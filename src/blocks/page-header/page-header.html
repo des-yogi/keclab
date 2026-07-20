@@ -1,0 +1,21 @@
+<!--DEV
+@ @include('blocks/page-header/page-header.html')
+-->
+
+<header id="header" class="container  page-header">
+  <div class="page-header__inner">
+
+    @@include('../../blocks/logo/logo.html', {
+      "addClass": "logo--header"
+    })
+
+    <div class="main-nav">Main navigation</div>
+
+    <div class="page-header__service">
+
+      @@include('../../blocks/theme-toggler/theme-toggler.html')
+
+    </div>
+
+  </div>
+</header>

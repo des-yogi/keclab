@@ -1,0 +1,183 @@
+// Глобальные классы, участвующие в переключении темы
+:root {
+  // Neutral Gray
+  --white: #ffffff;
+  --black: #000000;
+  --gray-20:  #f3f8fb;
+  --gray-50:  #f5f5f5;
+  --gray-100: #d9d9d9;
+  --gray-400: #979797;
+  --gray-600: #4d535e;
+  --gray-900: #000000; //уточнить цвет!
+
+  // Blue
+  --blue-50:  #dff3ff;
+  --blue-100: #badaff;
+  --blue-300: #6ca8ff;
+  --blue-400: #277dff;
+  --blue-500: #156dd1;
+  --blue-600: #02356d;
+  --blue-700: #004087;
+  --blue-800: #062159;
+  --blue-950: #000819;
+
+  // Teal
+  --teal-50:  #e0f7f8;
+  --teal-500: #00a0ae;
+  --teal-700: #005259;
+
+  // Green
+  --green-50:  #f0f9e6;
+  --green-500: #88C152;
+  --green-700: #244E00;
+
+  // Yellow
+  --yellow-400: #ffba08;
+  --yellow-500: #ffd948;
+
+  // Red
+  --red-50:  #ffebeb;
+  --red-500: #e53935;
+  --red-700: #bf1919;
+  //--bg-color: #fff;
+  //--text-color: #000;
+  //--border-color: #ccc;
+}
+
+[data-theme="light"] {
+  --bg-color: var(--gray-20);
+  --text-color: var(--blue-800);
+  --border-color: #ccc;
+
+  --link-color: var(--blue-700);
+  --link-color-hover: var(--blue-800);
+
+  --header-bg: var(--white);
+
+  --scrollbar-color: var(--gray-20);
+  --scrollbar-color-thumb: var(--blue-600);
+  --scrollbar-color-thumb-hover: var(--blue-800);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--blue-600);
+  --text-color: var(--white);
+  --border-color: #333;
+
+  --link-color: var(--blue-100);
+  --link-color-hover: var(--yellow-500);
+
+  --header-bg: var(--blue-900);
+
+  --scrollbar-color: var(--blue-600);
+  --scrollbar-color-thumb: var(--blue-500);
+  --scrollbar-color-thumb-hover: var(--blue-900);
+}
+
+// Базовые цвета https://colorscheme.ru/color-converter.html
+
+$black: hsl(0deg 0% 0%);
+$gray-darkest: hsl(0deg 0% 10%);
+$gray-darker: hsl(0deg 0% 20%);
+$gray-darken: hsl(0deg 0% 30%);
+$gray-dark: hsl(0deg 0% 40%);
+$gray: hsl(0deg 0% 50%);
+$gray-light: hsl(0deg 0% 60%);
+$gray-lighten: hsl(0deg 0% 70%);
+$gray-lighter: hsl(0deg 0% 80%);
+$gray-lightest: hsl(0deg 0% 90%);
+$white: hsl(0deg 0% 100%);
+$color-success: hsl(120deg 39% 54%);
+$color-danger: hsl(2deg 64% 58%);
+$color-warning: hsl(35deg 84% 62%);
+
+// $color-vk:                    #4a76a8;
+$color-fb: #4267b2;
+$color-tw: #40A2F5;
+$color-gh: #24292e;
+
+
+// Семантические цвета
+
+$main-color: #7391EA;
+$color-main: $main-color;
+$secondary-color: #ccc;
+$text-color: #575B66;
+$title-color: #393939;
+$text-muted: #BDBDBD;
+$body-bg: #F4F4F4;
+$link-color: $main-color;
+$link-color-hover: #4240CF;
+$border-color: $text-muted;
+$divider-color: $main-color;
+
+// Базовая типографика
+
+$font-size: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+
+$font-size-h1: 32px;
+$font-size-h1--dt: 48px;
+$font-size-h2: 28px;
+$font-size-h2--dt: 38px;
+$font-size-h3: 20px;
+$font-size-h3--dt: 32px;
+$font-size-h4: 18px;
+$font-size-h4--dt: 26px;
+$font-size-h5: 16px;
+$font-size-h5--dt: 24px;
+$font-size-h6: 14px;
+$font-size-h6--dt: 20px;
+
+$line-height: 1.625;
+
+$typo-margin-vertical: 1em;
+
+$font-family: 'Noto Sans', sans-serif;
+
+// $font-family: [Project Font], system-ui, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+// $font-family-headings: [Project Font], system-ui, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+//$font-family-monospace: sfmono-regular, menlo, monaco, consolas, liberation mono, courier new, monospace;
+
+
+// Ширины
+
+$screen-xs: 0;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+$screen-xxl: 1800px;
+
+$container-sm: 100%;
+$container-md: 100%;
+$container-lg: 100%;
+$container-xl: calc($screen-xl - 20px);
+$container-xxl: calc($screen-xxl - 20px);
+
+// Модульная сетка
+
+$grid-columns: 12;
+$grid-gutter-width: 8px;
+
+// Разное
+
+$field-padding-vertical: 5px;
+$field-padding-horizontal: 12px;
+$border-radius: 25px;
+$opacity: 0.7;
+$shadow: 0 4px 2px -2px rgb(0 0 0 / 30%);
+$transition-base: all 0.25s ease;
+$transition-time: 0.25s;
+
+// BS4 vars for mixins
+$enable-transitions: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$transition-base: all .25s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .25s ease !default;
+$menu-desktop-width: $screen-xl;
+$toggler-part-height: 3px;
+$toggler-part-bg-color: #000;
+//$z-index-modal: 100;
