@@ -1,11 +1,102 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
 <footer class="container  page-footer">
-  page-footer
+
+  <div class="row  page-footer__row">
+
+    <div class="page-footer__info-col">
+      <section class="page-footer__info">
+        <h2 class="visually-hidden">Способи зв’язку та адреса організації</h2>
+
+        @@include('../../blocks/logo/logo.html', {
+          "addClass": "logo--footer"
+        })
+
+        <ul class="list-nostyled  page-footer__list">
+          <li class="page-footer__item">
+            <a href="tel:+380957611507" class="page-footer__link">
+              +380 95 761 15 07
+            </a>
+          </li>
+
+          <li class="page-footer__item">
+            <a href="mailto:keclab@ukma.edu.ua" class="page-footer__link">
+              keclab@ukma.edu.ua
+            </a>
+          </li>
+
+          <li class="page-footer__item">
+            <p class="page-footer__link">5-303, вул. вулиця Волоська, 8/5, м.Київ 02000</p>
+          </li>
+
+          <li class="page-footer__item">
+            @@include('../../blocks/social-net/social-net.html')
+          </li>
+        </ul>
+
+      </section>
+    </div>
+
+    <div class="page-footer__about-col">
+      <nav class="page-footer__nav">
+        <h2 class="page-footer__nav-title">Про лабораторію</h2>
+
+        <ul class="list-nostyled  page-footer__list">
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Про KECLab</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Візія KECLab</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Наша команда</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Експерти</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Консультативна рада</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Партнери</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-footer__menu-col">
+      <nav class="page-footer__nav">
+        <h2 class="page-footer__nav-title">Меню</h2>
+        <ul class="list-nostyled  page-footer__list">
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Події</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Новини</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Публікації</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Дані та моделювання</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Звітність</a>
+          </li>
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-footer__subscription-col">
+      @@include('../../blocks/subscription/subscription.html')
+    </div>
+
+  </div>
+
+  @@include('../../blocks/copyrights/copyrights.html')
 </footer>

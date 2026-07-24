@@ -1,12 +1,5 @@
 @use '../../scss/variables.scss' as *;
 
-// В этом файле должны быть стили для БЭМ-блока burger, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$toggler-part-height: 3px !default;
-$toggler-part-bg-color: #000 !default;
-
 .burger {
   $block-name: &; // #{$block-name}__element
 
@@ -14,18 +7,28 @@ $toggler-part-bg-color: #000 !default;
   z-index: 1;
   display: flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-clip: padding-box;
+  background-color: rgba($white, 0.24);
+  border: 4px solid rgba($white, 0.12);
+  border-radius: 50%;
   user-select: none;
   cursor: pointer;
 
+  @media (min-width: $menu-desktop-width) {
+    display: none;
+  }
+
   > span {
     display: inline-block;
-    width: 100%;
+    width: 18px;
     height: $toggler-part-height;
     background: $toggler-part-bg-color;
     position: relative;
-    transition: background $transition-time $transition-time;
+    transition: background $transition-time ease;
 
     &::before,
     &::after {
@@ -36,22 +39,25 @@ $toggler-part-bg-color: #000 !default;
       height: $toggler-part-height;
       background: $toggler-part-bg-color;
       transform-origin: 50% 50%;
-      transition: top $transition-time $transition-time, transform $transition-time;
+      transition:
+        top $transition-time $transition-time ease,
+        transform $transition-time ease,
+        background $transition-time ease;
     }
 
     &::before {
-      top: -10px;
+      top: -6px;
     }
 
     &::after {
-      top: 10px;
+      top: 6px;
     }
   }
 
   &--close {
     > span {
       transition: background $transition-time 0s;
-      background: transparent;
+      background: transparent !important;
 
       &::before,
       &::after {

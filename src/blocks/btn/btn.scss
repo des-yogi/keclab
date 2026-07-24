@@ -1,80 +1,137 @@
 @use '../../scss/variables.scss' as *;
+@use '../../scss/mixins.scss' as *;
 
 .btn {
   $block-name: &; // #{$block-name}__element
 
   box-sizing: border-box;
   display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0 12px;
+  min-width: 56px;
+  height: 56px;
   margin: 0;
-
-  // padding: $field-padding-vertical  $field-padding-horizontal;
-  white-space: nowrap;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 1em;
+  padding: 4px;
+  font-size: 20px;
+  font-weight: 400;
   font-family: inherit;
   line-height: $line-height;
+  white-space: nowrap;
+  text-align: center;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  color: var(--white);
+  background-color: var(--blue-700);
+  //background-image: none;
+  border: 1px solid var(--blue-700);
   border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
-  background-image: none;
   user-select: none;
   cursor: pointer;
+  transition: $transition-base;
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: $text-color;
-
-    // background-color: darken($gray-lightest, 10%);
-    // border-color: darken($gray-lighter, 12%);
+  :root[data-theme="dark"] & {
+    background-color: var(--blue-500);
+    border-color: var(--blue-500);
   }
 
-  // &:active,
-  // &:focus {
-     // @include field-focus;
-  // }
+  &:hover {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--blue-800);
+
+    :root[data-theme="dark"] & {
+      background-color: var(--blue-700);
+      border-color: var(--blue-700);
+    }
+  }
+
+  &:focus {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--blue-800);
+    border-color: var(--blue-500);
+    box-shadow: 0 0 0 4px rgba(21, 109, 209, 0.8);
+
+    :root[data-theme="dark"] & {
+      background-color: var(--blue-700);
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 4px rgba(21, 109, 209, 0.8);
+    }
+  }
+
+  &:active {
+    background-color: var(--blue-950);
+    border-color: var(--blue-950);
+    box-shadow: none;
+
+    :root[data-theme="dark"] & {
+      background-color: var(--blue-800);
+      border-color: var(--blue-800);
+      box-shadow: none;
+    }
+
+    #{$block-name}__icon {
+
+      :root[data-theme="dark"] & {
+        background-color: var(--blue-500);
+        border-color: var(--blue-950);
+      }
+    }
+  }
 
   &--disabled,
   &:disabled {
     // opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    color: var(--gray-100) !important;
+    background-color: var(--gray-600) !important;
+    border-color: var(--gray-600) !important;
+
+    :root[data-theme="dark"] & {
+      color: var(--gray-100);
+      background-color: var(--gray-600);
+      border-color: var(--gray-600);
+    }
+
+    #{$block-name}__icon {
+      border-color: var(--gray-100) !important;
+    }
 
     @at-root a.btn--disabled {
       pointer-events: none;
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &__text {
+    padding-left: 20px;
+    // text-transform: lowercase;
 
+    // &::first-letter {
+    //   text-transform: uppercase;
+    // }
+  }
 
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    transition: $transition-base;
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+    :root[data-theme="dark"] & {
+      //background-color: var(--blue-500);
+      border-color: var(--blue-950);
+    }
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
-
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

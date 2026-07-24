@@ -3,6 +3,7 @@
 // Не редактируйте его вручную — изменения будут перезаписаны при следующей генерации.
 // Подключения из addCssBefore:
 @use './_coreui-custom' as *;
+@use '../node_modules/overlayscrollbars/styles/overlayscrollbars.scriptingenabled.css' as *;
 @use './variables' as *;
 @use './mixins' as *;
 
@@ -32,6 +33,31 @@
 @use '../blocks/theme-toggler/theme-toggler';
 @use '../blocks/hero-index/hero-index';
 @use '../blocks/chip/chip';
+@use '../blocks/search-btn/search-btn';
+@use '../blocks/lang-switcher/lang-switcher';
+@use '../blocks/mob-nav/mob-nav';
+@use '../blocks/search-pub/search-pub';
+@use '../blocks/scrollbar/scrollbar';
+@use '../blocks/btn-secondary/btn-secondary';
+@use '../blocks/vision-slider/vision-slider';
+@use '../blocks/review-card/review-card';
+@use '../blocks/upcoming-events/upcoming-events';
+@use '../blocks/event-card/event-card';
+@use '../blocks/faux-link/faux-link';
+@use '../blocks/last-news/last-news';
+@use '../blocks/news-card/news-card';
+@use '../blocks/lab-activities/lab-activities';
+@use '../blocks/activity-card/activity-card';
+@use '../blocks/last-posts/last-posts';
+@use '../blocks/post-card/post-card';
+@use '../blocks/strategic-focus/strategic-focus';
+@use '../blocks/focus-card/focus-card';
+@use '../blocks/data-modeling/data-modeling';
+@use '../blocks/data-model-card/data-model-card';
+@use '../blocks/subscription/subscription';
+@use '../blocks/social-net/social-net';
+@use '../blocks/copyrights/copyrights';
+@use '../blocks/search-panel/search-panel';
 
 // Подключения из addCssAfter:
 @use './print' as *;

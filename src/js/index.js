@@ -18,10 +18,11 @@
 
 import '@coreui/coreui/js/src/dropdown.js';
 import '@coreui/coreui/js/src/modal.js';
-import '@coreui/coreui/js/src/collapse.js';
+//import '@coreui/coreui/js/src/collapse.js';
+import Collapse from '@coreui/coreui/js/src/collapse.js';
 import '@coreui/coreui/js/src/tab.js';
 // import '@coreui/coreui/js/src/navigation.js';
-// import '@coreui/coreui/js/src/offcanvas.js';
+import '@coreui/coreui/js/src/offcanvas.js';
 // import Popover from '@coreui/coreui/js/src/popover.js';
 // import Tooltip from '@coreui/coreui/js/src/tooltip.js';
 // import '@coreui/coreui/js/src/scrollspy.js';
@@ -251,10 +252,14 @@ function initThemeSwitcher() {
       document.documentElement.classList.remove('no-transition');
     });
 
-    var toggleBtn = document.getElementById('toggle-theme');
-    if (toggleBtn) {
-      toggleBtn.removeEventListener('click', toggleTheme);
-      toggleBtn.addEventListener('click', toggleTheme);
+    const toggleBtns = document.querySelectorAll('.theme-toggler');
+
+    if (toggleBtns.length > 0) {
+      //console.log(toggleBtns.length);
+      toggleBtns.forEach((el) => {
+        el.removeEventListener('click', toggleTheme);
+        el.addEventListener('click', toggleTheme);
+      });
     }
 
     prefersDark.addEventListener('change', function () {
@@ -290,6 +295,60 @@ function initGlobal() {
 
 initGlobal();
 
+
+// =============================================================================
+// Инициализация библиотеки OverlayScrollbars (кастомный скроллбар)
+// Ее собственно запуск в файле блока scrollbar.exe
+// При необходимости в css файле блока можно кастомизировать стили под тему
+// =============================================================================
+
+/*import { OverlayScrollbars } from 'overlayscrollbars';
+
+const DEFAULT_OPTIONS = {
+  scrollbars: {
+    theme: 'os-theme-dark', // дефолтная тема
+    autoHide: 'scroll',
+  },
+};
+
+function createScrollbar(target, options = {}) {
+  if (!target) return null;
+
+  return OverlayScrollbars(target, {
+    ...DEFAULT_OPTIONS,
+    ...options,
+    scrollbars: {
+      ...DEFAULT_OPTIONS.scrollbars,
+      ...options.scrollbars,
+    },
+  });
+}
+
+// Kept private — exposed only through lock/unlock below, so callers
+// never touch the raw instance directly.
+let pageScrollbar = null;
+
+export function initPageScrollbar() {
+  pageScrollbar = createScrollbar(document.body);
+  return pageScrollbar;
+}
+
+export function lockPageScroll() {
+  pageScrollbar?.options({ overflow: { y: 'hidden' } });
+}
+
+export function unlockPageScroll() {
+  pageScrollbar?.options({ overflow: { y: 'scroll' } });
+}
+
+// Any block can opt in by adding [data-scrollbar] to its markup —
+// no need to touch this module when a new scrollable block appears elsewhere.
+export function initCustomScrollbars(options = {}) {
+  const elements = document.querySelectorAll('[data-scrollbar]');
+  return Array.from(elements).map((element) => createScrollbar(element, options));
+}*/
+
+
 // =============================================================================
 //  Fancybox UI
 // =============================================================================
@@ -301,33 +360,33 @@ initGlobal();
 // =============================================================================
 //  Swiper.js
 // =============================================================================
-//import Swiper from 'swiper';
-//import { Navigation, Pagination, Scrollbar } from 'swiper/modules'; // Подсключение помодульно
+/*import { Swiper } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules'; // Подсключение помодульно
 // Подключение бандла Swiper со ВСЕМИ модулями
 // import Swiper from 'swiper/bundle';
 
 // init Swiper:
-// const swiperTest = new Swiper('.swiper', {
-//   modules: [Navigation, Pagination, Scrollbar],
-//   // Optional parameters
-//   spaceBetween: 20,
-//   slidesPerView: 1,
-//   loop: true,
+const swiperTest = new Swiper('.swiper', {
+  modules: [Navigation, Pagination ],
+  // Optional parameters
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: true,
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});*/
 
 // =============================================================================
 //  Сниппеты-напоминалки (закомментированы)

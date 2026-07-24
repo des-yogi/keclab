@@ -7,6 +7,13 @@
   align-items: center;
 
   &--header {
+    width: 112px;
+    height: 56px;
+
+    @media (min-width: $screen-md) {
+      width: 144px;
+      height: 72px;
+    }
 
     svg {
 
@@ -45,6 +52,7 @@
   svg {
     width: 112px;
     height: 56px;
+    aspect-ratio: 112 / 56;
 
     @media (min-width: $screen-md) {
       width: 144px;

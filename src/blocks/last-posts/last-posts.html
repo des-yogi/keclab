@@ -1,0 +1,59 @@
+<!--DEV
+@@include('blocks/last-posts/last-posts.html')
+-->
+
+<section class="container  margin-y  last-posts">
+  <header class="row  last-posts__header">
+    <div class="last-posts__text-col">
+      <h2 class="last-posts__title">Останні публікації</h2>
+      <div class="last-posts__intro">
+        <p>Найновіші аналітичні матеріали KECLab — дослідження, policy papers та експертні огляди з питань енергетичної безпеки, декарбонізації та європейської інтеграції.</p>
+      </div>
+    </div>
+    <div class="last-posts__link-col">
+      <a href="#" class="btn-secondary">
+        <span class="btn-secondary__text">Усі публікації</span>
+        <span class="btn-secondary__icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <ul class="row  list-nostyled  last-posts__list">
+
+    <li class="last-posts__item">
+      @@include('../../blocks/post-card/post-card.html', {
+        "img": "cover-1",
+        "tag": "digest",
+        "tagColor": "badge--green",
+        "date": "Січневе видання 2026",
+        "title": "KECLabEnergy and Climate Digest",
+        "text": "Щомісячний аналітичний огляд ключових подій, регуляторних змін і ринкових тенденцій у сфері енергетики та кліматичної політики України з фокусом на стратегічні наслідки."
+      })
+    </li>
+
+    <li class="last-posts__item">
+      @@include('../../blocks/post-card/post-card.html', {
+        "img": "cover-2",
+        "tag": "Policy Papers",
+        "tagColor": "badge--teal",
+        "date": "Лютневе видання 2026",
+        "title": "KECLab Energy & Climate Review",
+        "text": "Розширений огляд структурних змін в енергетичному секторі, що поєднує системний аналіз, міжнародний контекст і оцінку довгострокових трендів декарбонізації та інтеграції до ЄС."
+      })
+    </li>
+
+    <li class="last-posts__item">
+      @@include('../../blocks/post-card/post-card.html', {
+        "img": "cover-3",
+        "tag": "Partner Publications",
+        "tagColor": "badge--gray",
+        "date": "Березневе видання 2026",
+        "title": "KECLab Energy and Climate Brief",
+        "text": "Короткі аналітичні матеріали з конкретних питань енергетичної та кліматичної політики, підготовлені для підтримки швидкого та обґрунтованого прийняття рішень."
+      })
+    </li>
+
+  </ul>
+</section>

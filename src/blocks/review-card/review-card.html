@@ -1,0 +1,38 @@
+<!--DEV
+Для использования этого файла как шаблона:
+@@include('blocks/review-card/review-card.html', {
+  "name": "Владислав Міхнич",
+  "position": "Директор Центру KECLab",
+  "text": "<p>Запуск Київської лабораторії з питань енергетики та клімату — це не просто інституційне досягнення, це зобов’язання перед майбутнім України. У час, коли наша енергетична система перебуває під безпрецедентним тиском, незалежні та засновані на фактах дослідження вже не є опціональними, а є обов’язковими. Нам також потрібен надійний місток між освітою, дослідженнями та прийняттям рішень — такий, що ґрунтується на чітких, неупереджених доказах, що зміцнюють інституційний потенціал та підвищують якість політичного вибору. Київська лабораторія з питань енергетики та клімату має на меті забезпечити цю основу, гарантуючи, що енергетичний та кліматичний перехід України буде стратегічним, стійким та узгодженим з довгостроковим сталим зростанням».</p>"
+})
+-->
+
+<article class="review-card">
+  <header class="review-card__header">
+    <div class="review-card__header-inner">
+
+      <div class="embed-responsive  embed-responsive--1-1  review-card__ava">
+        <picture>
+          <!-- <source srcset="img/ava-1.webp, img/ava-1.webp 2x" type="image/webp"> -->
+          <img src="img/ava-1.jpg"
+               srcset="img/ava-1.jpg, img/ava-1.jpg 2x"
+               alt="@@name"
+               width="64"
+               height="64"
+               loading="lazy">
+          <!-- 64px, 96px 2x -->
+        </picture>
+      </div>
+
+      <div class="review-card__descr">
+        <h3 class="h4  review-card__name">@@name</h3>
+        <p class="review-card__position">@@position</p>
+      </div>
+    </div>
+    <!-- <span class="review-card__quotes"></span> -->
+  </header>
+
+  <div class="review-card__text">
+    @@text
+  </div>
+</article>

@@ -9,12 +9,108 @@
       "addClass": "logo--header"
     })
 
-    <div class="main-nav">Main navigation</div>
+    @@include('../../blocks/main-nav/main-nav.html')
 
     <div class="page-header__service">
 
-      @@include('../../blocks/theme-toggler/theme-toggler.html')
+      @@include('../../blocks/lang-switcher/lang-switcher.html', {
+        "addClass": ""
+      })
 
+      @@include('../../blocks/theme-toggler/theme-toggler.html', {
+        "addClass": "mob-hidden"
+      })
+
+      @@include('../../blocks/search-btn/search-btn.html')
+
+      @@include('../../blocks/burger/burger.html')
+
+    </div>
+
+  </div>
+
+  <div id="mob-menu-container" class="mob-nav__container  collapse">
+    @@include('../../blocks/mob-nav/mob-nav.html')
+  </div>
+
+  <div id="main-menu-container" class="main-nav__container">
+    <div id="mainNavItem-1"
+         class="main-nav__nav-lvl2  container  collapse"
+         data-coreui-parent="#main-nav-list">
+      <ul class="main-nav__list-lvl2">
+        <li class="main-nav__item-lvl2  active">
+          <a href="#" class="main-nav__link-lvl2">
+            <span>Про KECLab</span>
+          </a>
+        </li>
+        <li class="main-nav__item-lvl2">
+          <a href="#" class="main-nav__link-lvl2">
+            <span>Наша команда</span>
+          </a>
+        </li>
+        <li class="main-nav__item-lvl2">
+          <a href="#" class="main-nav__link-lvl2">
+            <span>Експерти</span>
+          </a>
+        </li>
+        <li class="main-nav__item-lvl2">
+          <a href="#" class="main-nav__link-lvl2">
+            <span>Консультативна рада</span>
+          </a>
+        </li>
+        <li class="main-nav__item-lvl2">
+          <a href="#" class="main-nav__link-lvl2">
+            <span>Партнери</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="mainNavItem-2"
+         class="main-nav__nav-lvl2  container  collapse"
+         data-coreui-parent="#main-nav-list">
+      <div class="row  main-nav__mega-wrapper">
+
+        <div class="main-nav__all-posts-col">
+          <div class="main-nav__all-posts">
+            <div>
+              <p class="h6">Дані та інструменти</p>
+              <p>Ознайомтеся з нашими дослідженнями та рекомендаціями.</p>
+            </div>
+            <a href="#" class="btn-secondary">
+              <span class="btn-secondary__text">Усі публікації</span>
+              <span class="btn-secondary__icon">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="main-nav__menu-col">
+          <ul class="main-nav__list-lvl2">
+            <li class="main-nav__item-lvl2  active">
+              <a href="#" class="main-nav__link-lvl2">
+                <span>Digest</span>
+              </a>
+            </li>
+            <li class="main-nav__item-lvl2">
+              <a href="#" class="main-nav__link-lvl2">
+                <span>Policy Papers</span>
+              </a>
+            </li>
+            <li class="main-nav__item-lvl2">
+              <a href="#" class="main-nav__link-lvl2">
+                <span>Partner Publications</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main-nav__search-col">
+          @@include('../../blocks/search-pub/search-pub.html')
+        </div>
+
+      </div>
     </div>
 
   </div>

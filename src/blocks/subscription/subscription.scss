@@ -1,0 +1,121 @@
+// В этом файле должны быть стили для БЭМ-блока subscription, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.subscription {
+  $block-name: &; // #{$block-name}__element
+
+  isolation: isolate;
+  position: relative;
+  padding: 24px 16px;
+  color: var(--white);
+  background: linear-gradient(to bottom, var(--blue-700), var(--blue-800) 100%);
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    padding: 48px 40px;
+    border-radius: $border-radius-lg;
+  }
+
+  .blob-animated {
+    transform: scale(1.0) translateY(-30px);
+
+    @media (min-width: $screen-xl) {
+      transform: scale(0.95) translateY(-20px);
+    }
+
+    //&__wrapper {
+      //z-index: 0;
+    //}
+  }
+
+  &__header {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: 20px !important;
+  }
+
+  &__desc {
+    font-size: $font-size-sm;
+  }
+
+  //&__form-wrapper {
+  //}
+
+  //&__form {
+  //}
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 16px;
+    padding: 4px;
+    background-color: var(--white);
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      border-radius: $border-radius-lg;
+    }
+
+    .btn {
+
+      .btn__text {
+        margin-right: auto;
+      }
+
+      .btn__icon {
+        border-color: var(--white);
+      }
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 auto;
+      }
+    }
+  }
+
+  &__input-name {
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__input {
+    color: var(--blue-800);
+    background-color: var(--white);
+    border-color: var(--white);
+
+    @media (max-width: $screen-md - 1) {
+      text-align: center;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: var(--gray-600) !important;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<!--DEV
+@@include('blocks/news-card/news-card.html', {
+  "img": "",
+  "tag": "Енергетичний ринок",
+  "title": "Дефіцит генерації понад 4 ГВт: приватні інвестиції стають критично необхідними",
+  "text": "Операційний дефіцит генеруючих потужностей в Україні перевищує 4 ГВт на тлі пошкодження інфраструктури та високого зимового попиту. Питання залучення приватного капіталу та інтеграції резервної генерації до мережі стає ключовим для стабільності системи."
+})
+-->
+
+<article class="news-card">
+  <a href="#" class="embed-responsive  news-card__img" tabindex="-1" aria-label="@@title">
+    <picture>
+      <!-- 480x270, 720x405 2x  от 1440 -->
+      <!-- 400x225, 600x338 2x  от 1280 -->
+      <!-- 840x473 от 1024 -->
+      <!-- 450x253 от 768 -->
+      <!-- 680x383 от 480 -->
+      <!-- 540x304 от 300 -->
+      <source srcset="img/@@img.webp" type="image/webp">
+      <img src="img/@@img.jpg" alt="Alt text" width="448" height="252" loading="lazy">
+    </picture>
+  </a>
+
+  <div class="news-card__text-wrapper">
+    <div class="news-card__main">
+      <span class="badge  badge--gray">@@tag</span>
+      <h3 class="h6  news-card__title">
+        <a href="#">@@title</a>
+      </h3>
+      <div class="news-card__text">
+        <p>@@text</p>
+      </div>
+    </div>
+
+    <div class="news-card__footer">
+      <span class="date-time  date-time--date">
+        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#calendar-20"></use></svg>
+        <time datetime="2026-02-24">24 лютого 2026</time>
+      </span>
+
+      @@include('../../blocks/faux-link/faux-link.html')
+    </div>
+  </div>
+</article>

@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока search-panel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.search-panel {
+  $block-name: &; // #{$block-name}__element
+
+  top: 88px !important;
+  bottom: unset;
+  height: auto !important;
+
+  @media (min-width: $screen-md) {
+    top: 130px !important;
+  }
+
+  &.offcanvas.offcanvas-top {
+    transition: transform $transition-time ease !important;
+  }
+
+  .btn-secondary,
+  .btn-secondary__icon {
+    transition: background $transition-time ease;
+  }
+
+  &[aria-modal=true] {
+
+    @at-root .offcanvas-backdrop.fade.show {
+      //top: 88px !important;
+
+      @media (min-width: $screen-md) {
+        //top: 130px !important;
+      }
+    }
+  }
+
+  &__form-wrapper {
+    padding-right: 0;
+    padding-left: 0;
+    background-color: var(--bg-color);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+    }
+
+    & > * {
+      margin: 0;
+    }
+
+    .field-text {
+
+      @media (min-width: $screen-md) {
+        flex: 1 1 auto;
+      }
+    }
+
+    .btn-secondary .btn-secondary__text {
+
+      @media (max-width: $screen-md - 1) {
+        margin-right: auto;
+      }
+    }
+  }
+}

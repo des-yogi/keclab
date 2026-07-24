@@ -1,0 +1,102 @@
+// В этом файле должны быть стили для БЭМ-блока review-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.review-card {
+  $block-name: &; // #{$block-name}__element
+
+  padding: 24px 16px 0;
+  background: linear-gradient(180deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: $border-radius $border-radius 0 0;
+
+  @media (min-width: $screen-md) {
+    padding: 40px 40px 0;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+  }
+
+  :root[data-theme="dark"] & {
+    background: linear-gradient(180deg, var(--blue-950) 0%, rgba(0, 8, 25, 0) 100%);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 76px;
+      height: 32px;
+      background-color: transparent;
+      background-position: center;
+      background-size: 76px 32px;
+      background-image: svg-load('../blocks/review-card/bg-img/quotes.svg', fill=#00a0ae); // teal-500
+    }
+  }
+
+  &__header-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__ava {
+    width: 64px;
+    height: 64px;
+    background: var(--white);
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__descr {
+
+  }
+
+  &__name {
+    margin-bottom: 8px;
+  }
+
+  &__position {
+    margin-top: 0;
+    font-size: $font-size;
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+    }
+  }
+}

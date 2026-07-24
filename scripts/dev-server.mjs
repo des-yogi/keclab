@@ -25,6 +25,16 @@ const srcDir = path.join(rootDir, 'src');
 const buildDir = path.join(rootDir, 'build');
 const projectConfigPath = path.join(rootDir, 'projectConfig.json');
 
+// Общие опции для вотчеров: снижают частоту ложных EBUSY на Windows,
+// дожидаясь, пока файл перестанет меняться, прежде чем эмитить событие.
+const watchOptions = {
+  ignoreInitial: true,
+  awaitWriteFinish: {
+    stabilityThreshold: 200,
+    pollInterval: 50,
+  },
+};
+
 export async function devServer() {
   logInfo('[dev-server] Старт dev-сервера');
 
@@ -65,8 +75,13 @@ export async function devServer() {
   };
 
   // Вотчер для projectConfig.json
-  const configWatcher = chokidar.watch(projectConfigPath, {
-    ignoreInitial: true,
+  const configWatcher = chokidar.watch(projectConfigPath, watchOptions);
+
+  // Без этого обработчика ошибка EBUSY (и любая другая ошибка FSWatcher)
+  // валит весь Node-процесс, так как Node кидает необработанное исключение
+  // при 'error' событии без слушателя.
+  configWatcher.on('error', (err) => {
+    logError('[dev-server] Ошибка configWatcher: ' + err.message);
   });
 
   configWatcher.on('change', async () => {
@@ -83,8 +98,12 @@ export async function devServer() {
   });
 
   // Вотчер для src/
-  const watcher = chokidar.watch(srcDir, {
-    ignoreInitial: true,
+  const watcher = chokidar.watch(srcDir, watchOptions);
+
+  // Та же защита: ловим EBUSY и прочие ошибки вотчера, не давая им
+  // уронить весь dev-сервер.
+  watcher.on('error', (err) => {
+    logError('[dev-server] Ошибка watcher (src): ' + err.message);
   });
 
   watcher.on('all', async (event, filePath) => {

@@ -1,0 +1,32 @@
+<!--DEV
+@@include('blocks/data-modeling/data-modeling.html')
+-->
+
+<section class="container  margin-y  data-modeling">
+  <header class="row  data-modeling__header">
+    <div class="data-modeling__text-col">
+      <h2 class="data-modeling__title">Дані та моделювання</h2>
+      <div class="data-modeling__intro">
+        <p>Ми поєднуємо кількісний аналіз, економічне моделювання та візуалізацію даних для підтримки рішень у сфері енергетичної безпеки, декарбонізації та інтеграції до ринку ЄС.</p>
+      </div>
+    </div>
+    <div class="data-modeling__link-col">
+      <a href="#" class="btn-secondary">
+        <span class="btn-secondary__text">Дивитись всі</span>
+        <span class="btn-secondary__icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <div class="data-modeling__cards-wrapper">
+    @@include('../../blocks/data-model-card/data-model-card.html', {
+      "img": "data-modeling-1",
+      "tag": "Регулювання",
+      "tagColor": "badge--gray",
+      "title": "JAO Daily Offered Capacity by Corridor (Hourly exports to Ukraine)",
+      "text": "<p>Зміна енергетичної політики Індії в цілому залежить від дій на рівні штатів. Дізнайтеся, як штати просуваються в різних напрямках, включаючи збільшення потужностей сонячної та вітрової енергетики, зберігання енергії, а також впровадження політик, що сприяють інтеграції відновлюваних джерел енергії та впровадженню електромобілів (EV).</p>"
+    })
+  </div>
+</section>

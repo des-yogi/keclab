@@ -1,5 +1,101 @@
 @use '../../scss/variables.scss' as *;
+@use '../../scss/mixins.scss' as *;
 
 .page-footer {
   $block-name: &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  background: linear-gradient(to bottom, var(--bg-color), var(--header-bg) 100%);
+  overflow: hidden;
+
+  // :root[data-theme="dark"] & {
+  //   background: linear-gradient(180deg, #02356D, #000819 100%);
+  // }
+
+  @media (min-width: $screen-md) {
+    padding-top: 48px;
+  }
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__info-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 3);
+  }
+
+  &__about-col {
+    @include col(xs, 6);
+    @include col-offset(md, 1);
+    @include col(md, 3.5);
+    @include col-offset(xl, 0);
+    @include col(xl, 2)
+  }
+
+  &__menu-col {
+    @include col(xs, 6);
+    @include col(md, 3.5);
+    @include col(xl, 2)
+  }
+
+  &__subscription-col {
+    @include col(xs, 12);
+    @include col(xl, 5)
+  }
+
+  &__info {
+
+    .logo {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+
+  //&__item {
+  //}
+
+  &__link {
+    text-decoration: none;
+    color: var(--text-color);
+
+    @media (max-width: $screen-sm - 1) {
+      font-size: $font-size-sm;
+    }
+
+    &:not(p) {
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__nav {
+    font-size: $font-size;
+
+    @media (min-width: $screen-xxl) {
+      font-size: $font-size-lg;
+    }
+
+    #{$block-name}__list {
+      gap: 8px 0;
+    }
+  }
+
+  &__nav-title {
+    margin-bottom: 16px;
+    font-size: inherit;
+  }
 }
