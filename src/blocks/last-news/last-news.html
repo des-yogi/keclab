@@ -1,0 +1,62 @@
+<!--DEV
+@@include('blocks/last-news/last-news.html')
+-->
+
+<section class="container  margin-y  last-news">
+  <div class="blob-animated__wrapper" role="presentation">
+    <img src="img/blob-animated.svg" class="blob-animated" width="1920" height="664" alt="" loading="lazy">
+  </div>
+
+  <header class="last-news__header">
+    <span class="chip">
+      <span>Новини</span>
+    </span>
+
+    <h2 class="last-news__title">Останні новини</h2>
+    <div class="last-news__intro">
+      <p>Актуальні аналітичні матеріали та ключові події у сфері енергетики й кліматичної політики.</p>
+    </div>
+
+  </header>
+
+  <ul class="list-nostyled  row  last-news__row">
+
+    <li class="last-news__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "img": "news-img-1",
+        "tag": "Енергетичний ринок",
+        "title": "Дефіцит генерації понад 4 ГВт: приватні інвестиції стають критично необхідними",
+        "text": "Операційний дефіцит генеруючих потужностей в Україні перевищує 4 ГВт на тлі пошкодження інфраструктури та високого зимового попиту. Питання залучення приватного капіталу та інтеграції резервної генерації до мережі стає ключовим для стабільності системи."
+      })
+    </li>
+
+    <li class="last-news__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "img": "news-img-2",
+        "tag": "Регулювання",
+        "title": "Підвищення цінових обмежень на ринку електроенергії: імпорт реагує зростанням",
+        "text": "НКРЕКП підвищила верхні прайс-кепи на ринку «на добу наперед» та внутрішньодобовому сегменті до 15 000 грн/МВт·год."
+      })
+    </li>
+
+    <li class="last-news__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "img": "news-img-3",
+        "tag": "Відновлювана енергетика",
+        "title": "€220 млн інвестицій у вітроенергетику: сигнал відновлення сектору ВДЕ",
+        "text": "У Одеській області стартував проєкт вітропарку потужністю 124 МВт за участі міжнародних інвесторів. Проєкт демонструє збереження інтересу до українського ринку ВДЕ навіть в умовах воєнних ризиків."
+      })
+    </li>
+
+  </ul>
+
+  <div class="last-news__all">
+    <a href="#" class="btn-secondary">
+      <span class="btn-secondary__text">Усі новини</span>
+      <span class="btn-secondary__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+      </span>
+    </a>
+  </div>
+
+</section>

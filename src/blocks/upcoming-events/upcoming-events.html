@@ -1,0 +1,58 @@
+<!--DEV
+Для использования этого файла как шаблона:
+@@include('blocks/upcoming-events/upcoming-events.html')
+-->
+
+<section class="container  margin-y  upcoming-events">
+
+  <div class="row  upcoming-events__row">
+
+    <div class="upcoming-events__text-col">
+      <div class="upcoming-events__text-wrapper">
+        <h2 class="upcoming-events__title">Майбутні події</h2>
+        <div class="upcoming-events__text">
+          <p>Долучайтеся до фахових дискусій, презентацій аналітичних досліджень та відкритих лекцій за участю провідних українських і європейських експертів з енергетики та клімату.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="upcoming-events__link-col">
+      <a href="#" class="btn-secondary">
+        <span class="btn-secondary__text">Усі події</span>
+        <span class="btn-secondary__icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+        </span>
+      </a>
+    </div>
+
+  </div>
+
+  <ul class="list-nostyled  upcoming-events__list">
+    <li class="upcoming-events__item">
+      @@include('../../blocks/event-card/event-card.html', {
+        "img": "event-img-1",
+        "kind": "Онлайн",
+        "icon": "online",
+        "type": "Аналітичний семінар",
+        "title": "Системний дефіцит генерації: аналіз ризиків та шляхи подолання",
+        "text": "<p>Системний дефіцит понад 4 ГВт створює значні ризики для енергобезпеки та післявоєнного відновлення. KECLab аналізує поточний стан енергосистеми та пропонує стратегії на основі даних (data-driven) для мінімізації наслідків.</p>",
+        "speakers": "Доктор Сюзанна Ніс, Доктор Георг Захманн, Доктор Франк Мейсснер",
+        "location": "Zoom"
+      })
+    </li>
+
+    <li class="upcoming-events__item">
+      @@include('../../blocks/event-card/event-card.html', {
+        "img": "event-img-2",
+        "kind": "ОФлайн",
+        "icon": "offline",
+        "type": "Конференція",
+        "title": "Активізація приватних інвестицій у ВДЕ та гнучку генерацію",
+        "text": "<p>Для подолання дефіциту потужностей критично важливим є залучення приватного капіталу в сонячну, вітрову енергетику та системи накопичення (energy storage). KECLab розробляє рекомендації щодо регуляторних стимулів.</p>",
+        "speakers": "Доктор Сюзанна Ніс, Доктор Георг Захманн",
+        "location": "вул. Волоська, 8/5, м.Київ "
+      })
+    </li>
+  </ul>
+
+</section>

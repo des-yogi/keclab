@@ -1,0 +1,36 @@
+<!--DEV
+@@include('blocks/subscription/subscription.html')
+-->
+
+<section class="subscription">
+  <div class="blob-animated__wrapper" role="presentation">
+    <img src="img/blob-animated.svg" class="blob-animated" width="1920" height="664" alt="" loading="lazy">
+  </div>
+
+  <div class="subscription__header">
+    <h2 class="subscription__title">Підпишіться на розсилку KECLab</h2>
+    <div class="subscription__desc">
+      <p>Отримуйте аналітичні матеріали, нові публікації та щомісячний Energy and Climate Digest безпосередньо на вашу електронну пошту.</p>
+    </div>
+  </div>
+
+  <div class="subscription__form-wrapper">
+    <form class="subscription__form" action="#" method="post">
+
+      <div class="subscription__input-wrapper">
+        <label class="subscription__input-name">
+          <span class="visually-hidden">Email для отримання розсилки</span>
+          <input class="field-text__input  subscription__input" type="email" name="mail" value="" placeholder="Введіть ваш Email" autocomplete="email">
+        </label>
+
+        <button class="btn" type="submit" name="submit">
+          <span class="btn__text">Підписатись</span>
+          <span class="btn__icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+          </span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+// В этом файле должны быть стили для БЭМ-блока vision-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins.scss' as *;
+
+.vision-slider {
+  $block-name: &; // #{$block-name}__element
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__slider-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  //&__header {
+  //}
+
+  &__title {
+    margin-top: 24px;
+  }
+
+  &__text {
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  // &__review-slider {
+  // }
+}

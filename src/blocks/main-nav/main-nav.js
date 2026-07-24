@@ -1,75 +1,65 @@
-(function(){
+import Collapse from '@coreui/coreui/js/src/collapse.js';
+import { lockPageScroll, unlockPageScroll } from '../../js/index.js';
 
-  // Добавление/удаление модификаторов при клике на переключение видимости
-  var toggler = document.getElementById('main-nav-toggler');
-  if(toggler){
-    toggler.addEventListener('click', mainNavVisibleToggle);
+(function () {
+  const overlay = document.getElementById('menuOverlay');
+  const mainNav = document.getElementById('main-nav');
+  const mainMenuCollapsed = document.getElementById('main-menu-container');
+  if (!mainNav || !mainMenuCollapsed || !overlay) return;
 
-    function mainNavVisibleToggle(e) {
-      e.preventDefault();
-      toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
-      document.getElementById('main-nav').classList.toggle('main-nav--open');
-    }
+  const menuItemCollapsedAll = Array.from(mainMenuCollapsed.querySelectorAll('.collapse'));
+  if (!menuItemCollapsedAll.length) return;
+
+  menuItemCollapsedAll.forEach((item) => {
+    item.addEventListener('show.coreui.collapse', (event) => {
+      if (event.target !== item) return;
+      menuItemCollapsedAll.forEach((sibling) => {
+        if (sibling === item || !sibling.classList.contains('show')) return;
+        Collapse.getOrCreateInstance(sibling).hide();
+      });
+    });
+    item.addEventListener('shown.coreui.collapse', (event) => {
+      if (event.target !== item) return;
+      overlay.classList.add('visible');
+      lockPageScroll();
+    });
+    item.addEventListener('hidden.coreui.collapse', (event) => {
+      if (event.target !== item) return;
+      const anyStillOpen = menuItemCollapsedAll.some((el) => el.classList.contains('show'));
+      if (!anyStillOpen) {
+        overlay.classList.remove('visible');
+        unlockPageScroll();
+      }
+    });
+  });
+
+  // Take full manual control over toggler clicks instead of relying on
+  // CoreUI's data-coreui-toggle data-api, to avoid double-toggle if the
+  // library ends up initialized more than once on the page.
+  const togglers = mainNav.querySelectorAll('.main-nav__link--toggler');
+  togglers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = trigger.getAttribute('href');
+      const target = document.querySelector(targetId);
+      if (!target) return;
+      Collapse.getOrCreateInstance(target).toggle();
+    });
+  });
+
+  function closeMenu() {
+    menuItemCollapsedAll.forEach((item) => {
+      if (!item.classList.contains('show')) return;
+      Collapse.getOrCreateInstance(item).hide();
+    });
+    overlay.classList.remove('visible');
+    unlockPageScroll();
   }
 
-  // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
-  var linkClassName = 'main-nav__link';
-  var linkClassNameShowChild = 'main-nav__item--show-child';
-  var findLinkClassName = new RegExp(linkClassName);
-  // Слежение за всплывшим событием focus (нужно добавить класс, показывающий потомков)
-  document.addEventListener('focus', function(event) {
-    // Если событие всплыло от одной из ссылок гл. меню
-    if (findLinkClassName.test(event.target.className)) {
-      // Добавим классы, показывающие списки вложенных уровней, на всех родителей
-      event.target.parents('.main-nav__item').forEach(function(item){
-        item.classList.add(linkClassNameShowChild);
-      });
-    }
-  }, true);
-  // Слежение за всплывшим событием blur (нужно убрать класс, показывающий потомков)
-  document.addEventListener('blur', function(event) {
-    // Если событие всплыло от одной из ссылок гл. меню
-    if (findLinkClassName.test(event.target.className)) {
-      // Уберем все классы, показывающие списки 2+ уровней
-      // event.target.closest('.main-nav').querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
-      document.querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
-        item.classList.remove(linkClassNameShowChild);
-      });
-    }
-  }, true);
-
-
-
-  // Добавление метода .parents()
-  Element.prototype.parents = function(selector) {
-    var elements = [];
-    var elem = this;
-    var ishaveselector = selector !== undefined;
-
-    while ((elem = elem.parentElement) !== null) {
-      if (elem.nodeType !== Node.ELEMENT_NODE) {
-        continue;
-      }
-
-      if (!ishaveselector || elem.matches(selector)) {
-        elements.push(elem);
-      }
-    }
-
-    return elements;
-  };
-
-  // Добавление метода .closest() (полифил, собственно)
-  // (function(e){
-  //  e.closest = e.closest || function(css){
-  //    var node = this;
-
-  //    while (node) {
-  //       if (node.matches(css)) return node;
-  //       else node = node.parentElement;
-  //    }
-  //    return null;
-  //  }
-  // })(Element.prototype);
-
-}());
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closeMenu();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+})();

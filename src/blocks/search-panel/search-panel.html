@@ -1,0 +1,32 @@
+<!--DEV
+@@include('blocks/search-panel/search-panel.html')
+-->
+
+<div class="offcanvas offcanvas-top  search-panel"
+     tabindex="-1"
+     id="searchOffcanvas"
+     aria-labelledby="searchOffcanvasLabel"
+     role="dialog">
+  <h3 class="offcanvas-title visually-hidden" id="searchOffcanvasLabel">Пошук по сайту</h3>
+  <!-- <div class="offcanvas-header">
+    <button type="button" class="btn-close" data-coreui-dismiss="offcanvas" aria-label="Close"></button>
+  </div> -->
+  <div class="offcanvas-body  search-panel__form-wrapper">
+    <form class="container  search-panel__form" action="#" method="post">
+      <label class="field-text">
+        <span class="field-text__name  visually-hidden">Поле пошуку</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input" type="search" name="search" value="" placeholder="Пошук">
+          <span class="field-text__help-text"></span>
+        </span>
+      </label>
+
+      <button class="btn-secondary" type="sumbit" name="search-submit">
+        <span class="btn-secondary__text">Пошук</span>
+        <span class="btn-secondary__icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"></use></svg>
+        </span>
+      </button>
+    </form>
+  </div>
+</div>

@@ -59,6 +59,10 @@ h6 {
   font-weight: 500;
   text-wrap: balance;
   color: currentcolor;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .h1,
@@ -135,31 +139,13 @@ h6 {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
 p {
   // http://clagnut.com/blog/2395
-  hyphens: auto;
-  hyphenate-limit-chars: 6 3 3;
-  hyphenate-limit-lines: 2;
-  hyphenate-limit-last: always;
-  hyphenate-limit-zone: 8%;
+  // hyphens: auto;
+  // hyphenate-limit-chars: 6 3 3;
+  // hyphenate-limit-lines: 2;
+  // hyphenate-limit-last: always;
+  // hyphenate-limit-zone: 8%;
 
   &:first-child {
     margin-top: 0;

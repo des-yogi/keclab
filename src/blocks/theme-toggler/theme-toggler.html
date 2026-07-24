@@ -1,8 +1,10 @@
 <!--DEV
 Для использования этого файла как шаблона:
-@@include('blocks/theme-toggler/theme-toggler.html')
+@@include('blocks/theme-toggler/theme-toggler.html', {
+  "addClass": ""
+})
 -->
 
-<button id="toggle-theme" class="theme-toggler" type="button" aria-label="Theme toggler">
+<button class="theme-toggler  @@addClass" type="button" aria-label="Theme toggler">
   <span class="theme-toggler__inner"></span>
 </button>

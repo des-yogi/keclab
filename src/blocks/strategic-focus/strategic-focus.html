@@ -1,0 +1,39 @@
+<!--DEV
+@@include('blocks/strategic-focus/strategic-focus.html')
+-->
+
+<section class="container  margin-y  strategic-focus">
+  <header class="row  strategic-focus__header">
+    <div class="strategic-focus__text-col">
+      <h2 class="strategic-focus__title">Стратегічний фокус</h2>
+      <div class="strategic-focus__intro">
+        <p>Наша діяльність поєднує наукову глибину, прикладну аналітику та розвиток людського капіталу.</p>
+      </div>
+    </div>
+    <div class="strategic-focus__link-col">
+      <span class="chip">
+        <span>Стратегія</span>
+      </span>
+    </div>
+  </header>
+
+  <ul class="list-nostyled  row  strategic-focus__list">
+
+    <li class="strategic-focus__item  strategic-focus__item--left">
+      @@include('../../blocks/focus-card/focus-card.html', {
+        "icon": "atom-64",
+        "title": "Наукова діяльність",
+        "text": "<p>Основні пріоритети досліджень лабораторії охоплюватимуть такі сфери, як вступ України до ЄС з урахуванням питань енергетики та клімату, енергетична безпека, енергетичні ринки, клімат та сталий розвиток, а також чисті енергетичні технології.</p><p>Кінцеві результати досліджень включатимуть:</p><ul><li>Наукові статті</li><li>Рекомендації щодо політики</li><li>Дані, моделювання та сценарії</li><li>Інше</li></ul>"
+      })
+    </li>
+
+    <li class="strategic-focus__item  strategic-focus__item--right">
+      @@include('../../blocks/focus-card/focus-card.html', {
+        "icon": "graduation-cap-64",
+        "title": "Наукова діяльність",
+        "text": "<p>Програма професійної підготовки, що пропонує кілька форматів професійного навчання, розроблених для задоволення нагальної потреби у кваліфікованому персоналі для осіб, що приймають рішення, місцевих громад та експертів.</p><p>Університетська програма, що пропонує магістерську та докторську програми з енергетики та клімату, що забезпечить створення сильної наукової спільноти в Україні.</p>"
+      })
+    </li>
+
+  </ul>
+</section>

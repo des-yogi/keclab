@@ -1,60 +1,53 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/main-nav/main-nav.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-
 -->
-<nav id="main-nav" class="main-nav" role="navigation">
-  <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
-  <ul class="main-nav__list">
-    <li class="main-nav__item  main-nav__item--active">
-      <a href="" class="main-nav__link">
-        Страницы
-      </a>
-      <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-        <ul class="main-nav__list  main-nav__list--lvl-2">
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Контакты
-            </a>
-          </li>
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Услуги
-            </a>
-            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-              <ul class="main-nav__list  main-nav__list--lvl-3">
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Вёрстка HTML-CSS
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Стриптиз
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li class="main-nav__item">
-      <a href="https://github.com/nicothin/NTH-start-project" class="main-nav__link">
-        Репозиторий
+<nav id="main-nav" class="main-nav">
+  <ul id="main-nav-list" class="main-nav__list">
+    <li class="main-nav__item  active">
+         <!-- data-coreui-toggle="collapse" -->
+      <a class="main-nav__link  main-nav__link--toggler"
+         href="#mainNavItem-1"
+         role="button"
+         aria-expanded="false"
+         aria-controls="mainNavItem-1">
+        <span>Про лабораторію</span>
+        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#dropdown"></use></svg>
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="http://nicothin.pro/" class="main-nav__link">
-        Сайт автора
+      <a href="#" class="main-nav__link">
+        <span>Події</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">
+        <span>Новини</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
+         <!-- data-coreui-toggle="collapse" -->
+      <a class="main-nav__link  main-nav__link--toggler"
+         href="#mainNavItem-2"
+         role="button"
+         aria-expanded="false"
+         aria-controls="mainNavItem-2">
+        <span>Публікації</span>
+        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#dropdown"></use></svg>
+      </a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">
+        <span>Дані та моделювання</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">
+        <span>Освіта</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">
+        <span>Контакти</span>
       </a>
     </li>
   </ul>

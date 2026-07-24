@@ -59,7 +59,8 @@
 
 @mixin field-focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  border-color: var(--teal-500); //--teal-500
+  box-shadow: 0 0 0 4px rgba(21, 109, 209, 0.8);//rgba(#156dd1, 0.24)
 }
 
 
@@ -69,3 +70,4 @@
   line-height: $line-height;
   font-weight: 700;
 }
+

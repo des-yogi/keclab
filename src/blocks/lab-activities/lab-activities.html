@@ -1,0 +1,70 @@
+<!--DEV
+@@include('blocks/lab-activities/lab-activities.html')
+-->
+
+<section class="container  margin-y  lab-activities">
+  <header class="row  lab-activities__header">
+    <div class="lab-activities__chips-col">
+      <span class="chip">
+        <span>НАПРЯМИ ДіяльнОСТІ</span>
+      </span>
+    </div>
+    <div class="lab-activities__text-col">
+      <h2 class="lab-activities__title">Діяльність лабораторії</h2>
+      <div class="lab-activities__intro">
+        <p>Сприяти академічній досконалості в галузі досліджень енергетики та клімату в Україні.</p>
+        <p>Проводити наукові дослідження та надавати рекомендації політикам, експертам та широкій громадськості України та ЄС щодо шляху України до ЄС.</p>
+      </div>
+    </div>
+  </header>
+
+  <ul class="list-nostyled  row  lab-activities__row">
+    <li class="lab-activities__item">
+      @@include('../../blocks/activity-card/activity-card.html', {
+        "img": "atom-64",
+        "title": "Research and policy analysis in energy and climate",
+        "text": "<p>KECLab проводить прикладні та академічні дослідження у сфері енергетики та кліматичної політики. Ми поєднуємо системний аналіз, моделювання та оцінку регуляторного впливу для формування обґрунтованих рекомендацій щодо розвитку енергетичного сектору та декарбонізації.</p>"
+      })
+    </li>
+
+    <li class="lab-activities__item">
+      @@include('../../blocks/activity-card/activity-card.html', {
+        "img": "atom-64",
+        "title": "Data and modelling",
+        "text": "<p>Ми готуємо policy papers, аналітичні звіти та академічні публікації, а також розробляємо відкриті набори даних і візуалізації. Наші матеріали спрямовані на підвищення прозорості ринку та підтримку прийняття рішень на основі доказів.</p>"
+      })
+    </li>
+
+    <li class="lab-activities__item">
+      @@include('../../blocks/activity-card/activity-card.html', {
+        "img": "atom-64",
+        "title": "Освіта та розвиток спроможності",
+        "text": "<p>KECLab сприяє формуванню нової генерації фахівців у сфері енергетики та кліматичної політики. Ми розробляємо навчальні курси, проводимо семінари та тренінги, а також інтегруємо сучасні європейські підходи до освітніх програм.</p>"
+      })
+    </li>
+
+    <li class="lab-activities__item">
+      @@include('../../blocks/activity-card/activity-card.html', {
+        "img": "atom-64",
+        "title": "Міжнародні партнерства та нетворкінг",
+        "text": "<p>Ми розвиваємо співпрацю з європейськими дослідницькими центрами, університетами та міжнародними організаціями. Таке партнерство сприяє обміну знаннями, інтеграції України до європейського енергетичного простору та реалізації спільних проєктів.</p>"
+      })
+    </li>
+
+    <li class="lab-activities__item">
+      @@include('../../blocks/activity-card/activity-card.html', {
+        "img": "atom-64",
+        "title": "Незалежний консалтинг з питань політики",
+        "text": "<p>KECLab надає експертні консультації органам державної влади, міжнародним партнерам і бізнесу щодо розробки та оцінки енергетичної та кліматичної політики. Ми гарантуємо незалежність, наукову обґрунтованість і відсутність конфлікту інтересів.</p>"
+      })
+    </li>
+
+    <li class="lab-activities__item">
+      @@include('../../blocks/activity-card/activity-card.html', {
+        "img": "atom-64",
+        "title": "Поширення знань та освітні заходи",
+        "text": "<p>Ми організовуємо публічні дискусії, конференції, круглі столи та відкриті лекції, спрямовані на формування якісного професійного діалогу. KECLab виступає платформою для взаємодії науки, політики та ринку.</p>"
+      })
+    </li>
+  </ul>
+</section>

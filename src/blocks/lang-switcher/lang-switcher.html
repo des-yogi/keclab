@@ -1,18 +1,20 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/lang-switcher/lang-switcher.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-<div class="lang-switcher  dropdown" id="lang-switcher">
-  <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
-  <div class="dropdown-menu" aria-labelledby="lang-switcher">
-    <a class="dropdown-item" href="#">UA</a>
-    <a class="dropdown-item" href="#">RU</a>
-  </div>
-</div>
-
+@ @include('blocks/lang-switcher/lang-switcher.html', {
+  "addClass": "mob-hidden"
+})
 -->
+
+<div class="dropdown-center  lang-switcher  @addClass">
+  <button class="dropdown-toggle  lang-switcher__toggle"
+          type="button"
+          data-coreui-toggle="dropdown"
+          data-coreui-offset="-1,0"
+          aria-expanded="false">
+    <span class="lang-switcher__current">uk</span>
+  </button>
+  <ul class="dropdown-menu  lang-switcher__menu">
+    <li>
+      <a class="dropdown-item  lang-switcher__item" href="#">en</a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,43 @@
+<!--DEV
+@@include('blocks/post-card/post-card.html', {
+  "img": "cover-1",
+  "tag": "digest",
+  "tagColor": "",
+  "date": "Січневе видання 2026",
+  "title": "KECLabEnergy and Climate Digest",
+  "text": "Щомісячний аналітичний огляд ключових подій, регуляторних змін і ринкових тенденцій у сфері енергетики та кліматичної політики України з фокусом на стратегічні наслідки."
+})
+-->
+
+<article class="post-card">
+  <div class="post-card__inner">
+    <div class="post-card__text-wrapper">
+
+      <div class="post-card__top">
+        <span class="badge  @@tagColor">@@tag</span>
+        <span class="post-card__month">@@date</span>
+      </div>
+
+      <h3 class="h4  post-card__title">
+        <a href="#">@@title</a>
+      </h3>
+
+      <p class="post-card__descr">@@text</p>
+
+      <div class="post-card__footer">
+        <p class="post-card__authors">Автори: Доктор Сюзанна Ніс, Доктор Георг Захманн, Доктор Франк Мейсснер</p>
+
+        @@include('../../blocks/faux-link/faux-link.html')
+      </div>
+    </div>
+
+    <a href="#" class="post-card__img" tabindex="-1" aria-label="@@title">
+      <picture>
+        <!-- 000 -->
+        <source srcset="img/@@img.webp" type="image/webp">
+        <img src="img/@@img.jpg" alt="@@title" width="706" height="1000" loading="lazy">
+      </picture>
+    </a>
+
+  </div>
+</article>

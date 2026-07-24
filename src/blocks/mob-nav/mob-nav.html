@@ -1,0 +1,160 @@
+<!--DEV
+Для использования этого файла как шаблона:
+@@include('blocks/mob-nav/mob-nav.html')
+-->
+
+<div class="container  mob-nav__theme-toggler-container  tablet-hidden">
+  @@include('../../blocks/theme-toggler/theme-toggler.html', {
+    "addClass": "theme-toggler--white-bg"
+  })
+</div>
+
+<nav class="mob-nav">
+
+  <ul id="mob-nav" class="mob-nav__list">
+    <li class="container  mob-nav__item  collapsed  active">
+      <a href="#"
+         class="mob-nav__link"
+         data-coreui-toggle="collapse"
+         data-coreui-target="#collapse-1"
+         aria-expanded="false"
+         aria-controls="collapse-1">
+        <span>Про лабораторію</span>
+      </a>
+      <ul id="collapse-1"
+           class="mob-nav__list  mob-nav__list--lvl2  collapse"
+           data-coreui-parent="#mob-nav">
+        <li class="mob-nav__item  mob-nav__item--lvl2  active">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Про KECLab
+          </a>
+        </li>
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Наша команда
+          </a>
+        </li>
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Експерти
+          </a>
+        </li>
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Консультативна рада
+          </a>
+        </li>
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Партнери
+          </a>
+        </li>
+     </ul>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Події</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Новини</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item collapsed">
+      <a href="#"
+         class="mob-nav__link"
+         data-coreui-toggle="collapse"
+         data-coreui-target="#collapse-2"
+         aria-expanded="false"
+         aria-controls="collapse-2">
+        <span>Публікації</span>
+      </a>
+      <ul id="collapse-2"
+           class="mob-nav__list  mob-nav__list--lvl2  collapse"
+           data-coreui-parent="#mob-nav">
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Усі публікації
+          </a>
+        </li>
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Digest
+          </a>
+        </li>
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Policy Papers
+          </a>
+        </li>
+        <li class="mob-nav__item  mob-nav__item--lvl2">
+          <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+            Partner Publications
+          </a>
+        </li>
+
+        <li class="mob-nav__item  mob-nav__item--pub">
+          @@include('../../blocks/search-pub/search-pub.html')
+        </li>
+     </ul>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Дані та моделювання</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Освіта</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+
+
+    <!-- <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li>
+    <li class="container  mob-nav__item">
+      <a href="#" class="mob-nav__link">
+        <span>Контакти</span>
+      </a>
+    </li> -->
+  </ul>
+</nav>

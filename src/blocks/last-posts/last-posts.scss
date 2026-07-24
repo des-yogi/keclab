@@ -1,0 +1,115 @@
+// В этом файле должны быть стили для БЭМ-блока last-posts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.last-posts {
+  $block-name: &; // #{$block-name}__element
+
+  &__header {
+    gap: 24px 0;
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(md, 8);
+  }
+
+  &__link-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+
+    @media (min-width: $screen-md) {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__intro {
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  //&__list {
+  //}
+
+  &__item {
+    @include col(xs, 12);
+    @include col(xxl, 6);
+
+    & + & {
+      margin-top: 8px;
+    }
+
+    &:first-child {
+      @include col(xxl, 12);
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 40px;
+      }
+
+      .post-card {
+
+        @media (min-width: $screen-xl) {
+          padding-top: 130px;
+        }
+
+        @media (min-width: $screen-xxl) {
+          padding-top: 158px;
+        }
+      }
+
+      .post-card__inner {
+        position: relative;
+      }
+
+      .post-card__text-wrapper {
+
+        @media (min-width: $screen-xl) {
+          padding-right: 328px; // 328+24
+        }
+
+        @media (min-width: $screen-xxl) {
+          padding-right: 370px; //330+40
+        }
+      }
+
+      .post-card__img {
+
+        @media (min-width: $screen-xl) {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          max-width: 304px;
+          aspect-ratio: 0.71;
+          border-top-right-radius: 0;
+        }
+
+        @media (min-width: $screen-xxl) {
+          max-width: 330px;
+        }
+      }
+    }
+  }
+}

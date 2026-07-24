@@ -60,5 +60,17 @@
       background-image: svg-load('../blocks/theme-toggler/bg-img/moon.svg', fill=#ffffff);
     }
   }
+
+  &--white-bg {
+    border-color: var(--gray-20);
+
+    :root[data-theme="dark"] & {
+      border-color: rgba($white, 0.12);
+    }
+
+    #{$block-name}__inner {
+      background-image: svg-load('../blocks/theme-toggler/bg-img/sun.svg', fill=#ffba08);
+    }
+  }
 }
 
