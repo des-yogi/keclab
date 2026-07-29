@@ -1,0 +1,73 @@
+<!--DEV
+@@include('blocks/scenario-modeling/scenario-modeling.html')
+-->
+
+<section class="container  scenario-modeling">
+
+  <header class="scenario-modeling__header">
+    <span class="chip">
+      <span>Інтерактивна аналітика</span>
+    </span>
+
+    <div class="scenario-modeling__title-wrapper">
+      <h2 class="scenario-modeling__title">Енергетичний баланс та сценарії</h2>
+
+      <section class="filters">
+        <h2 class="visually-hidden">Фільтр вмісту</h2>
+
+        <form class="form filters__form" action="#" method="get">
+          <fieldset class="form__fieldset  filters__fieldset">
+            <legend class="visually-hidden">Фільтрування за сценарієм</legend>
+            <div class="filters__section">
+              <label class="filters__label">
+                <span class="filters__name-text">Все</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="" checked>
+              </label>
+              <label class="filters__label">
+                <span class="filters__name-text">Генерація</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="generation">
+              </label>
+              <label class="filters__label">
+                <span class="filters__name-text">Споживання</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="consumption">
+              </label>
+              <label class="filters__label">
+                <span class="filters__name-text">Імпорт/Експорт</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="imp-exp">
+              </label>
+            </div>
+          </fieldset>
+
+        </form>
+
+      </section>
+
+    </div>
+
+  </header>
+
+  <ul class="list-nostyled  scenario-modeling__list">
+
+    <li class="scenario-modeling__item">
+      <figure class="scenario-modeling__fig">
+        <figcaption class="visually-hidden  scenario-modeling__caption">Виробництво електроенергії за джерелами, ТВт·год/рік (2020–2030, прогноз з 2026)</figcaption>
+
+        <div class="scenario-modeling__img">
+          <img src="img/scenario-modeling-1.svg" alt="Alt text" width="1600" height="560" loading="lazy">
+        </div>
+      </figure>
+    </li>
+
+    <li class="scenario-modeling__item">
+      <figure class="scenario-modeling__fig">
+        <figcaption class="visually-hidden  scenario-modeling__caption">Сукупна встановлена потужність ВДЕ за сценаріями, ГВт (2025–2030)</figcaption>
+
+        <div class="scenario-modeling__img">
+          <img src="img/scenario-modeling-2.svg" alt="Alt text" width="1600" height="560" loading="lazy">
+        </div>
+      </figure>
+    </li>
+
+  </ul>
+
+</section>

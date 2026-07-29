@@ -18,6 +18,12 @@
 .data-modeling {
   $block-name: &; // #{$block-name}__element
 
+  &__cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+
   &__header {
     gap: 24px 0;
     margin-bottom: 40px;
@@ -47,4 +53,10 @@
       font-size: $font-size-lg;
     }
   }
+
+  // &--bg {
+  //   padding-top: 48px;
+  //   padding-bottom: 48px;
+  //   background-color: var(--diagram-bg);
+  // }
 }

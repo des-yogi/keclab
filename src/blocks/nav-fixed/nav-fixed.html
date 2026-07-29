@@ -1,0 +1,31 @@
+<!--DEV
+@@include('blocks/nav-fixed/nav-fixed.html', {
+  "isFilters": true,
+  "isLinks": false,
+  "isHybrid": false
+})
+-->
+
+@@if(isFilters)
+  <div class="container  nav-fixed">
+    <div class="nav-fixed__inner">
+      @@include('../../blocks/filters/filters.html')
+    </div>
+  </div>
+@@endif
+
+@@if(isLinks)
+  <div class="container  nav-fixed  nav-fixed--overflow-auto  invisible-scrollbar">
+    <nav class="nav-fixed__inner">
+      @@include('../../blocks/nav-link/nav-link.html')
+    </nav>
+  </div>
+@@endif
+
+@@if(isHybrid)
+  <div class="container  nav-fixed">
+    <div class="nav-fixed__inner">
+      @@include('../../blocks/nav-hybrid/nav-hybrid.html')
+    </div>
+  </div>
+@@endif

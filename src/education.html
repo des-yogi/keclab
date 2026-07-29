@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Освіта</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html')
+
+        <span id="menuOverlay" class="menu-overlay"></span>
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--blue-700)",
+          "chipText": "Навчальні програми",
+          "title": "Освіта",
+          "intro": "<p>Нагальність підтримки українських полісімейкерів зросла з моменту прийняття Європейською Радою рішення про початок переговорів про вступ до ЄС. Хоча переговори про вступ до ЄС ще займуть певний час, визначення пріоритетів у сфері енергетики та клімату є важливим для відновлення України.</p>",
+          "isTags": false,
+          "paddBottomClass": ""
+        })
+
+      </div>
+
+      <main class="main">
+
+        @@include('blocks/nav-fixed/nav-fixed.html', {
+          "isFilters": true
+        })
+
+        <section class="container  margin-y  news__wrapper">
+          <h2 class="visually-hidden">Перелік програм</h2>
+
+          <ul class="list-nostyled  row  news__row">
+
+            <li class="news__col">
+              @@include('blocks/news-card/news-card.html', {
+                "img": "news-img-1",
+                "tag": "Децентралізована програма",
+                "title": "Навчальна програма з лідерства в енергетиці та кліматі",
+                "text": "Реєстрацію завершено: 21 Квітня 2026"
+              })
+            </li>
+
+            <li class="news__col">
+              @@include('blocks/news-card/news-card.html', {
+                "img": "news-img-2",
+                "tag": "централізована програма",
+                "title": "PRO Green Deal для місцевих громад 2026",
+                "text": "Реєстрацію завершено: 21 Квітня 2026"
+              })
+            </li>
+
+            <li class="news__col">
+              @@include('blocks/news-card/news-card.html', {
+                "img": "news-img-3",
+                "tag": "Відновлювана енергетика",
+                "title": "PRO Green Deal: EU Accession",
+                "text": "У Одеській області стартував проєкт вітропарку потужністю 124 МВт за участі міжнародних інвесторів. "
+              })
+            </li>
+
+            <li class="news__col">
+              @@include('blocks/news-card/news-card.html', {
+                "img": "news-img-1",
+                "tag": "Децентралізована програма",
+                "title": "Навчальна програма з лідерства в енергетиці та кліматі",
+                "text": "Реєстрацію завершено: 21 Квітня 2026"
+              })
+            </li>
+
+            <li class="news__col">
+              @@include('blocks/news-card/news-card.html', {
+                "img": "news-img-2",
+                "tag": "централізована програма",
+                "title": "PRO Green Deal для місцевих громад 2026",
+                "text": "Реєстрацію завершено: 21 Квітня 2026"
+              })
+            </li>
+
+            <li class="news__col">
+              @@include('blocks/news-card/news-card.html', {
+                "img": "news-img-3",
+                "tag": "Відновлювана енергетика",
+                "title": "PRO Green Deal: EU Accession",
+                "text": "У Одеській області стартував проєкт вітропарку потужністю 124 МВт за участі міжнародних інвесторів. "
+              })
+            </li>
+
+          </ul>
+
+          @@include('blocks/pagination/pagination.html')
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--DEV
+@@include('blocks/hero-secondary/hero-secondary.html', {
+  "bgColor": "var(--green-700)",
+  "chipText": "Заходи KECLab",
+  "title": "Події",
+  "intro": "<p>Долучайтеся до фахових дискусій, презентацій аналітичних досліджень та відкритих лекцій за участю провідних українських і міжнародних експертів з енергетики та клімату.</p>",
+  "isTags": false,
+  "paddBottomClass": ""
+})
+-->
+
+<div class="hero-secondary"
+     style="background-color: @@bgColor;">
+
+  <div class="blob-animated__wrapper" role="presentation">
+    <img src="img/blob-animated.svg" class="blob-animated" width="1920" height="664" alt="" loading="lazy">
+  </div>
+
+
+  <div class="container  hero-secondary__inner  @@paddBottomClass">
+    <!-- hero-secondary__inner--pb-large -->
+
+    @@include('../../blocks/breadcrumbs/breadcrumbs.html')
+
+    <div class="row hero-secondary__row">
+      <div class="hero-secondary__col">
+        <div class="hero-secondary__text">
+          <span class="chip">@@chipText</span>
+          <h1 class="hero-secondary__page-title">@@title</h1>
+          <div class="hero-secondary__intro">
+            @@intro
+          </div>
+
+          @@if(isTags)
+            <div class="hero-secondary__tag-wrapper">
+              @@include('../../blocks/hero-tag/hero-tag.html')
+            </div>
+          @@endif
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

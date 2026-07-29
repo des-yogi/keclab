@@ -1,0 +1,52 @@
+<!--DEV
+@@include('blocks/filters/filters.html')
+-->
+
+<section class="filters">
+  <h2 class="visually-hidden">Фільтр вмісту</h2>
+
+  <form class="form filters__form" action="#" method="get">
+    <fieldset class="form__fieldset  filters__fieldset">
+      <legend class="visually-hidden">Фільтрування за датою</legend>
+      <div class="filters__section">
+        <label class="filters__label">
+          <span class="filters__name-text">Всі</span>
+          <input type="radio" class="visually-hidden" name="date" value="" checked>
+        </label>
+        <label class="filters__label">
+          <span class="filters__name-text">Майбутні</span>
+          <input type="radio" class="visually-hidden" name="date" value="date-upcoming">
+        </label>
+        <label class="filters__label">
+          <span class="filters__name-text">Минулі</span>
+          <input type="radio" class="visually-hidden" name="date" value="date-past">
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form__fieldset  filters__fieldset">
+      <legend class="visually-hidden">Фільтрування за форматом</legend>
+      <div class="filters__section">
+        <label class="filters__label  filters__label--teal">
+          <span class="filters__name-text">Будь-який формат</span>
+          <input type="radio" class="visually-hidden" name="format" value="" checked>
+        </label>
+        <label class="filters__label  filters__label--teal">
+          <span class="filters__name-text">Онлайн</span>
+          <input type="radio" class="visually-hidden" name="format" value="format-online">
+        </label>
+        <label class="filters__label  filters__label--teal">
+          <span class="filters__name-text">Офлайн</span>
+          <input type="radio" class="visually-hidden" name="format" value="format-offline">
+        </label>
+        <label class="filters__label  filters__label--teal">
+          <span class="filters__name-text">Гібрид</span>
+          <input type="radio" class="visually-hidden" name="format" value="format-hybrid">
+        </label>
+      </div>
+    </fieldset>
+
+    <p class="filters__total">2 заходи</p>
+  </form>
+
+</section>

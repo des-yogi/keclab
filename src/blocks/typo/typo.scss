@@ -58,7 +58,7 @@ h6 {
   font-family: $font-family;
   font-weight: 500;
   text-wrap: balance;
-  color: currentcolor;
+  color: var(--title-color);
 
   &:first-child {
     margin-top: 0;

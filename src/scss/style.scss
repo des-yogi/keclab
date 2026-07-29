@@ -58,6 +58,21 @@
 @use '../blocks/social-net/social-net';
 @use '../blocks/copyrights/copyrights';
 @use '../blocks/search-panel/search-panel';
+@use '../blocks/hero-secondary/hero-secondary';
+@use '../blocks/nav-fixed/nav-fixed';
+@use '../blocks/hero-tag/hero-tag';
+@use '../blocks/filters/filters';
+@use '../blocks/nav-link/nav-link';
+@use '../blocks/news/news';
+@use '../blocks/nav-hybrid/nav-hybrid';
+@use '../blocks/field-select/field-select';
+@use '../blocks/publications/publications';
+@use '../blocks/scenario-modeling/scenario-modeling';
+@use '../blocks/dataset-catalog/dataset-catalog';
+@use '../blocks/dataset-card/dataset-card';
+@use '../blocks/rest-api-banner/rest-api-banner';
+@use '../blocks/models/models';
+@use '../blocks/model-card/model-card';
 
 // Подключения из addCssAfter:
 @use './print' as *;

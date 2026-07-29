@@ -5,7 +5,7 @@
   $block-name: &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   &__name {
     @include field-name;
@@ -19,20 +19,21 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    font-size: inherit;
+    height: 56px;
+    padding: $field-padding-vertical 40px $field-padding-vertical  $field-padding-horizontal;
+    font-size: $font-size;
     font-weight: inherit;
     font-family: inherit;
     line-height: inherit;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    appearance: none;
-    color: $title-color;
-    background-color: $white;
+    color: var(--text-color);
+    background-color: var(--bg-input);
     background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$border-color);
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 20px;
+    border: 1px solid var(--border-input);
+    border-radius: $border-radius;
+    appearance: none;
 
     &[multiple] {
       background-image: none;

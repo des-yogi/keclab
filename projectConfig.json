@@ -54,7 +54,22 @@
     "subscription": [],
     "social-net": [],
     "copyrights": [],
-    "search-panel": []
+    "search-panel": [],
+    "hero-secondary": [],
+    "nav-fixed": [],
+    "hero-tag": [],
+    "filters": [],
+    "nav-link": [],
+    "news": [],
+    "nav-hybrid": [],
+    "field-select": [],
+    "publications": [],
+    "scenario-modeling": [],
+    "dataset-catalog": [],
+    "dataset-card": [],
+    "rest-api-banner": [],
+    "models": [],
+    "model-card": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",
