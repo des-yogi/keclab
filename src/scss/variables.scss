@@ -46,7 +46,8 @@
 
 [data-theme="light"] {
   --bg-color: var(--gray-20);
-  --text-color: var(--blue-800);
+  --text-color: var(--gray-600);
+  --title-color: var(--blue-800);
 
   --border-color: var(--blue-50);
 
@@ -54,6 +55,8 @@
 
   --bg-input: var(--gray-20);
   --border-input: var(--blue-50);
+
+  // --tab-control-hover: var(--blue-50);
 
   --link-color: var(--blue-700);
   --link-color-hover: var(--blue-800);
@@ -66,11 +69,16 @@
   --scrollbar-color: var(--gray-20);
   --scrollbar-color-thumb: var(--blue-600);
   --scrollbar-color-thumb-hover: var(--blue-800);
+
+  --pagination-bg-active: var(--blue-700);
+
+  --diagram-bg: var(--gray-20);
 }
 
 [data-theme="dark"] {
   --bg-color: var(--blue-600);
-  --text-color: var(--white);
+  --text-color: var(--gray-100);
+  --title-color: var(--white);
 
   --border-color: var(--blue-700);
 
@@ -78,6 +86,8 @@
 
   --bg-input: var(--blue-950);
   --border-input: var(--gray-600);
+
+  // --tab-control-hover: var(--blue-400);
 
   --link-color: var(--blue-100);
   --link-color-hover: var(--yellow-500);
@@ -90,6 +100,10 @@
   --scrollbar-color: var(--blue-600);
   --scrollbar-color-thumb: var(--blue-500);
   --scrollbar-color-thumb-hover: var(--blue-950);
+
+  --pagination-bg-active: var(--blue-500);
+
+  --diagram-bg: var(--blue-800);
 }
 
 // Базовые цвета https://colorscheme.ru/color-converter.html

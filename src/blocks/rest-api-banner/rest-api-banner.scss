@@ -1,0 +1,86 @@
+// В этом файле должны быть стили для БЭМ-блока rest-api-banner, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.rest-api-banner {
+  $block-name: &; // #{$block-name}__element
+
+  .blob-animated {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    left: 0;
+    //width: 100%;
+    //height: 100%;
+    //transform: none;
+
+    @media (min-width: $screen-md) {
+      top: -20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      top: -80px;
+      left: -10px;
+      right: -10px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      top: -120px;
+      left: -20px;
+      right: -20px;
+    }
+  }
+
+  .blob-animated__wrapper {
+    z-index: 0;
+  }
+
+  &__inner {
+    position: relative;
+    isolation: isolate;
+    padding: 24px 16px;
+    color: var(--white);
+    background: linear-gradient(to bottom, var(--blue-700), var(--blue-800) 100%);
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      padding: 48px 40px;
+      border-radius: $border-radius-lg;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: inherit;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size-lg;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<!--DEV
+@@include('blocks/dataset-card/dataset-card.html', {
+  "icon": "database",
+  "tag": "Ринок",
+  "title": "Баланс електроенергії України",
+  "descr": "Щомісячні дані виробництва, споживання та балансу електроенергії по всіх джерелах генерації з 2015 року.",
+  "source": "Укренерго / KECLab",
+  "date": "Лютий 2026",
+  "format": "CSV, XLSX",
+  "license": "CC BY 4.0"
+})
+-->
+
+<article class="dataset-card">
+
+  <div class="dataset-card__top">
+    <span class="dataset-card__icon">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@icon"></use></svg>
+    </span>
+    <span class="badge">@@tag</span>
+  </div>
+
+  <div class="dataset-card__main">
+    <h3 class="h6  dataset-card__title">@@title</h3>
+    <p class="dataset-card__descr">@@descr</p>
+  </div>
+
+  <table class="dataset-card__table">
+    <tr>
+      <th>Джерело</th>
+      <td>@@source</td>
+    </tr>
+    <tr>
+      <th>Оновлено</th>
+      <td>@@date</td>
+    </tr>
+    <tr>
+      <th>Формат</th>
+      <td>@@format</td>
+    </tr>
+    <tr>
+      <th>Ліцензія</th>
+      <td>@@license</td>
+    </tr>
+  </table>
+
+  <div class="dataset-card__footer">
+    <a href="#" class="btn" download>
+      <span class="btn__text">
+        Завантажити
+        <span class="visually-hidden">@@title</span>
+      </span>
+      <span class="btn__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+      </span>
+    </a>
+  </div>
+
+</article>

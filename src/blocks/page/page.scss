@@ -382,6 +382,14 @@ a {
 
 .main {
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    //padding-top: 48px;
+    //padding-bottom: 48px;
+  }
+
   &--index {
 
     .margin-y {
@@ -555,7 +563,7 @@ a {
   align-items: center;
   gap: 6px;
   font-size: $font-size-sm;
-  white-space: nowrap;
+  //white-space: nowrap;
   line-height: 1.25;
   color: var(--gray-600);
 
@@ -564,6 +572,7 @@ a {
   }
 
   svg {
+    flex: 0 0 20px;
     width: 20px;
     height: 20px;
     fill: var(--teal-500);
@@ -583,10 +592,21 @@ a {
     right: 0;
     z-index: -1;
     width: 100%;
-    //height: auto;
+    height: 100%;
     filter: blur(30px);
     overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      //object-fit: contain;
+      //object-position: center;
+    }
   }
+}
+
+figure {
+  margin: 0;
 }
 
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));

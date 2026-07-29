@@ -302,53 +302,6 @@ initGlobal();
 // При необходимости в css файле блока можно кастомизировать стили под тему
 // =============================================================================
 
-/*import { OverlayScrollbars } from 'overlayscrollbars';
-
-const DEFAULT_OPTIONS = {
-  scrollbars: {
-    theme: 'os-theme-dark', // дефолтная тема
-    autoHide: 'scroll',
-  },
-};
-
-function createScrollbar(target, options = {}) {
-  if (!target) return null;
-
-  return OverlayScrollbars(target, {
-    ...DEFAULT_OPTIONS,
-    ...options,
-    scrollbars: {
-      ...DEFAULT_OPTIONS.scrollbars,
-      ...options.scrollbars,
-    },
-  });
-}
-
-// Kept private — exposed only through lock/unlock below, so callers
-// never touch the raw instance directly.
-let pageScrollbar = null;
-
-export function initPageScrollbar() {
-  pageScrollbar = createScrollbar(document.body);
-  return pageScrollbar;
-}
-
-export function lockPageScroll() {
-  pageScrollbar?.options({ overflow: { y: 'hidden' } });
-}
-
-export function unlockPageScroll() {
-  pageScrollbar?.options({ overflow: { y: 'scroll' } });
-}
-
-// Any block can opt in by adding [data-scrollbar] to its markup —
-// no need to touch this module when a new scrollable block appears elsewhere.
-export function initCustomScrollbars(options = {}) {
-  const elements = document.querySelectorAll('[data-scrollbar]');
-  return Array.from(elements).map((element) => createScrollbar(element, options));
-}*/
-
-
 // =============================================================================
 //  Fancybox UI
 // =============================================================================

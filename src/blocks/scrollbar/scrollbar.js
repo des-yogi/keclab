@@ -72,17 +72,3 @@ export function initCustomScrollbars(options = {}) {
 
 initPageScrollbar();
 initCustomScrollbars();
-
-//import { initPageScrollbar, initCustomScrollbars } from '../../js/index.js';
-// Основная инициализация плагина в index.js
-
-/*(function () {
-  initPageScrollbar();
-  initCustomScrollbars();
-
-  // Разметка любого будущего блока для инициализации — просто атрибут, без единой правки в JS
-  // Добавить атрибут "data-scrollbar" на элемент-контейнер, например:
-  // <div class="table__scroll" data-scrollbar>
-  //   <table class="table">...</table>
-  // </div>
-})();*/

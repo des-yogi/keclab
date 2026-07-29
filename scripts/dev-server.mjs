@@ -1,5 +1,6 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { existsSync } from 'node:fs';
 import chokidar from 'chokidar';
 import browserSync from 'browser-sync';
 import { build } from './build.mjs';
@@ -42,9 +43,33 @@ export async function devServer() {
   await build({ mode: 'development' });
 
   // 2. старт browser-sync
+  // const bs = browserSync.create();
+  // bs.init({
+  //   server: buildDir,
+  //   files: [`${buildDir}/**/*`],
+  //   open: true,
+  //   notify: false,
+  // });
   const bs = browserSync.create();
   bs.init({
-    server: buildDir,
+    server: {
+      baseDir: buildDir,
+      middleware: [
+        (req, res, next) => {
+          const hasExt = path.extname(req.url.split('?')[0]) !== '';
+          if (hasExt || req.url === '/') {
+            return next();
+          }
+
+          const htmlPath = path.join(buildDir, req.url.split('?')[0] + '.html');
+          if (existsSync(htmlPath)) {
+            req.url = req.url.split('?')[0] + '.html';
+          }
+
+          next();
+        },
+      ],
+    },
     files: [`${buildDir}/**/*`],
     open: true,
     notify: false,

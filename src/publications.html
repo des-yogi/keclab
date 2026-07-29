@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Publications</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html')
+
+        <span id="menuOverlay" class="menu-overlay"></span>
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--blue-700)",
+          "chipText": "аналітичні матеріал",
+          "title": "Публікації",
+          "intro": "<p>Ґрунтовні дослідження, policy papers та експертні звіти KECLab щодо енергетичної безпеки, декарбонізації та європейської інтеграції України.</p>",
+          "isTags": false,
+          "paddBottomClass": ""
+        })
+
+      </div>
+
+      <main class="main">
+
+        @@include('blocks/nav-fixed/nav-fixed.html', {
+          "isHybrid": true
+        })
+
+        <section class="container  margin-y  publications">
+          <h2 class="visually-hidden">Перелік публикацій</h2>
+
+          <ul class="list-nostyled  row  publications__list">
+
+            <li class="publications__item">
+              @@include('blocks/post-card/post-card.html', {
+                "isLandscape": false,
+                "img": "cover-1",
+                "tag": "digest",
+                "tagColor": "badge--green",
+                "date": "Січневе видання 2026",
+                "title": "KECLabEnergy and Climate Digest",
+                "text": "Щомісячний аналітичний огляд ключових подій, регуляторних змін і ринкових тенденцій у сфері енергетики та кліматичної політики України з фокусом на стратегічні наслідки."
+              })
+            </li>
+
+            <li class="publications__item">
+              @@include('blocks/post-card/post-card.html', {
+                "isLandscape": true,
+                "img": "cover-4-wide",
+                "tag": "REPORT",
+                "tagColor": "",
+                "date": "Квітневе видання 2026",
+                "title": "KÉCLab Energy & Climate Policy Monitor",
+                "text": "Аналітичне дослідження ключових змін у законодавстві та регуляторній базі енергетичної та кліматичної сфери, з акцентом на впровадженні Зеленого курсу ЄС та реформах українського ринку."
+              })
+            </li>
+
+            <li class="publications__item">
+              @@include('blocks/post-card/post-card.html', {
+                "isLandscape": true,
+                "img": "cover-5-wide",
+                "tag": "RESEARCH",
+                "tagColor": "",
+                "date": "Травневе видання 2026",
+                "title": "KÉCLab Renewable Energy Transition Report",
+                "text": "Комплексний аналіз прогресу України у переході до відновлюваних джерел енергії, оцінка інвестиційного потенціалу та бар'єрів для розвитку чистої енергетики в контексті євроінтеграції."
+              })
+            </li>
+
+            <li class="publications__item">
+              @@include('blocks/post-card/post-card.html', {
+                "isLandscape": false,
+                "img": "cover-2",
+                "tag": "Policy Papers",
+                "tagColor": "badge--green",
+                "date": "Лютневе видання 2026",
+                "title": "KECLab Energy & Climate Review",
+                "text": "Розширений огляд структурних змін в енергетичному секторі, що поєднує системний аналіз, міжнародний контекст і оцінку довгострокових трендів декарбонізації та інтеграції до ЄС."
+              })
+            </li>
+
+            <li class="publications__item">
+              @@include('blocks/post-card/post-card.html', {
+                "isLandscape": false,
+                "img": "cover-3",
+                "tag": "Partner Publications",
+                "tagColor": "badge--teal",
+                "date": "Березневе видання 2026",
+                "title": "KECLab Energy and Climate Brief",
+                "text": "Короткі аналітичні матеріали з конкретних питань енергетичної та кліматичної політики, підготовлені для підтримки швидкого та обґрунтованого прийняття рішень."
+              })
+            </li>
+
+            <li class="publications__item">
+              @@include('blocks/post-card/post-card.html', {
+                "isLandscape": false,
+                "img": "cover-1",
+                "tag": "digest",
+                "tagColor": "badge--green",
+                "date": "Січневе видання 2026",
+                "title": "KECLabEnergy and Climate Digest",
+                "text": "Щомісячний аналітичний огляд ключових подій, регуляторних змін і ринкових тенденцій у сфері енергетики та кліматичної політики України з фокусом на стратегічні наслідки."
+              })
+            </li>
+
+          </ul>
+
+          @@include('blocks/pagination/pagination.html')
+
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--DEV
+@@include('blocks/models/models.html')
+-->
+
+<section class="container  margin-y  models">
+  <header class="models__header">
+    <span class="chip">
+      <span>Інструменти</span>
+    </span>
+    <h2 class="models__title">Моделі та аналітичні інструменти</h2>
+  </header>
+
+  <ul class="list-nostyled  row  models__row">
+
+    <li class="models__col">
+      @@include('../../blocks/model-card/model-card.html', {
+        "badge": "Python / XLSX",
+        "title": "MEВ-UA: модель енергетичного балансу",
+        "descr": "Відкрита оптимізаційна модель енергосистеми України на базі OSeMOSYS. Дозволяє будувати сценарії розвитку генерації, попиту та ціноутворення до 2050 року."
+      })
+    </li>
+
+    <li class="models__col">
+      @@include('../../blocks/model-card/model-card.html', {
+        "badge": "Веб / API",
+        "title": "Калькулятор викидів ПГ",
+        "descr": "Інтерактивний інструмент для розрахунку вуглецевого сліду електроенергії та тепла за різних сценаріїв паливного балансу. Методологія — за IPCC AR6."
+      })
+    </li>
+
+    <li class="models__col">
+      @@include('../../blocks/model-card/model-card.html', {
+        "badge": "Веб-додаток",
+        "title": "Сценарний explorer ВДЕ",
+        "descr": "Інтерактивна панель для порівняння сценаріїв розвитку відновлюваної енергетики: потужності, вироблення, LCOE та рівень системної інтеграції."
+      })
+    </li>
+
+  </ul>
+</section>

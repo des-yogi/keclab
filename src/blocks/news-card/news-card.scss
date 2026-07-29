@@ -44,6 +44,10 @@
     border-radius: $border-radius-lg;
   }
 
+  &__wrapper {
+
+  }
+
   &__img {
     flex: 0 0 auto;
     background-color: var(--gray-100);

@@ -40,6 +40,8 @@
     @include col(xs, 12);
     @include col(xl, 4);
     @include col(xxl, 5);
+    display: flex;
+    align-items: center;
   }
 
   &__text-col {

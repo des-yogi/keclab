@@ -1,5 +1,5 @@
 import Collapse from '@coreui/coreui/js/src/collapse.js';
-import { lockPageScroll, unlockPageScroll } from '../../js/index.js';
+import { lockPageScroll, unlockPageScroll } from '../scrollbar/scrollbar.js';
 
 (function () {
   const overlay = document.getElementById('menuOverlay');

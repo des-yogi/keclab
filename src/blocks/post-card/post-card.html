@@ -1,5 +1,6 @@
 <!--DEV
 @@include('blocks/post-card/post-card.html', {
+  "isLandscape": false,
   "img": "cover-1",
   "tag": "digest",
   "tagColor": "",
@@ -9,35 +10,98 @@
 })
 -->
 
-<article class="post-card">
-  <div class="post-card__inner">
-    <div class="post-card__text-wrapper">
+@@if(isLandscape)
+  <article class="post-card  post-card--landscape">
+    <div class="post-card__inner">
+      <div class="post-card__text-wrapper">
 
-      <div class="post-card__top">
-        <span class="badge  @@tagColor">@@tag</span>
-        <span class="post-card__month">@@date</span>
+        <div class="post-card__top">
+          <span class="badge  @@tagColor">@@tag</span>
+          <span class="post-card__month">@@date</span>
+        </div>
+
+        <h3 class="h4  post-card__title">
+          <a href="#">@@title</a>
+        </h3>
+
+        <p class="post-card__descr">@@text</p>
+
+        <div class="post-card__footer">
+          <p class="post-card__authors">Автори: Доктор Сюзанна Ніс, Доктор Георг Захманн, Доктор Франк Мейсснер</p>
+
+          @@include('../../blocks/faux-link/faux-link.html')
+        </div>
       </div>
 
-      <h3 class="h4  post-card__title">
-        <a href="#">@@title</a>
-      </h3>
+      <a href="#" class="post-card__img" tabindex="-1" aria-label="@@title">
+        <picture>
+          <source srcset="img/@@img.webp,
+                          img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/@@img.jpg,
+                          img/@@img.jpg 2x" media="(min-width: 1280px)">
+          <!-- 445x250, 680x383 2x от 1280 -->
+          <source srcset="img/@@img.webp" media="(min-width: 1024px)" type="image/webp">
+          <source srcset="img/@@img.jpg" media="(min-width: 1024px)">
+          <!-- 1350x760 от 1024 -->
+          <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+          <!-- 960x540 от 768 -->
+          <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+          <!-- 720x405 от 480 -->
+          <source srcset="img/@@img.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/@@img.jpg" media="(min-width: 300px)">
+          <!-- 540x304 от 300 -->
+          <source srcset="img/@@img.webp" type="image/webp">
+          <img src="img/@@img.jpg" alt="@@title" width="540" height="304" loading="lazy">
+        </picture>
+      </a>
 
-      <p class="post-card__descr">@@text</p>
-
-      <div class="post-card__footer">
-        <p class="post-card__authors">Автори: Доктор Сюзанна Ніс, Доктор Георг Захманн, Доктор Франк Мейсснер</p>
-
-        @@include('../../blocks/faux-link/faux-link.html')
-      </div>
     </div>
+  </article>
+@@else
+  <article class="post-card">
+    <div class="post-card__inner">
+      <div class="post-card__text-wrapper">
 
-    <a href="#" class="post-card__img" tabindex="-1" aria-label="@@title">
-      <picture>
-        <!-- 000 -->
-        <source srcset="img/@@img.webp" type="image/webp">
-        <img src="img/@@img.jpg" alt="@@title" width="706" height="1000" loading="lazy">
-      </picture>
-    </a>
+        <div class="post-card__top">
+          <span class="badge  @@tagColor">@@tag</span>
+          <span class="post-card__month">@@date</span>
+        </div>
 
-  </div>
-</article>
+        <h3 class="h4  post-card__title">
+          <a href="#">@@title</a>
+        </h3>
+
+        <p class="post-card__descr">@@text</p>
+
+        <div class="post-card__footer">
+          <p class="post-card__authors">Автори: Доктор Сюзанна Ніс, Доктор Георг Захманн, Доктор Франк Мейсснер</p>
+
+          @@include('../../blocks/faux-link/faux-link.html')
+
+          <a href="#" class="btn  index-first-only">
+            <span class="btn__text">Детальніше</span>
+            <span class="btn__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="#" class="post-card__img" tabindex="-1" aria-label="@@title">
+        <picture>
+          <!-- 304x428, 460x657 2x от 1280 -->
+          <source srcset="img/@@img.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/@@img.jpg" media="(min-width: 300px)">
+          <!-- 445x635 от 300 -->
+          <source srcset="img/@@img.webp" type="image/webp">
+          <img src="img/@@img.jpg" alt="@@title" width="460" height="657" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+  </article>
+@@endif
+
+

@@ -1,0 +1,136 @@
+<!--DEV
+@@include('blocks/dataset-catalog/dataset-catalog.html')
+-->
+
+<section class="container  margin-y  dataset-catalog">
+
+  <header class="dataset-catalog__header">
+    <span class="chip">
+      <span>Відкриті дані</span>
+    </span>
+
+    <div class="dataset-catalog__title-wrapper">
+      <div class="dataset-catalog__inner-title">
+        <h2 class="dataset-catalog__title">Каталог наборів даних</h2>
+        <div class="dataset-catalog__intro">
+          <p>Всі набори даних KECLab доступні безкоштовно під відкритою ліцензією. Ми просимо посилатися на KECLab при публікації результатів.</p>
+        </div>
+      </div>
+
+      <section class="filters">
+        <h2 class="visually-hidden">Фільтр вмісту</h2>
+
+        <form class="form filters__form" action="#" method="get">
+          <fieldset class="form__fieldset  filters__fieldset">
+            <legend class="visually-hidden">Фільтрування за сценарієм</legend>
+            <div class="filters__section">
+              <label class="filters__label">
+                <span class="filters__name-text">Все</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="" checked>
+              </label>
+              <label class="filters__label">
+                <span class="filters__name-text">Генерація</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="generation">
+              </label>
+              <label class="filters__label">
+                <span class="filters__name-text">Споживання</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="consumption">
+              </label>
+              <label class="filters__label">
+                <span class="filters__name-text">Імпорт/Експорт</span>
+                <input type="radio" class="visually-hidden" name="scenario" value="imp-exp">
+              </label>
+            </div>
+          </fieldset>
+
+        </form>
+
+      </section>
+
+    </div>
+
+  </header>
+
+  <ul class="list-nostyled  row  dataset-catalog__list">
+
+    <li class="dataset-catalog__item">
+      @@include('../../blocks/dataset-card/dataset-card.html', {
+        "icon": "database",
+        "tag": "Ринок",
+        "title": "Баланс електроенергії України",
+        "descr": "Щомісячні дані виробництва, споживання та балансу електроенергії по всіх джерелах генерації з 2015 року.",
+        "source": "Укренерго / KECLab",
+        "date": "Лютий 2026",
+        "format": "CSV, XLSX",
+        "license": "CC BY 4.0"
+      })
+    </li>
+
+    <li class="dataset-catalog__item">
+      @@include('../../blocks/dataset-card/dataset-card.html', {
+        "icon": "database",
+        "tag": "Сценарії",
+        "title": "Сценарії розвитку ВДЕ до 2035 року",
+        "descr": "Три сценарії (базовий, оптимістичний, зелений) розвитку  генерації з проміжними показниками і допущеннями.",
+        "source": "KECLab",
+        "date": "Січень 2026",
+        "format": "XLSX, JSON",
+        "license": "CC BY 4.0"
+      })
+    </li>
+
+    <li class="dataset-catalog__item">
+      @@include('../../blocks/dataset-card/dataset-card.html', {
+        "icon": "database",
+        "tag": "Клімат",
+        "title": "Викиди парникових газів енергосектору",
+        "descr": "Серія даних про викиди CO₂ та інших ПГ від виробництва електро- і теплоенергії в Україні (2010–2025).",
+        "source": "Держенергоефективності / IEA",
+        "date": "Грудень 2025",
+        "format": "CSV",
+        "license": "CC BY 4.0"
+      })
+    </li>
+
+    <li class="dataset-catalog__item">
+      @@include('../../blocks/dataset-card/dataset-card.html', {
+        "icon": "database",
+        "tag": "Ринок",
+        "title": "Ринкові ціни на електроенергію (DAM/IDM)",
+        "descr": "Щоденні дані ринку на добу наперед та внутрішньодобового ринку: обсяги, ціни, імпорт/експорт.",
+        "source": "ENTSO-E Transparency / KECLab",
+        "date": "28 лютого 2026",
+        "format": "CSV, API",
+        "license": "CC BY 4.0"
+      })
+    </li>
+
+    <li class="dataset-catalog__item">
+      @@include('../../blocks/dataset-card/dataset-card.html', {
+        "icon": "database",
+        "tag": "Ринок",
+        "title": "Баланс електроенергії України",
+        "descr": "Щомісячні дані виробництва, споживання та балансу електроенергії по всіх джерелах генерації з 2015 року.",
+        "source": "Укренерго / KECLab",
+        "date": "Лютий 2026",
+        "format": "CSV, XLSX",
+        "license": "CC BY 4.0"
+      })
+    </li>
+
+    <li class="dataset-catalog__item">
+      @@include('../../blocks/dataset-card/dataset-card.html', {
+        "icon": "database",
+        "tag": "Сценарії",
+        "title": "Сценарії розвитку ВДЕ до 2035 року",
+        "descr": "Три сценарії (базовий, оптимістичний, зелений) розвитку  генерації з проміжними показниками і допущеннями.",
+        "source": "KECLab",
+        "date": "Січень 2026",
+        "format": "XLSX, JSON",
+        "license": "CC BY 4.0"
+      })
+    </li>
+
+  </ul>
+
+</section>

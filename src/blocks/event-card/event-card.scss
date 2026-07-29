@@ -158,5 +158,9 @@
     @media (min-width: $screen-xl) {
       gap: 8px 24px;
     }
+
+    &:not(.faux-link) {
+      flex: 0 1 auto;
+    }
   }
 }
