@@ -6,3 +6,4 @@
 * https://des-yogi.github.io/keclab/publications
 * https://des-yogi.github.io/keclab/data-modeling
 * https://des-yogi.github.io/keclab/education
+* https://des-yogi.github.io/keclab/contacts
