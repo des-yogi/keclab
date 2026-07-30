@@ -1,0 +1,152 @@
+<!--DEV
+@@include('blocks/contact-form/contact-form.html')
+-->
+
+<div class="container  margin-y  contact-form">
+
+  <section class="contact-form__inner">
+
+    <div class="contact-form__header">
+      <h2 class="contact-form__title">
+        <span class="chip">Форма зворотного зв'язку</span>
+      </h2>
+      <p class="h2  contact-form__faux-title">Напишіть нам</p>
+      <div class="contact-form__intro">
+        <p>Заповніть форму та ми відповімо протягом 1–2 робочих днів.</p>
+      </div>
+    </div>
+
+    <div class="row  contact-form__main">
+
+      <div class="contact-form__form-col">
+        <form class="form  contact-form__form" action="#" method="post">
+
+          <div class="contact-form__input-group">
+            <label class="field-text">
+              <span class="field-text__name">Ім'я та прізвище <sup>*</sup></span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" name="name" value="" placeholder="ПІБ" autocomplete="name">
+                <!-- <span class="field-text__help-text">Error placeholder</span> -->
+              </span>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Email <sup>*</sup></span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" name="mail" value="" placeholder="email@example.com" autocomplete="email">
+                <span class="field-text__help-text"></span>
+              </span>
+            </label>
+          </div>
+
+          <label class="field-text">
+            <span class="field-text__name">Організація</span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="org" value="" placeholder="Назва організації (необов'язково)">
+              <!-- <span class="field-text__help-text">Error placeholder</span> -->
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__name">Тема звернення <sup>*</sup></span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="org" value="" placeholder="">
+              <!-- <span class="field-text__help-text">Error placeholder</span> -->
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__name">Повідомлення <sup>*</sup></span>
+            <span class="field-text__input-wrap">
+              <textarea class="field-text__input" name="message" rows="4" placeholder="Опишіть ваше запитання або пропозицію…"></textarea>
+              <!-- <span class="field-text__help-text">Error placeholder</span> -->
+            </span>
+          </label>
+
+          <div class="field-actions  form__agreement">
+            <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" name="agreement" value="" checked>
+                <span class="field-checkbox__name-text">Я погоджуюся з <a href="#">Політикою конфіденційності</a> KECLab</span>
+              </label>
+            </div>
+
+            <button class="btn" type="submit" name="submit-contacts">
+              <span class="btn__text">Надіслати</span>
+              <span class="btn__icon">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-form__map-col">
+
+        <div class="contact-form__map">
+          <div class="contact-form__map-info">
+            <span class="contact-form__map-pin">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#location"></use></svg>
+            </span>
+            <p class="contact-form__map-adress">
+              <span class="contact-form__org-name">KECLab при НаУКМА</span>
+              <span>вул. Волоська, 8/5, каб. 5-303, м. Київ</span>
+            </p>
+          </div>
+        </div>
+
+        <section class="contact-form__add-contacts">
+          <h3 class="h4  contact-form__add-contacts-title">Контакти відділів</h3>
+
+          <ul class="list-nostyled  contact-form__branch-contacts">
+            <li>
+              @@include('../../blocks/mail-unit/mail-unit.html', {
+                "ava": "ava-1",
+                "branch": "Директор",
+                "person": "Владислав Міхнич"
+              })
+            </li>
+            <li>
+              @@include('../../blocks/mail-unit/mail-unit.html', {
+                "ava": "ava-1",
+                "branch": "Медіа та комунікації",
+                "person": "Наталія Іванова · media@keclab.org.ua"
+              })
+            </li>
+            <li>
+              @@include('../../blocks/mail-unit/mail-unit.html', {
+                "ava": "ava-1",
+                "branch": "Міжнародні партнерства",
+                "person": "Ольга Петренко · partnerships@keclab.org.ua"
+              })
+            </li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact-form__downloads">
+    <h4 class="h5  contact-form__add-contacts-title">Завантаження</h4>
+    <ul class="list-nostyled  row  contact-form__downloads-list">
+      <li class="contact-form__downloads-item">
+        @@include('../../blocks/download-panel/download-panel.html', {
+          "fileTypeIcon": "file-pdf",
+          "title": "Презентація лабораторії",
+          "descr": "PDF • 2.1 Mb"
+        })
+      </li>
+
+      <li class="contact-form__downloads-item">
+        @@include('../../blocks/download-panel/download-panel.html', {
+          "fileTypeIcon": "file-zip",
+          "title": "Брендбук",
+          "descr": "ZIP • 840 Kb"
+        })
+      </li>
+    </ul>
+  </section>
+
+</div>

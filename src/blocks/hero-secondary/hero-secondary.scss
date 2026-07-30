@@ -107,7 +107,19 @@
     }
   }
 
-  // &__tag-wrapper {
-  //   margin-top: 24px;
-  // }
+  &__soc-net {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0 0;
+    font-size: $font-size-sm;
+  }
+
+  &__soc-net-title {
+    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: var(--white);
+  }
 }

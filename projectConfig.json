@@ -69,7 +69,12 @@
     "dataset-card": [],
     "rest-api-banner": [],
     "models": [],
-    "model-card": []
+    "model-card": [],
+    "contacts": [],
+    "contact-form": [],
+    "mail-unit": [],
+    "download-panel": [],
+    "social-net-header": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",

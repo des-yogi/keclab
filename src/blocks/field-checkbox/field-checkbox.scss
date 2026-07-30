@@ -6,19 +6,19 @@
   $block-name: &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   &__title {
     display: block;
-    margin-bottom: 16px;
+    //margin-bottom: 16px;
     line-height: $line-height;
-    font-weight: 500;
+    //font-weight: 500;
     color: $title-color;
   }
 
   &__input-wrap {
-    margin-right: 24px;
-    margin-bottom: 16px;
+    //margin-right: 24px;
+    //margin-bottom: 16px;
 
     &:last-child {
       margin-right: 0;
@@ -29,22 +29,23 @@
     position: relative;
     display: inline-block;
     padding-left: 32px;
-
     // margin-right: 0.6em;
+    font-family: $font-family;
+    font-size: $font-size-sm;
     font-weight: 400;
     line-height: $line-height;
-    cursor: pointer;
+    //cursor: pointer;
 
     &:hover {
 
-      #{$block-name}__name-text {
-        color: $link-color-hover;
+      #{$block-name}__name-text::before {
+        border-color: var(--teal-500);
       }
     }
   }
 
   &__name-text {
-    color: $title-color;
+    color: var(--title-color);
 
     &::before {
       content: '';
@@ -53,11 +54,15 @@
       left: 0;
       width: 22px;
       height: 22px;
-      border: 1px solid $border-color;
-      border-radius: math.div($border-radius, 2);
+      background-color: var(--checkbox-bg);
+      border: 1px solid var(--checkbox-border);
+      border-radius: 4px;//math.div($border-radius, 2)
+      cursor: pointer;
+      transition: background $transition-time ease, border-color $transition-time ease;
 
       @at-root input:checked ~ & {
-        background-color: $border-color;
+        background-color: var(--checkbox-bg-checked);
+        border-color: var(--checkbox-border-checked);
       }
     }
 
@@ -76,7 +81,8 @@
       border-left: 2px solid $white;
       border-bottom: 2px solid $white;
       transform: rotate(-45deg);
-      transition: opacity $transition-time;
+      transition: opacity $transition-time ease;
+      pointer-events: none;
 
       @at-root input:checked ~ & {
         opacity: 1;

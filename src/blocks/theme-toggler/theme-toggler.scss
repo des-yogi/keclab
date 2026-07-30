@@ -32,6 +32,11 @@
   cursor: pointer;
   user-select: none;
 
+  &:hover,
+  &:focus {
+    background-color: rgba($white, 0.12);
+  }
+
   //:root[data-theme="dark"] & {
     //justify-content: flex-end;
     // dark state styles here

@@ -1,0 +1,33 @@
+<!--DEV
+@@include('blocks/mail-unit/mail-unit.html', {
+  "ava": "ava-1",
+  "branch": "Директор",
+  "person": "Владислав Міхнич"
+})
+-->
+
+<a href="mailto:info@keclab.org.ua" class="mail-unit">
+  <div class="mail-unit__info">
+    <div class="mail-unit__ava">
+      <picture>
+        <!-- <source srcset="img/ava-1.webp, img/ava-1.webp 2x" type="image/webp"> -->
+        <img src="img/@@ava.jpg"
+             srcset="img/@@ava.jpg, img/@@ava.jpg 2x"
+             alt="@@person"
+             width="56"
+             height="56"
+             loading="lazy">
+      </picture>
+    </div>
+    <div class="mail-unit__text">
+      <span class="mail-unit__branch">@@branch</span>
+      <span class="mail-unit__name">@@person</span>
+    </div>
+  </div>
+
+  <span class="btn-secondary  mail-unit__icon">
+    <span class="btn-secondary__icon">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+    </span>
+  </span>
+</a>
