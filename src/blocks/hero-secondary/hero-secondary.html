@@ -4,6 +4,7 @@
   "chipText": "Заходи KECLab",
   "title": "Події",
   "intro": "<p>Долучайтеся до фахових дискусій, презентацій аналітичних досліджень та відкритих лекцій за участю провідних українських і міжнародних експертів з енергетики та клімату.</p>",
+  "isContacts": false,
   "isTags": false,
   "paddBottomClass": ""
 })
@@ -29,6 +30,13 @@
           <h1 class="hero-secondary__page-title">@@title</h1>
           <div class="hero-secondary__intro">
             @@intro
+
+            @@if(isContacts)
+              <section class="hero-secondary__soc-net" aria-labelledby="soc-net-header-title">
+                <h2 class="hero-secondary__soc-net-title" id="soc-net-header-title">Ми у соціальних мережах:</h2>
+                @@include('../../blocks/social-net-header/social-net-header.html')
+              </section>
+            @@endif
           </div>
 
           @@if(isTags)

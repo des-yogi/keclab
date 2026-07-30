@@ -28,4 +28,23 @@
     line-height: $line-height;
     color: currentcolor;
   }
+
+  &__agreement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px 0;
+
+    .field-checkbox {
+      margin-bottom: 0;
+    }
+
+    .btn[type=submit] {
+
+      @media (max-width: $screen-md - 1) {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
 }

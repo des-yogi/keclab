@@ -23,7 +23,9 @@
   justify-content: center;
   padding: 7px 16px;
   font-size: $font-size;
+  font-weight: 400 !important;
   text-transform: uppercase;
+  line-height: $line-height !important;
   color: var(--title-color);
   border: 1px solid var(--teal-500);
   border-radius: 25px;

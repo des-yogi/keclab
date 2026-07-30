@@ -73,6 +73,11 @@
 @use '../blocks/rest-api-banner/rest-api-banner';
 @use '../blocks/models/models';
 @use '../blocks/model-card/model-card';
+@use '../blocks/contacts/contacts';
+@use '../blocks/contact-form/contact-form';
+@use '../blocks/mail-unit/mail-unit';
+@use '../blocks/download-panel/download-panel';
+@use '../blocks/social-net-header/social-net-header';
 
 // Подключения из addCssAfter:
 @use './print' as *;

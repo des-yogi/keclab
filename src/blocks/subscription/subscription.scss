@@ -24,6 +24,7 @@
   color: var(--white);
   background: linear-gradient(to bottom, var(--blue-700), var(--blue-800) 100%);
   border-radius: $border-radius;
+  overflow: hidden;
 
   @media (min-width: $screen-md) {
     padding: 48px 40px;

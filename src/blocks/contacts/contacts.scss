@@ -1,0 +1,116 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.contacts {
+  $block-name: &; // #{$block-name}__element
+
+  &__panel {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: var(--header-bg);
+  }
+
+  &__list {
+    gap: 8px 0;
+    justify-content: center;
+  }
+
+  &__item {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px 0;
+    height: 100%;
+    padding: 24px;
+    background-color: var(--bg-block);
+    border: 1px solid var(--border-color);
+    border-radius: 32px;
+  }
+
+  &__icon {
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--gray-50);
+    border-radius: 16px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--tel {
+      color: var(--green-500);
+      background-color: var(--green-50);
+
+      :root[data-theme="dark"] & {
+        background-color: var(--green-700);
+      }
+    }
+
+    &--mail {
+      color: var(--blue-500);
+      background-color: var(--blue-50);
+
+      // :root[data-theme="dark"] & {
+      //   background-color: var(--blue-700);
+      // }
+    }
+
+    &--address {
+      color: var(--teal-500);
+      background-color: var(--teal-50);
+
+      :root[data-theme="dark"] & {
+        background-color: var(--teal-700);
+      }
+    }
+  }
+
+  //&__card-content {
+  //}
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px 0;
+  }
+
+  &__var-name {
+    font-size: $font-size-sm;
+  }
+
+  &__var-value {
+    font-size: $font-size;
+    text-decoration: none;
+    color: var(--title-color);
+
+    &:where(a:hover, a:focus) {
+      text-decoration: underline;
+    }
+  }
+}
