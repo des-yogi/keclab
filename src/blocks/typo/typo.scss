@@ -192,13 +192,6 @@ ul ol {
   margin-bottom: 0;
 }
 
-blockquote {
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-
 code {
   padding: 0.06em 0.3em;
   color: $text-color;
@@ -240,6 +233,44 @@ figure {
     margin-bottom: 0;
   }
 }
+
+blockquote {
+  position: relative;
+  padding: 64px 16px 0;
+  margin: 1.5em 0;
+  color: var(--title-color);
+  background: linear-gradient(180deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: $border-radius $border-radius 0 0;
+
+  @media (min-width: $screen-md) {
+    padding: 80px 40px 0;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+  }
+
+  :root[data-theme="dark"] & {
+    background: linear-gradient(180deg, var(--blue-950) 0%, rgba(0, 8, 25, 0) 100%);
+  }
+
+  &::after {
+    //display: block;
+    position: absolute;
+    content: "";
+    top: 24px;
+    right: 16px;
+    width: 76px;
+    height: 32px;
+    background-color: transparent;
+    background-position: center;
+    background-size: 76px 32px;
+    background-image: svg-load('../blocks/review-card/bg-img/quotes.svg', fill=#00a0ae); // teal-500
+
+    @media (min-width: $screen-md) {
+      top: 40px;
+      right: 40px;
+    }
+  }
+}
+
 /* stylelint-enable no-descending-specificity */
 
 hr {

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Новина</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
+
+      <div class="page__hero-wrapper">
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--teal-700)",
+          "chipText": "",
+          "title": "Дефіцит генерації понад 4 ГВт: приватні інвестиції стають критично необхідними",
+          "intro": "<p>Операційний дефіцит генеруючих потужностей в Україні перевищує 4 ГВт на тлі пошкодження інфраструктури та високого зимового попиту. Питання залучення приватного капіталу та інтеграції резервної генерації до мережі стає ключовим для стабільності системи.</p>",
+          "isTags": true,
+          "paddBottomClass": "hero-secondary__inner--pb-news"
+        })
+
+      </div>
+
+      <main class="main  news-article">
+
+        <div class="container  news-article__container">
+
+          <div class="row  news-article__row">
+
+            <div class="news-article__main-col">
+              <div class="news-article__main">
+                <div class="embed-responsive  news-article__img">
+                  <picture>
+                    <!-- 1064x599, 1600x900 2x от 1800 -->
+                    <!-- 960x540, 1440x810 2x от 1440 -->
+                    <!-- 800x450, 1200x675 2x от 1280 -->
+                    <!-- 1440x810 от 1024 -->
+                    <!-- 1040x585 от 768 -->
+                    <!-- 700x394 от 480 -->
+                    <!-- 600x338 от 300 -->
+                    <source srcset="img/article-img.webp" type="image/webp">
+                    <img src="img/article-img.jpg" alt="Alt text" width="720" height="405" loading="eager" decoding="sync">
+                  </picture>
+                </div>
+                <p class="news-article__src">Джерело фотографії: depositphotos.com</p>
+
+                <div class="margin-y  news-article__content">
+                  <p>За оперативними даними Укренерго, у лютому 2026 року дефіцит потужності в пікові години перевищував 4 ГВт — рекордний показник за останні роки. Основними причинами є пошкодження великих теплових електростанцій внаслідок ракетних обстрілів та зниження вироблення гідроелектростанцій через маловоддя.</p>
+                  <p>Для покриття дефіциту Україна вдається до максимальних обсягів імпорту електроенергії з країн ЄС. За даними ENTSO-E, у критичні дні лютого імпорт перевищував 1 500 МВт — технічну межу пропускної спроможності існуючих з'єднань.</p>
+                  <p>Аналітики KECLab вказують на три ключові шляхи виходу із ситуації: по-перше, залучення приватного капіталу у відновлення пошкоджених потужностей та будівництво нових; по-друге, розширення пропускної спроможності міждержавних перетоків; по-третє, активніше впровадження програм управління попитом.</p>
+
+                  <h2>Ключові можливості KEC-OS 3.0</h2>
+
+                  <p>Платформа побудована на основі мікроядерного RTOS-ядра, яке забезпечує максимальну безпеку та ізоляцію задач. Інтегрований HAL-шар (Hardware Abstraction Layer) дозволяє легко переносити застосунки між різними мікроконтролерами, включаючи ARM Cortex-M та RISC-V. До складу платформи входять готові драйвери для інтерфейсів CAN, SPI та I2C, а також розширені інструменти налагодження на основі JTAG і SWD.</p>
+                  <p>KEC-OS 3.0 також підтримує процес сертифікації за стандартами DO-178C (аерокосмічна промисловість) та IEC 61508 (функціональна безпека). Це робить її ідеальним вибором для розробки критично важливих систем, де надійність і передбачуваність мають першочергове значення.</p>
+                  <p>Головні стратегічні цілі лабораторії</p>
+
+                  <ol>
+                    <li>Інтеграція до ЄС: Сприяння швидкому та ефективному вступу України до Європейського Союзу шляхом адаптації національного енергетичного та кліматичного законодавства.</li>
+                    <li>Стале відновлення: Розробка науково обґрунтованих сценаріїв для стійкого відновлення зруйнованого енергетичного сектору України.</li>
+                    <li>Декарбонізація: Забезпечення експертної підтримки для довгострокової декарбонізації української економіки та переходу на чисту енергію.</li>
+                  </ol>
+
+                  <p>Основні напрямки діяльності</p>
+
+                  <ul>
+                    <li>Збір даних та моделювання: Робота з масивами даних, створення комплексних моделей енергетичних систем та ринків електроенергії.</li>
+                    <li>Політична аналітика: Надання незалежної експертизи та практичних рекомендацій для урядових інституцій і стейкхолдерів.</li>
+                    <li>Освіта та розвиток: Проведення тренінгів, семінарів та конференцій для підвищення кваліфікації та нарощування потенціалу українських фахівців.</li>
+                  </ul>
+
+                  <img src="img/article-img-1.jpg" alt="text">
+                  <img src="img/article-img-2.jpg" alt="text">
+                  <img src="img/article-img-3.jpg" alt="text">
+
+                  <h2>Технічні характеристики KEC-OS 3.0</h2>
+
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Значення</th>
+                      </tr>
+                      <tr>
+                        <td>Час відгуку</td>
+                        <td>менше 1 мкс</td>
+                      </tr>
+                      <tr>
+                        <td>Підтримувані архітектури</td>
+                        <td>ARM Cortex-M, RISC-V</td>
+                      </tr>
+                      <tr>
+                        <td>Размер Flash</td>
+                        <td>від 32 КБ</td>
+                      </tr>
+                      <tr>
+                        <td>Сертифікація</td>
+                        <td>DO-178C, IEC 61508</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <blockquote>
+                    <p>Запуск Київської лабораторії з питань енергетики та клімату — це не просто інституційне досягнення, це зобов’язання перед майбутнім України. У час, коли наша енергетична система перебуває під безпрецедентним тиском, незалежні та засновані на фактах дослідження вже не є опціональними, а є обов’язковими.</p>
+                  </blockquote>
+
+                  <h3>Висновок</h3>
+                  <p>KEC-OS 3.0 — це значний крок вперед у сфері вбудованих систем. Завдяки своїй масштабованості та безпеці, вона стане основою для майбутніх інновацій KECLab у сфері робототехніки та аерокосмічної інженерії.</p>
+                </div>
+
+                @@include('blocks/accordion/accordion.html')
+
+                @@include('blocks/article-gallery/article-gallery.html')
+              </div>
+            </div>
+
+            <div class="news-article__aside-col">
+              <aside class="news-article__aside">
+                <h3 class="h5  news-article__aside-title">Інші новини</h3>
+                <ul class="list-nostyled  news-article__other-list">
+
+                  <li class="news-article__other-item">
+                    @@include('blocks/other-news-card/other-news-card.html', {
+                      "tag": "Регулювання",
+                      "title": "Підвищення цінових обмежень на ринку електроенергії: імпорт реагує зростанням"
+                    })
+                  </li>
+
+                  <li class="news-article__other-item">
+                    @@include('blocks/other-news-card/other-news-card.html', {
+                      "tag": "Регулювання",
+                      "title": "€220 млн інвестицій у вітроенергетику: сигнал відновлення сектору ВДЕ"
+                    })
+                  </li>
+
+                  <li class="news-article__other-item">
+                    @@include('blocks/other-news-card/other-news-card.html', {
+                      "tag": "Регулювання",
+                      "title": "Зміни в законодавстві: митні тарифи на імпорт електроенергії"
+                    })
+                  </li>
+
+                  <li class="news-article__other-item">
+                    @@include('blocks/other-news-card/other-news-card.html', {
+                      "tag": "Регулювання",
+                      "title": "Впровадження відновлювальних джерел енергії"
+                    })
+                  </li>
+
+                  <li class="news-article__other-item">
+                    @@include('blocks/other-news-card/other-news-card.html', {
+                      "tag": "Регулювання",
+                      "title": "Конкуренція між постачальниками електроенергії"
+                    })
+                  </li>
+
+                </ul>
+              </aside>
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

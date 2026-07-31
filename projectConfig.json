@@ -79,7 +79,11 @@
     "event-summary": [],
     "countdown": [],
     "person-card": [],
-    "team": []
+    "team": [],
+    "other-news-card": [],
+    "accordion": [],
+    "article-gallery": [],
+    "news-article": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",

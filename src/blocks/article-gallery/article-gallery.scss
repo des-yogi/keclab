@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока event-article, его элементов,
+// В этом файле должны быть стили для БЭМ-блока article-gallery, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очерёдность:
 // 1. Стилевые правила для этого селектора. 2. @media этого контекста.
@@ -15,72 +15,36 @@
 @use '../../scss/variables' as *;
 @use '../../scss/mixins' as *;
 
-.event-article {
+.article-gallery {
   $block-name: &; // #{$block-name}__element
 
-
-  &__main {
-
-    @media (min-width: $screen-md) {
-      position: relative;
-      z-index: 1;
-      margin-top: -80px;
-    }
-
-    @media (min-width: $screen-xxl) {
-      margin-top: -105px;
-    }
-  }
+  margin-top: 48px;
 
   &__row {
-    gap: 48px 0;
+    gap: 8px 0;
   }
 
-  &__content-col {
-    @include col(xs, 12);
-    @include col(xl, 8);
-  }
-
-  &__informer-col {
-    @include col(xs, 12);
-    @include col(xl, 4);
-  }
-
-  //&__content {
-  //}
-
-  &__btn-wrapper {
-    padding: 24px 0;
-
-    .btn {
-
-      @media (max-width: $screen-md - 1) {
-        width: 100%;
-      }
-    }
+  &__col {
+    @include col(xs, 6);
+    @include col(md, 4);
+    //@include col(lg, 4);
   }
 
   &__img {
-    margin-bottom: 40px;
     border-radius: $border-radius;
 
-    @media (min-width: $screen-md) {
-      margin-bottom: 48px;
-      border-radius: $border-radius-lg;
+    &:hover,
+    &:focus {
+
+      img {
+        transform: scale(1.07);
+      }
     }
 
     img {
       object-fit: cover;
       object-position: center;
-    }
-  }
-
-  &__informer {
-
-    @media (min-width: $screen-xl) {
-      //position: sticky;
-      //top: 0;
-      padding-left: 32px;
+      transition: transform $transition-time ease;
     }
   }
 }

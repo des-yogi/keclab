@@ -1,0 +1,25 @@
+<!--DEV
+@@include('blocks/other-news-card/other-news-card.html', {
+  "tag": "Регулювання",
+  "title": "Підвищення цінових обмежень на ринку електроенергії: імпорт реагує зростанням"
+})
+-->
+
+<a href="#" class="other-news-card">
+  <div class="other-news-card__main">
+    <span class="badge  badge--gray">@@tag</span>
+    <p class="h6  other-news-card__caption">@@title</p>
+  </div>
+
+  <div class="other-news-card__footer">
+
+    <span class="date-time date-time--date">
+      <svg width="20" height="20" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#calendar-20"></use>
+      </svg>
+      <time datetime="2026-01-21T10:00+03:00">21 січня 2026</time>
+    </span>
+
+    @@include('../../blocks/faux-link/faux-link.html')
+  </div>
+</a>

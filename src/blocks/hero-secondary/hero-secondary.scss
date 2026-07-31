@@ -76,6 +76,22 @@
         padding-bottom: 140px; // 35+105
       }
     }
+
+    &--pb-news {
+      padding-bottom: 115px; // 35+80
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 115px; // 35+80
+      }
+
+      // @media (min-width: $screen-xl) {
+      //   padding-bottom: 115px; // 35+80
+      // }
+
+      @media (min-width: $screen-xxl) {
+        padding-bottom: 140px; // 35+105
+      }
+    }
   }
 
   //&__row {

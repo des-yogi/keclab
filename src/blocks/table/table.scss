@@ -11,7 +11,8 @@ table,
   font-feature-settings: "tnum", "zero"; /* Резерв для старых браузеров */
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid var(--border-color);
+  //border: 1px solid var(--border-color);
+  border: none;
   margin: #{$line-height}px 0;
 
   caption {
@@ -37,7 +38,7 @@ table,
 
   th,
   td {
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding: 16px 12px;
     vertical-align: baseline;
     border-bottom: 1px solid var(--border-color);
 
