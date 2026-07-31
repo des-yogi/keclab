@@ -83,6 +83,10 @@
 @use '../blocks/countdown/countdown';
 @use '../blocks/person-card/person-card';
 @use '../blocks/team/team';
+@use '../blocks/other-news-card/other-news-card';
+@use '../blocks/accordion/accordion';
+@use '../blocks/article-gallery/article-gallery';
+@use '../blocks/news-article/news-article';
 
 // Подключения из addCssAfter:
 @use './print' as *;

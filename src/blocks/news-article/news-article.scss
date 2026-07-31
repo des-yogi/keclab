@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока event-article, его элементов,
+// В этом файле должны быть стили для БЭМ-блока news-article, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очерёдность:
 // 1. Стилевые правила для этого селектора. 2. @media этого контекста.
@@ -15,57 +15,44 @@
 @use '../../scss/variables' as *;
 @use '../../scss/mixins' as *;
 
-.event-article {
+.news-article {
   $block-name: &; // #{$block-name}__element
 
-
-  &__main {
-
-    @media (min-width: $screen-md) {
-      position: relative;
-      z-index: 1;
-      margin-top: -80px;
-    }
-
-    @media (min-width: $screen-xxl) {
-      margin-top: -105px;
-    }
+  &__container {
+    margin-bottom: 48px;
   }
 
   &__row {
     gap: 48px 0;
   }
 
-  &__content-col {
+  &__main-col {
     @include col(xs, 12);
     @include col(xl, 8);
   }
 
-  &__informer-col {
+  &__aside-col {
     @include col(xs, 12);
     @include col(xl, 4);
   }
 
-  //&__content {
-  //}
+  &__main {
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
 
-  &__btn-wrapper {
-    padding: 24px 0;
+    //@media (min-width: $screen-md) {
+    //}
 
-    .btn {
-
-      @media (max-width: $screen-md - 1) {
-        width: 100%;
-      }
+    @media (min-width: $screen-xxl) {
+      margin-top: -105px;
     }
   }
 
   &__img {
-    margin-bottom: 40px;
     border-radius: $border-radius;
 
     @media (min-width: $screen-md) {
-      margin-bottom: 48px;
       border-radius: $border-radius-lg;
     }
 
@@ -75,12 +62,45 @@
     }
   }
 
-  &__informer {
+  &__src {
+    font-size: $font-size-sm;
+    text-align: right;
 
-    @media (min-width: $screen-xl) {
-      //position: sticky;
-      //top: 0;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__content {
+    margin-bottom: 0;
+
+    img {
+      display: block;
+      margin: 16px 0;
+      border-radius: $border-radius;
+    }
+  }
+
+  &__aside {
+
+    @media (min-width: $screen-md) {
       padding-left: 32px;
     }
+
+    @media (min-width: $screen-xl) {
+      position: sticky;
+      top: 24px;
+      margin-top: 48px;
+    }
+  }
+
+  &__aside-title {
+    text-align: center;
+  }
+
+  &__other-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
   }
 }
