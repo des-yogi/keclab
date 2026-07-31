@@ -31,4 +31,12 @@
     @include col(xs, 12);
     @include col(xxl, 6);
   }
+
+  &__title {
+    margin: 0 0 24px;
+
+    &:empty {
+      display: none;
+    }
+  }
 }

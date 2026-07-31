@@ -74,7 +74,12 @@
     "contact-form": [],
     "mail-unit": [],
     "download-panel": [],
-    "social-net-header": []
+    "social-net-header": [],
+    "event-article": [],
+    "event-summary": [],
+    "countdown": [],
+    "person-card": [],
+    "team": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",

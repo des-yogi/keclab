@@ -1,0 +1,109 @@
+// В этом файле должны быть стили для БЭМ-блока person-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.person-card {
+  $block-name: &; // #{$block-name}__element
+
+  display: flex;
+  //align-items: center;
+  justify-content: space-between;
+  gap: 0 16px;
+  height: 100%;
+  padding: 16px;
+  text-decoration: none;
+  background-color: var(--bg-block);
+  border-radius: $border-radius;
+  border: 1px solid var(--border-color);
+
+  @media (min-width: $screen-md) {
+    gap: 0 24px;
+    padding: 24px;
+  }
+
+  &:is(a) {
+
+    @include hover-trigger-inner;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__name {
+        color: var(--link-color-hover);
+      }
+
+      #{$block-name}__img {
+
+        img {
+          transform: scale(1.07);
+        }
+      }
+    }
+  }
+
+  &__img-col {
+    flex: 0 0 96px;
+    width: 96px;
+  }
+
+  &__img {
+    background-color: var(--gray-100);
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      transition: transform $transition-time ease;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 4px 0;
+
+    .faux-link {
+      margin-left: auto;
+    }
+  }
+
+  &__text {
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 28px);
+    margin-top: auto;
+  }
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.35;
+    color: var(--title-color);
+    transition: color $transition-time ease;
+  }
+
+  &__position {
+    margin: 0;
+    font-size: $font-size-sm;
+    line-height: 1.4;
+    color: var(--text-color);
+    text-wrap: balance;
+  }
+}

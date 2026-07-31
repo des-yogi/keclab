@@ -7,7 +7,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Events page</title>
+  <title>Новини</title>
   @@include('_include/page_head.html')
 </head>
 
@@ -18,10 +18,10 @@
 
     <div class="page__content">
 
-      <div class="page-header__wrapper">
-        @@include('blocks/page-header/page-header.html')
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
 
-        <span id="menuOverlay" class="menu-overlay"></span>
+      <div class="page__hero-wrapper">
 
         @@include('blocks/hero-secondary/hero-secondary.html', {
           "bgColor": "var(--teal-700)",

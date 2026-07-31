@@ -52,6 +52,12 @@
     flex-shrink: 0;
   }
 
+  &__hero-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100px;
+  }
+
   // Firefox only
   /* «цвет ползунка» «цвет полосы скроллбара» */
   scrollbar-color:  var(--scrollbar-color-thumb) var(--scrollbar-color);
@@ -523,6 +529,10 @@ a {
     background-color: var(--blue-600);
   }
 
+  &:empty {
+    display: none;
+  }
+
   &--icon {
     padding-left: 6px;
 
@@ -609,6 +619,10 @@ figure {
   margin: 0;
 }
 
+[class$="__intro"] {
+  //color: blue;
+}
+
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 // background-image: svg-load('../blocks/sprite-svg/svg/asterisk.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 
@@ -621,7 +635,9 @@ figure {
 
 // :root[data-theme="dark"] & {}
 
+// @@include('blocks/faux-link/faux-link.html')
 // @include hover-trigger-for;
+// @include hover-trigger-inner;
 
 
 // @media (min-width: $screen-md) {}

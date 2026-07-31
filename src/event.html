@@ -7,7 +7,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Публікації</title>
+  <title>Подія</title>
   @@include('_include/page_head.html')
 </head>
 
@@ -24,24 +24,74 @@
       <div class="page__hero-wrapper">
 
         @@include('blocks/hero-secondary/hero-secondary.html', {
-          "bgColor": "var(--blue-700)",
-          "chipText": "аналітичні матеріал",
-          "title": "Публікації",
-          "intro": "<p>Ґрунтовні дослідження, policy papers та експертні звіти KECLab щодо енергетичної безпеки, декарбонізації та європейської інтеграції України.</p>",
-          "isTags": false,
-          "paddBottomClass": ""
+          "bgColor": "var(--green-700)",
+          "chipText": "",
+          "title": "Системний дефіцит генерації: аналіз ризиків та шляхи подолання",
+          "intro": "<p>Системний дефіцит понад 4 ГВт створює значні ризики для енергобезпеки та післявоєнного відновлення. KECLab аналізує поточний стан енергосистеми та пропонує стратегії на основі даних (data-driven) для мінімізації наслідків.</p>",
+          "isTags": true,
+          "paddBottomClass": "hero-secondary__inner--pb-large"
         })
 
       </div>
 
-      <main class="main">
+      <main class="main  event-article">
 
-        @@include('blocks/nav-fixed/nav-fixed.html', {
-          "isHybrid": true
+        <div class="container  event-article__main">
+          <div class="row event-article__row">
+
+            <div class="event-article__content-col">
+              <div class="event-article__content">
+
+                <div class="event-article__btn-wrapper  tablet-hidden">
+                  <a href="#" class="btn" style="width: 100%;" target="_blank" rel="nofollow noopener">
+                    <span class="btn__text">Реєстрація</span>
+                    <span class="btn__icon">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="embed-responsive  event-article__img">
+                  <picture>
+                    <!-- 000 -->
+                    <source srcset="img/article-img.webp" type="image/webp">
+                    <img src="img/article-img.jpg" alt="Alt text" width="720" height="405">
+                  </picture>
+                </div>
+
+                <div class="event-article__text">
+                  <p>Дефіцит генеруючих потужностей в Україні є одним із ключових викликів для стабільності енергосистеми. На семінарі будуть представлені результати аналізу KECLab щодо поточного балансу попиту і пропозиції, сценарії розвитку ситуації на найближчі 12-24 місяці та рекомендації для регуляторів і ринкових учасників.</p>
+                  <p>Основні теми:</p>
+                  <ul>
+                    <li>Оцінка поточного дефіциту та його причин</li>
+                    <li>Короткострокові та середньострокові ризики для системи</li>
+                    <li>Стратегії мінімізації: demand response, імпорт, резервна генерація</li>
+                    <li>Роль ВДЕ у вирішенні проблеми дефіциту</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-article__informer-col">
+              <div class="event-article__informer">
+                @@include('blocks/event-summary/event-summary.html')
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        @@include('blocks/team/team.html', {
+          "chip": "",
+          "titleLevel": "h2",
+          "title": "Доповідачі",
+          "intro": "",
+          "isShortHeader": true,
+          "isFullHeader": false
         })
 
         <section class="container  margin-y  publications">
-          <h2 class="visually-hidden">Перелік публикацій</h2>
+          <h2 class="publications__title">Публікації та матеріали</h2>
 
           <ul class="list-nostyled  row  publications__list">
 
@@ -118,8 +168,6 @@
             </li>
 
           </ul>
-
-          @@include('blocks/pagination/pagination.html')
 
         </section>
 

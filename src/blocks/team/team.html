@@ -1,0 +1,65 @@
+<!--DEV
+@@include('blocks/team/team.html', {
+  "chip": "",
+  "titleLevel": "h2",
+  "title": "Доповідачі",
+  "intro": "",
+  "isShortHeader": true,
+  "isFullHeader": false
+})
+-->
+
+<section class="container  margin-y  team">
+
+  @@if(isShortHeader)
+    <div class="team__header  team__header--short">
+      <@@titleLevel class="team__title">
+        @@title
+      </@@titleLevel>
+    </div>
+  @@endif
+
+  @@if(isFullHeader)
+    <div class="team__header">
+      <span class="chip">@@chip</span>
+
+      <@@titleLevel class="team__title">
+        @@title
+      </@@titleLevel>
+
+      <div class="team__intro">@@intro</div>
+    </div>
+  @@endif
+
+  <ul class="list-nostyled  row  team__row">
+
+    <li class="team__col">
+      @@include('../../blocks/person-card/person-card.html', {
+        "photo": "susanna-nis",
+        "name": "Доктор Сюзанна Ніс",
+        "position": "Керівник проєкту Green Deal Ukraine в HZB",
+        "isLink": true
+      })
+    </li>
+
+    <li class="team__col">
+      @@include('../../blocks/person-card/person-card.html', {
+        "photo": "george-zahman",
+        "name": "Доктор Георг Захманн",
+        "position": "Науковий керівник програми «Зелена угода Україна» в HZB",
+        "isLink": true
+      })
+    </li>
+
+    <li class="team__col">
+      @@include('../../blocks/person-card/person-card.html', {
+        "photo": "frank-meissner",
+        "name": "Доктор Франк Мейсснер",
+        "position": "Керівник відділу даних і моделювання в рамках програми «Зелена угода Україна» в HZB",
+        "isLink": false
+      })
+    </li>
+
+  </ul>
+
+</section>
