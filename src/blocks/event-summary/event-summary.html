@@ -1,0 +1,55 @@
+<!--DEV
+@@include('blocks/event-summary/event-summary.html')
+-->
+
+<section class="event-summary">
+  <h2 class="visually-hidden">Інформація про подію та реєстрація</h2>
+
+  <div class="event-summary__countdown">
+    <p class="event-summary__countdown-caption">До початку події</p>
+    @@include('../../blocks/countdown/countdown.html', {
+      "deadline": "2026-09-15 18:59:00 GMT+0300"
+    })
+  </div>
+
+  <div class="event-summary__table-wrapper">
+    <p class="h5  event-summary__table-caption">Зареєструватися</p>
+
+    <table class="event-summary__table">
+      <tbody>
+        <tr>
+          <th>Дата</th>
+          <td>21 лютого 2026</td>
+        </tr>
+        <tr>
+          <th>Час</th>
+          <td>10:00 – 12:30 (GMT+3)</td>
+        </tr>
+        <tr>
+          <th>Формат</th>
+          <td>Онлайн</td>
+        </tr>
+        <tr>
+          <th>Місце</th>
+          <td>Онлайн (Zoom)</td>
+        </tr>
+        <tr>
+          <th>Вхід</th>
+          <td>Безкоштовно</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="#" class="btn" style="width: 100%;" target="_blank" rel="nofollow noopener">
+      <span class="btn__text">Реєстрація</span>
+      <span class="btn__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </span>
+    </a>
+
+    <p class="event-summary__contact-us">Є запитання? <a href="contacts">Напишіть нам</a></p>
+
+    <p class="event-summary__info">Журналісти повинні пройти обов’язкову акредитацію. Запис вебінару буде надіслано всім зареєстрованим.</p>
+  </div>
+
+</section>

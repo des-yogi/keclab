@@ -1,17 +1,31 @@
 @use '../../scss/variables.scss' as *;
 
+[data-theme="light"] {
+  --countdown-time-color: var(--blue-500);
+  --countdown-text-color: var(--blue-700);
+}
+
+[data-theme="dark"] {
+  --countdown-time-color: var(--white);
+  --countdown-text-color: var(--gray-100);
+}
+
 .countdown {
-  display: inline-flex;
+  display: flex;
   font-size: inherit;
   font-weight: inherit;
   text-align: center;
-  color: $main-color;
+  //color: $main-color;
 
   $block-name: &; // #{$block-name}__element
 
   &__inner {
+    flex: 1 1 100%;
     display: flex;
-    align-items: center;
+    //align-items: center;
+    justify-content: space-between;
+    gap: 0 22px;
+    width: 100%;
 
     &.hidden {
       display: none;
@@ -19,15 +33,45 @@
   }
 
   &__number {
-    &::after {
-      display: inline-block;
-      vertical-align: baseline;
-      content: attr(data-divider);
-      margin-right: 4px;
-      margin-left: 2px;
-      font-size: inherit;
-      font-weight: inherit;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px 0;
+    position: relative;
+    padding: 8px 10px;
+    background-color: var(--bg-input);
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-sm) {
+      padding: 8px 14px;
     }
+
+    &::after {
+      //display: inline-flex;
+      content: attr(data-divider);
+      position: absolute;
+      right: -13.5px;
+      top: 50%;
+      transform: translateY(-50%);
+      //margin-right: 4px;
+      //margin-left: 2px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  &__time {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: var(--countdown-time-color);
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+    color: var(--countdown-text-color);
   }
 
   &__deadline-message {

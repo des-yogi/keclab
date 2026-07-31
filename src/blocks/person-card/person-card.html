@@ -1,0 +1,70 @@
+<!--DEV
+@@include('blocks/person-card/person-card.html', {
+  "photo": "susanna-nis",
+  "name": "Доктор Сюзанна Ніс",
+  "position": "Керівник проєкту Green Deal Ukraine в HZB",
+  "isLink": true
+})
+-->
+
+@@if(isLink)
+
+  <a href="#" class="person-card">
+    <div class="person-card__img-col">
+      <div class="embed-responsive  embed-responsive--2-3  person-card__img">
+        <picture>
+          <!-- 96x144, 144x216 -->
+          <source srcset="img/@@photo.webp, img/@@photo.webp 2x" type="image/webp">
+          <img src="img/@@photo.jpg"
+               srcset="img/@@photo.jpg, img/@@photo.jpg 2x"
+               alt="@@name"
+               width="96"
+               height="144"
+               loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <div class="person-card__text-wrapper">
+
+      <div class="person-card__text">
+        <p class="h6  person-card__name">@@name</p>
+        <p class="person-card__position">@@position</p>
+      </div>
+
+      @@include('../../blocks/faux-link/faux-link.html')
+    </div>
+  </a>
+
+@@else
+
+  <section class="person-card">
+    <div class="person-card__img-col">
+      <div class="embed-responsive  embed-responsive--2-3  person-card__img">
+        <picture>
+          <!-- 96x144, 144x216 -->
+          <source srcset="img/@@photo.webp, img/@@photo.webp 2x" type="image/webp">
+          <img src="img/@@photo.jpg"
+               srcset="img/@@photo.jpg, img/@@photo.jpg 2x"
+               alt="@@name"
+               width="96"
+               height="144"
+               loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <div class="person-card__text-wrapper">
+
+      <div class="person-card__text">
+        <h3 class="visually-hidden">@@name</h3>
+        <p class="h6  person-card__name" aria-hidden="true">@@name</p>
+        <p class="person-card__position">@@position</p>
+      </div>
+
+      @@include('../../blocks/faux-link/faux-link.html')
+    </div>
+  </section>
+
+@@endif
+

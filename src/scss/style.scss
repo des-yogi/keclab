@@ -78,6 +78,11 @@
 @use '../blocks/mail-unit/mail-unit';
 @use '../blocks/download-panel/download-panel';
 @use '../blocks/social-net-header/social-net-header';
+@use '../blocks/event-article/event-article';
+@use '../blocks/event-summary/event-summary';
+@use '../blocks/countdown/countdown';
+@use '../blocks/person-card/person-card';
+@use '../blocks/team/team';
 
 // Подключения из addCssAfter:
 @use './print' as *;
