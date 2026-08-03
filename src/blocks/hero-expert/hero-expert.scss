@@ -1,0 +1,158 @@
+// В этом файле должны быть стили для БЭМ-блока hero-expert, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+@use "sass:math";
+
+.hero-expert {
+  $block-name: &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 1;
+  padding-top: 88px;
+  color: var(--white);
+  background-color: var(--blue-600);
+  overflow: hidden;
+
+  @media (min-width: $screen-md) {
+    padding-top: 133px;
+  }
+
+  .chip {
+    color: inherit;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .blob-animated__wrapper {
+    transform: translateY(50px);
+
+    @media (min-width: $screen-md) {
+      transform: translateY(60px);
+    }
+
+    @media (min-width: $screen-xl) {
+      transform: translateY(20px);
+    }
+
+    @media (min-width: $screen-xxl) {
+      transform: translateY(0);
+    }
+  }
+
+  &__inner {
+    padding-top: 35px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__row {
+    gap: 24px 0;
+    margin-bottom: 24px;
+  }
+
+  &__main-col {
+    @include col(xs, 12);
+    @include col(md, 8);
+    //@include col(xl, 9);
+    @include col(xxl, 9);
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: $screen-xl) {
+      justify-content: center;
+    }
+  }
+
+  &__photo-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col-offset(xl, 1);
+    @include col(xl, 3);
+    @include col-offset(xxl, 1);
+    @include col(xxl, 2);
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px 0;
+
+    @media (min-width: $screen-md) {
+      padding-right: 20px;
+    }
+  }
+
+  &__photo {
+    max-width: 400px;
+    background-color: var(--gray-100);
+    border: 1px solid var(--blue-100);
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__page-title {
+    margin: 0;
+    color: var(--white);
+  }
+
+  &__intro {
+    font-size: $font-size-sm;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__soc-net {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0 0;
+    font-size: $font-size-sm;
+  }
+
+  &__soc-net-title {
+    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: var(--white);
+  }
+}
