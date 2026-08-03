@@ -87,7 +87,8 @@
     "publication-main": [],
     "diagram-slider": [],
     "numbered-item": [],
-    "diagram-fig": []
+    "diagram-fig": [],
+    "modeling-main": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",
