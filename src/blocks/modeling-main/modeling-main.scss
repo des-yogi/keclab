@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока diagram-slider, его элементов,
+// В этом файле должны быть стили для БЭМ-блока modeling-main, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очерёдность:
 // 1. Стилевые правила для этого селектора. 2. @media этого контекста.
@@ -15,52 +15,20 @@
 @use '../../scss/variables' as *;
 @use '../../scss/mixins' as *;
 
-.diagram-slider {
+.modeling-main {
   $block-name: &; // #{$block-name}__element
 
-  padding-top: 48px;
-  padding-bottom: 48px;
-  background-color: var(--header-bg);
-
-  &__header {
-    gap: 24px 0;
-    margin-bottom: 40px;
-
-    @media (min-width: $screen-md) {
-      margin-bottom: 48px;
-    }
-
-    .swiper-controls {
-      margin-top: 0;
-    }
+  &__row {
   }
 
-  &__header-main-col {
+  &__text-col {
     @include col(xs, 12);
+    //@include col(md, 6);
     @include col(xl, 8);
-    @include col(xxl, 6);
+    //@include col(xxl, 3);
   }
 
-  &__header-ctrl-col {
-    @include col(xs, 12);
-    @include col(xl, 4);
-    @include col(xxl, 6);
+  &__text {
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  // &__header-main {
-  // }
-
-  // &__title {
-  // }
-
-  // &__intro {
-  // }
-
-  &__container {
-    padding: 2px 0;
   }
 }
