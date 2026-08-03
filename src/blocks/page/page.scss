@@ -508,6 +508,10 @@ a {
   }
 }
 
+.swiper-button-lock {
+  display: none !important;
+}
+
 //.swiper-slide-active {}
 
 .badge {
@@ -621,6 +625,10 @@ figure {
 
 [class$="__intro"] {
   //color: blue;
+
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size-lg;
+  }
 }
 
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));

@@ -83,7 +83,11 @@
     "other-news-card": [],
     "accordion": [],
     "article-gallery": [],
-    "news-article": []
+    "news-article": [],
+    "publication-main": [],
+    "diagram-slider": [],
+    "numbered-item": [],
+    "diagram-fig": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",
