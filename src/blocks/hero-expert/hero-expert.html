@@ -1,0 +1,60 @@
+<!--DEV
+@@include('blocks/hero-expert/hero-expert.html', {
+  "bgColor": "var(--green-700)",
+  "chipText": "Заходи KECLab",
+  "title": "Події",
+  "intro": "<p>Долучайтеся до фахових дискусій, презентацій аналітичних досліджень та відкритих лекцій за участю провідних українських і міжнародних експертів з енергетики та клімату.</p>"
+})
+-->
+
+<div class="hero-expert"
+     style="background-color: @@bgColor;">
+
+  <div class="blob-animated__wrapper" role="presentation">
+    <img src="img/blob-animated.svg" class="blob-animated" width="1920" height="664" alt="" loading="lazy">
+  </div>
+
+
+  <div class="container  hero-expert__inner">
+
+    @@include('../../blocks/breadcrumbs/breadcrumbs.html')
+
+    <div class="row  hero-expert__row">
+
+      <div class="hero-expert__main-col">
+        <div class="hero-expert__text">
+          <span class="chip">@@chipText</span>
+          <h1 class="hero-expert__page-title">@@title</h1>
+          <div class="hero-expert__intro">
+            @@intro
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-expert__photo-col">
+        <div class="embed-responsive  embed-responsive--2-3  hero-expert__photo">
+          <picture>
+            <!-- 000 -->
+            <source srcset="img/susanna-nis.webp" type="image/webp">
+            <img src="img/susanna-nis.jpg" alt="@@title" width="400" height="600" loading="eager" decoding="sync">
+          </picture>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="hero-expert__main-col">
+        <div class="hero-expert__tag-wrapper">
+          @@include('../../blocks/hero-tag/hero-tag.html')
+        </div>
+
+        <section class="hero-expert__soc-net" aria-labelledby="soc-net-header-title">
+          <h2 class="hero-expert__soc-net-title" id="soc-net-header-title">Ми у соціальних мережах:</h2>
+          @@include('../../blocks/social-net-header/social-net-header.html')
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>
