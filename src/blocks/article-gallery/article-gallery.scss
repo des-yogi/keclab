@@ -32,6 +32,7 @@
 
   &__img {
     border-radius: $border-radius;
+    @include hover-trigger-inner;
 
     &:hover,
     &:focus {
@@ -39,12 +40,29 @@
       img {
         transform: scale(1.07);
       }
+
+      .faux-link.faux-link--lens {
+        opacity: 1;
+      }
     }
 
     img {
       object-fit: cover;
       object-position: center;
       transition: transform $transition-time ease;
+    }
+
+    .faux-link.faux-link--lens {
+      position: absolute;
+      z-index: 1;
+      right: 24px;
+      bottom: 24px;
+      width: 44px;
+      height: 44px;
+      color: var(--white);
+      background: none;
+      border: 1px solid var(--white);
+      opacity: 0;
     }
   }
 }

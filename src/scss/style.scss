@@ -87,6 +87,10 @@
 @use '../blocks/accordion/accordion';
 @use '../blocks/article-gallery/article-gallery';
 @use '../blocks/news-article/news-article';
+@use '../blocks/publication-main/publication-main';
+@use '../blocks/diagram-slider/diagram-slider';
+@use '../blocks/numbered-item/numbered-item';
+@use '../blocks/diagram-fig/diagram-fig';
 
 // Подключения из addCssAfter:
 @use './print' as *;

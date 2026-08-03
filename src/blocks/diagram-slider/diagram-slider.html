@@ -1,0 +1,92 @@
+<!--DEV
+@@include('blocks/diagram-slider/diagram-slider.html')
+-->
+
+<section class="container  margin-y  diagram-slider">
+
+  <div class="row  diagram-slider__header">
+    <div class="diagram-slider__header-main-col">
+      <div class="diagram-slider__header-main">
+        <h2 class="diagram-slider__title">Усі ілюстрації в цій публікації</h2>
+
+        <div class="diagram-slider__intro">
+          <p>Графіки, діаграми та схеми, використані в аналізі.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="diagram-slider__header-ctrl-col">
+      <div class="swiper-controls">
+        <div class="btn-secondary  swiper-button-prev">
+          <span class="btn-secondary__icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+          </span>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="btn  swiper-button-next">
+          <span class="btn__icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="swiper  diagram-slider__container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        @@include('../../blocks/diagram-fig/diagram-fig.html', {
+          "img": "diagram-1",
+          "caption": "Рис. 1: Прогноз споживання електроенергії",
+          "descr": "Прогноз до 2035 року за сценарієм Net Zero."
+        })
+      </div>
+
+      <div class="swiper-slide">
+        @@include('../../blocks/diagram-fig/diagram-fig.html', {
+          "img": "diagram-2",
+          "caption": "Рис. 2: Прогноз споживання електроенергії",
+          "descr": "Прогноз до 2035 року за сценарієм Net Zero."
+        })
+      </div>
+
+      <div class="swiper-slide">
+        @@include('../../blocks/diagram-fig/diagram-fig.html', {
+          "img": "diagram-3",
+          "caption": "Рис. 3: Прогноз споживання електроенергії",
+          "descr": "Прогноз до 2035 року за сценарієм Net Zero."
+        })
+      </div>
+
+      <div class="swiper-slide">
+        @@include('../../blocks/diagram-fig/diagram-fig.html', {
+          "img": "diagram-1",
+          "caption": "Рис. 1: Прогноз споживання електроенергії",
+          "descr": "Прогноз до 2035 року за сценарієм Net Zero."
+        })
+      </div>
+
+      <div class="swiper-slide">
+        @@include('../../blocks/diagram-fig/diagram-fig.html', {
+          "img": "diagram-2",
+          "caption": "Рис. 2: Прогноз споживання електроенергії",
+          "descr": "Прогноз до 2035 року за сценарієм Net Zero."
+        })
+      </div>
+
+      <div class="swiper-slide">
+        @@include('../../blocks/diagram-fig/diagram-fig.html', {
+          "img": "diagram-3",
+          "caption": "Рис. 3: Прогноз споживання електроенергії",
+          "descr": "Прогноз до 2035 року за сценарієм Net Zero."
+        })
+      </div>
+
+    </div>
+  </div>
+
+</section>

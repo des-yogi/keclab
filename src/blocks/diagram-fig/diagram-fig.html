@@ -1,0 +1,28 @@
+<!--DEV
+@@include('blocks/diagram-fig/diagram-fig.html', {
+  "img": "diagram-1",
+  "caption": "Рис. 1: Прогноз споживання електроенергії",
+  "descr": "Прогноз до 2035 року за сценарієм Net Zero."
+})
+-->
+
+<figure class="diagram-fig">
+  <a href="img/@@img.jpg"
+     class="embed-responsive  diagram-fig__img"
+     data-fancybox="diagram">
+    <picture>
+      <!-- 480x270, 720x405 2x от 1440 -->
+      <!-- 400x225, 600x338 2x от 1280 -->
+      <!-- 760x428 от 1024 -->
+      <!-- 640x360 от 768 -->
+      <!-- 700x394 от 480 -->
+      <!-- 540x304 от 300 -->
+      <source srcset="img/@@img.webp" type="image/webp">
+      <img src="img/@@img.jpg" alt="Alt" width="800" height="450" loading="lazy">
+    </picture>
+  </a>
+  <figcaption class="diagram-fig__caption">
+    @@caption
+    <span class="diagram-fig__descr">@@descr</span>
+  </figcaption>
+</figure>

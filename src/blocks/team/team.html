@@ -1,5 +1,6 @@
 <!--DEV
 @@include('blocks/team/team.html', {
+  "id": "",
   "chip": "",
   "titleLevel": "h2",
   "title": "Доповідачі",
@@ -9,25 +10,31 @@
 })
 -->
 
-<section class="container  margin-y  team">
+<section id="@@id" class="container  margin-y  team">
 
   @@if(isShortHeader)
-    <div class="team__header  team__header--short">
-      <@@titleLevel class="team__title">
-        @@title
-      </@@titleLevel>
+    <div class="row  team__header  team__header--short">
+      <div class="team__header-col">
+        <@@titleLevel class="team__title">
+          @@title
+        </@@titleLevel>
+      </div>
     </div>
   @@endif
 
   @@if(isFullHeader)
-    <div class="team__header">
-      <span class="chip">@@chip</span>
+    <div class="row  team__header">
+      <div class="publication-main__row">
+        <div class="team__header-col">
+          <span class="chip">@@chip</span>
 
-      <@@titleLevel class="team__title">
-        @@title
-      </@@titleLevel>
+          <@@titleLevel class="team__title">
+            @@title
+          </@@titleLevel>
 
-      <div class="team__intro">@@intro</div>
+          <div class="team__intro">@@intro</div>
+        </div>
+      </div>
     </div>
   @@endif
 

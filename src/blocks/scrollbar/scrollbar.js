@@ -6,7 +6,8 @@
 
 // Single entry point for all OverlayScrollbars instances and scroll-lock logic on the page.
 import { OverlayScrollbars } from 'overlayscrollbars';
-import 'overlayscrollbars/overlayscrollbars.scriptingenabled.css';
+// import 'overlayscrollbars/overlayscrollbars.scriptingenabled.css';
+// стили подключаются через projectConfig
 
 const DEFAULT_OPTIONS = {
   scrollbars: {

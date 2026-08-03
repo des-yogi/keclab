@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока team, его элементов,
+// В этом файле должны быть стили для БЭМ-блока diagram-fig, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очерёдность:
 // 1. Стилевые правила для этого селектора. 2. @media этого контекста.
@@ -15,42 +15,47 @@
 @use '../../scss/variables' as *;
 @use '../../scss/mixins' as *;
 
-.team {
+.diagram-fig {
   $block-name: &; // #{$block-name}__element
 
-  &__header {
+  height: 100%;
+  padding: 16px;
+  background-color: var(--header-bg);
+  border: 1px solid var(--blue-100);
+  border-radius: 32px;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  &__img {
     margin-bottom: 24px;
+    background-color: var(--gray-100);
+    border-radius: 16px;
 
-    &--short {
+    &:hover,
+    &:focus {
 
-      #{$block-name}__title {
-        margin-bottom: 0;
+      img {
+        transform: scale(1.05);
       }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      transition: transform $transition-time ease;
     }
   }
 
-  &__header-col {
-    @include col(xs, 12);
-    @include col(xl, 8);
-    @include col(xxl, 6);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px 0;
+  &__caption {
+    color: var(--title-color);
   }
 
-  &__title {
-    margin: 0;
-  }
-
-  &__row {
-    gap: 8px 0;
-  }
-
-  &__col {
-    @include col(xs, 12);
-    @include col(md, 6);
-    @include col(xl, 4);
-    @include col(xxl, 3);
+  &__descr {
+    display: block;
+    margin-top: 4px;
+    font-size: $font-size-sm;
+    color: var(--text-color);
   }
 }

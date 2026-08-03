@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока team, его элементов,
+// В этом файле должны быть стили для БЭМ-блока numbered-item, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очерёдность:
 // 1. Стилевые правила для этого селектора. 2. @media этого контекста.
@@ -15,42 +15,46 @@
 @use '../../scss/variables' as *;
 @use '../../scss/mixins' as *;
 
-.team {
+.numbered-item {
   $block-name: &; // #{$block-name}__element
 
-  &__header {
-    margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  background-color: var(--bg-block);
+  border-radius: $border-radius;
+  border: 1px solid var(--border-color);
 
-    &--short {
-
-      #{$block-name}__title {
-        margin-bottom: 0;
-      }
-    }
+  @media (min-width: $screen-md) {
+    flex-direction: initial;
+    align-items: center;
+    padding: 24px;
   }
 
-  &__header-col {
-    @include col(xs, 12);
-    @include col(xl, 8);
-    @include col(xxl, 6);
+  &__num {
+    flex: 0 0 48px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px 0;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: var(--white);
+    background-color: var(--blue-700);
+  }
+
+  &__text {
+    flex: 1 1 auto;
   }
 
   &__title {
+    margin-bottom: 8px;
+  }
+
+  &__descr {
     margin: 0;
-  }
-
-  &__row {
-    gap: 8px 0;
-  }
-
-  &__col {
-    @include col(xs, 12);
-    @include col(md, 6);
-    @include col(xl, 4);
-    @include col(xxl, 3);
+    text-wrap: pretty;
   }
 }

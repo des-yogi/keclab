@@ -1,0 +1,164 @@
+<!--DEV
+@@include('blocks/publication-main/publication-main.html')
+-->
+
+<div class="container  margin-y  publication-main">
+  <div class="row  publication-main__row">
+
+    <div class="publication-main__sidebar-col">
+      <div id="publication-main-overview" class="publication-main__sidebar">
+
+        <div class="publication-main__cover-col">
+
+          <div class="publication-main__cover">
+            <picture>
+              <!-- 000 -->
+              <source srcset="img/cover-1.webp" type="image/webp">
+              <img src="img/cover-1.jpg" alt="Alt" width="332" height="470">
+            </picture>
+          </div>
+
+          <a href="#" class="btn" download>
+            <span class="btn__text">Завантажити</span>
+            <span class="btn__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+            </span>
+          </a>
+
+        </div>
+
+        <div class="publication-main__data-col">
+          <div id="publication-main-data" class="publication-main__data">
+            <h2 class="h4  publication-main__subtitle">Бібліографічні дані</h2>
+
+            <ul class="list-nostyled  publication-main__data-list">
+              <li class="publication-main__data-item">
+                <span class="h6  publication-main__data-name">Автори</span>
+                <span class="publication-main__data-value">Олександр Коваль (KECLab), Ірина Сидоренко (GreenTech), Максим Левченко (EcoSolutions), Тетяна Гнатюк (KECLab Research)</span>
+              </li>
+
+              <li class="publication-main__data-item">
+                <span class="h6  publication-main__data-name">Номер версії</span>
+                <span class="publication-main__data-value">1.0</span>
+              </li>
+
+              <li class="publication-main__data-item">
+                <span class="h6  publication-main__data-name">Дата публікації</span>
+                <span class="publication-main__data-value">15 листопада 2025</span>
+              </li>
+
+              <li class="publication-main__data-item">
+                <span class="h6  publication-main__data-name">Сторінки</span>
+                <span class="publication-main__data-value">29</span>
+              </li>
+
+              <li class="publication-main__data-item">
+                <span class="h6  publication-main__data-name">Тематика</span>
+                <span class="publication-main__data-value">Електроенергія</span>
+              </li>
+
+              <li class="publication-main__data-item">
+                <span class="h6  publication-main__data-name">Рекомендоване цитування</span>
+                <span class="publication-main__data-value">KECLab, GreenTech та EcoSolutions (2025): Інновації в енергетичній безпеці: Стратегії для сталого розвитку в Україні.</span>
+              </li>
+            </ul>
+
+            <a href="#" class="btn-secondary" download>
+              <span class="btn-secondary__text">Поділитися</span>
+              <span class="btn-secondary__icon">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="publication-main__base-col">
+      <div class="publication-main__base">
+        <section id="publication-main-short" class="publication-main__brief">
+          <h2 class="publication-main__brief-title">Короткий зміст</h2>
+          <p>Витрати на енергію мають ключове значення для конкурентоспроможності європейської промисловості. Наразі витрати на електроенергію залишаються низькими для більшості галузей - зазвичай менше 5% від собівартості виробництва - порівняно з витратами на викопне паливо, які можуть становити від 30 до 80%. Залежність Європи від імпортного викопного палива робить її вразливою під час енергетичних криз, тоді як декарбонізовані технології можуть стати більш конкурентоспроможними за умови створення відповідних умов.</p>
+          <p>Після електрифікації споживання електроенергії у більшості секторів становитиме від 60 до 100% від загального обсягу споживання, а витрати на електроенергію потенційно можуть сягати від 10 до 90% виробничих витрат залежно від енергоємності процесу. Ця трансформація відкриває значні можливості для зміцнення промислової бази Європи через цілеспрямовані політичні заходи.</p>
+        </section>
+
+        <section id="publication-main-conclusions" class="publication-main__conclusions">
+          <h2 class="h3  publication-main__conclusions-title">Основні висновки</h2>
+
+          <ol class="list-nostyled  publication-main__conclusions-list">
+            <li>
+              @@include('../../blocks/numbered-item/numbered-item.html', {
+                "number": "1",
+                "title": "Ціновий розрив",
+                "text": "Різниця в цінах на електроенергію між ЄС та США залишається ключовим бар'єром для енергоємних галузей металургійного сектору."
+              })
+            </li>
+
+            <li>
+              @@include('../../blocks/numbered-item/numbered-item.html', {
+                "number": "2",
+                "title": "Електрифікація як драйвер",
+                "text": "Перехід на низьковуглецеві технології може знизити операційні витрати на 15-20% у довгостроковій перспективі за умови доступності ВДЕ."
+              })
+            </li>
+
+            <li>
+              @@include('../../blocks/numbered-item/numbered-item.html', {
+                "number": "3",
+                "title": "Роль регулювання",
+                "text": "Стабільні прайс-кепи та державні гарантії інвестицій є критичними для залучення капіталу в модернізацію мереж."
+              })
+            </li>
+
+            <li>
+              @@include('../../blocks/numbered-item/numbered-item.html', {
+                "number": "4",
+                "title": "Регіональні особливості",
+                "text": "Східна Європа має унікальний потенціал для створення нових промислових хабів завдяки інтеграції з українською енергосистемою."
+              })
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="publication-main__pub-details">
+          <h3 class="h6  publication-main__pub-details-title">Вихідні дані</h3>
+          <p>KECLab (2026). "Розвиток промисловості Європи: конкурентоспроможність та роль цін на електроенергію". Scientific Series 'Energy & Climate'. ISSN 2341-9872. Kyiv, Ukraine.</p>
+        </section>
+
+        <section id="publication-main-downloads" class="publication-main__pub-details  publication-main__pub-details--download">
+          <h3 class="h3  publication-main__pub-details-title">Завантаження файлів</h3>
+
+          <ol class="list-nostyled  publication-main__conclusions-list">
+            <li>
+              @@include('../../blocks/download-panel/download-panel.html', {
+                "fileTypeIcon": "file-pdf",
+                "title": "Повний звіт",
+                "descr": "PDF • 2.1 MB"
+              })
+            </li>
+
+            <li>
+              @@include('../../blocks/download-panel/download-panel.html', {
+                "fileTypeIcon": "file-pdf",
+                "title": "Резюме для керівників",
+                "descr": "PDF • 2.1 MB"
+              })
+            </li>
+
+            <li>
+              @@include('../../blocks/download-panel/download-panel.html', {
+                "fileTypeIcon": "file-xls",
+                "title": "Додаток з даними",
+                "descr": "XLSX • 840 кB"
+              })
+            </li>
+          </ol>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+</div>
