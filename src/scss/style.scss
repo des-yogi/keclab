@@ -91,6 +91,7 @@
 @use '../blocks/diagram-slider/diagram-slider';
 @use '../blocks/numbered-item/numbered-item';
 @use '../blocks/diagram-fig/diagram-fig';
+@use '../blocks/modeling-main/modeling-main';
 
 // Подключения из addCssAfter:
 @use './print' as *;
