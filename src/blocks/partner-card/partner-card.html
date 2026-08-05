@@ -1,0 +1,36 @@
+<!--DEV
+@@include('blocks/partner-card/partner-card.html', {
+  "logo": "erste",
+  "imgFormat": "svg",
+  "name": "",
+  "longname": "",
+  "isLink": true
+})
+-->
+
+@@if(isLink)
+
+  <a href="#" class="partner-card" target="_blank" rel="nofollow noopener">
+    <div class="partner-card__logo">
+      <img src="img/@@logo.@@imgFormat" alt="@@name" width="232" height="89" loading="lazy">
+      <!-- if .png then + 1.5x -->
+    </div>
+    <p class="partner-card__text">
+      <span class="partner-card__name">@@name</span>
+      <span class="partner-card__longname">@@longname</span>
+    </p>
+  </a>
+
+@@else
+
+  <div class="partner-card">
+    <div class="partner-card__logo">
+      <img src="img/@@logo.@@imgFormat" alt="@@name" width="232" height="89" loading="lazy">
+    </div>
+    <p class="partner-card__text">
+      <span class="partner-card__name">@@name</span>
+      <span class="partner-card__longname">@@longname</span>
+    </p>
+  </div>
+
+@@endif

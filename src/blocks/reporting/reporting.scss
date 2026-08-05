@@ -1,0 +1,71 @@
+// В этом файле должны быть стили для БЭМ-блока reporting, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.reporting {
+  $block-name: &; // #{$block-name}__element
+
+  &__row {
+    margin-bottom: 24px;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xxl, 8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__intro {
+    text-wrap: pretty;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__feature-report {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    margin-top: 16px;
+    font-size: $font-size-sm;
+    text-align: center;
+    text-wrap: balance;
+    color: var(--title-color);
+    background-color: var(--bg-block);
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+      border-radius: $border-radius-lg;
+    }
+  }
+}

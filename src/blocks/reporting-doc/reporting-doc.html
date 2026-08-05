@@ -1,0 +1,73 @@
+<!--DEV
+Для использования этого файла как шаблона:
+@@include('blocks/reporting-doc/reporting-doc.html')
+-->
+
+<section class="container  margin-y  reporting-doc">
+  <div class="row  reporting-doc__row">
+    <div class="reporting-doc__header-col">
+      <span class="chip">Управління</span>
+      <h2 class="reporting-doc__title">Документи управління та доброчесності</h2>
+      <!-- <div class="reporting-doc__intro">
+        <p>Щорічні звіти KECLab містять повну інформацію про реалізовані дослідження, публікації, заходи, фінансові потоки та стратегічні плани.</p>
+      </div> -->
+    </div>
+  </div>
+
+  <ul class="list-nostyled  row  reporting-doc__list">
+    <li class="reporting-doc__item">
+      @@include('../../blocks/download-panel/download-panel.html', {
+        "fileTypeIcon": "file-pdf",
+        "title": "Статут KECLab",
+        "descr": "Квітень 2025 · PDF"
+      })
+    </li>
+
+    <li class="reporting-doc__item">
+      @@include('../../blocks/download-panel/download-panel.html', {
+        "fileTypeIcon": "file-pdf",
+        "title": "Положення про раду директорів",
+        "descr": "Квітень 2025 · PDF"
+      })
+    </li>
+
+    <li class="reporting-doc__item">
+      @@include('../../blocks/download-panel/download-panel.html', {
+        "fileTypeIcon": "file-pdf",
+        "title": "Кодекс наукової доброчесності",
+        "descr": "Травень 2025 · PDF"
+      })
+    </li>
+
+    <li class="reporting-doc__item">
+      @@include('../../blocks/download-panel/download-panel.html', {
+        "fileTypeIcon": "file-pdf",
+        "title": "Антикорупційна програма",
+        "descr": "Травень 2025 · PDF"
+      })
+    </li>
+
+    <li class="reporting-doc__item">
+      @@include('../../blocks/download-panel/download-panel.html', {
+        "fileTypeIcon": "file-pdf",
+        "title": "Положення про публічний доступ до даних",
+        "descr": "Червень 2025 · PDF"
+      })
+    </li>
+
+    <li class="reporting-doc__item">
+      @@include('../../blocks/download-panel/download-panel.html', {
+        "fileTypeIcon": "file-pdf",
+        "title": "Конфлікт інтересів: процедури",
+        "descr": "Червень 2025 · PDF"
+      })
+    </li>
+  </ul>
+
+  @@include('../../blocks/audit-panel/audit-panel.html', {
+    "icon": "shield",
+    "title": "Незалежний зовнішній аудит",
+    "descr": "Фінансова звітність KECLab щорічно перевіряється незалежним аудитором. Результати аудиту публікуються у відкритому доступі разом із щорічним звітом."
+  })
+
+</section>

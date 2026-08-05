@@ -1,0 +1,58 @@
+<!--DEV
+@@include('blocks/founder-card/founder-card.html', {
+  "logo": "naukma",
+  "fileFormat": "svg",
+  "title": "НаУКМА",
+  "descr": "Національний університет «Києво-Могилянська академія» — інституційна домівка KECLab"
+})
+-->
+
+<article class="founder-card">
+
+  <div class="founder-card__top">
+    <div class="founder-card__logo">
+      <img src="img/@@logo.@@fileFormat" alt="@@title" width="260" height="100" loading="lazy">
+    </div>
+
+    <div class="founder-card__so-net">
+      <ul class="list-nostyled  social-net">
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Підписуйтесь на нас у LinkedIn" title="LinkedIn">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#linkedin-logo"></use></svg>
+            </span>
+          </a>
+        </li>
+
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Підписуйтесь на нас у Facebook" title="Facebook">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-logo"></use></svg>
+            </span>
+          </a>
+        </li>
+
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Підписуйтесь на нас у X (ex Twitter)" title="X">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#x-logo"></use></svg>
+            </span>
+          </a>
+        </li>
+
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Веб-сайт організації" title="Веб-сайт організації">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#link"></use></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="founder-card__bottom">
+    <h3 class="h4  founder-card__title">@@title</h3>
+    <p class="founder-card__descr">@@descr</p>
+  </div>
+</article>

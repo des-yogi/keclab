@@ -92,6 +92,23 @@
 @use '../blocks/numbered-item/numbered-item';
 @use '../blocks/diagram-fig/diagram-fig';
 @use '../blocks/modeling-main/modeling-main';
+@use '../blocks/partners-slider/partners-slider';
+@use '../blocks/training-program/training-program';
+@use '../blocks/hero-expert/hero-expert';
+@use '../blocks/partner-card/partner-card';
+@use '../blocks/reporting/reporting';
+@use '../blocks/reporting-doc/reporting-doc';
+@use '../blocks/audit-panel/audit-panel';
+@use '../blocks/annual-report/annual-report';
+@use '../blocks/about-us/about-us';
+@use '../blocks/founders/founders';
+@use '../blocks/founder-card/founder-card';
+@use '../blocks/keclab-stats/keclab-stats';
+@use '../blocks/key-areas/key-areas';
+@use '../blocks/key-area-card/key-area-card';
+@use '../blocks/our-values/our-values';
+@use '../blocks/value-card/value-card';
+@use '../blocks/history/history';
 
 // Подключения из addCssAfter:
 @use './print' as *;

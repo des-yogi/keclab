@@ -1,0 +1,47 @@
+<!--DEV
+@@include('blocks/founders/founders.html')
+-->
+
+<section class="container  margin-y  founders">
+
+  <div class="row  founders__row">
+    <div class="founders__header-col">
+      <div class="founders__header">
+        <span class="chip">засновники</span>
+        <h2 class="founders__title">Засновники лабораторії</h2>
+        <div class="founders__intro">
+          <p>Три потужні інституційні стовпи об'єднали європейську експертизу та українську академічну базу для аналізу кліматичної політики на основі даних.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-nostyled  row  founders__list">
+    <li class="founders__item">
+      @@include('../../blocks/founder-card/founder-card.html', {
+        "logo": "naukma",
+        "fileFormat": "png",
+        "title": "НаУКМА",
+        "descr": "Національний університет «Києво-Могилянська академія» — інституційна домівка KECLab"
+      })
+    </li>
+
+    <li class="founders__item">
+      @@include('../../blocks/founder-card/founder-card.html', {
+        "logo": "hzb",
+        "fileFormat": "svg",
+        "title": "Helmholtz-Zentrum Berlin",
+        "descr": "Провідний німецький дослідний центр; виконавець проєкту Green Deal Ukraïna"
+      })
+    </li>
+
+    <li class="founders__item">
+      @@include('../../blocks/founder-card/founder-card.html', {
+        "logo": "green-deal",
+        "fileFormat": "svg",
+        "title": "Green Deal Ukraïna",
+        "descr": "Проєкт на базі HZB, на якому ґрунтується KECLab"
+      })
+    </li>
+  </ul>
+</section>

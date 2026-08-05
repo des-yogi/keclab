@@ -1,0 +1,34 @@
+<!--DEV
+@@include('blocks/reporting/reporting.html')
+-->
+
+<section class="container  margin-y  reporting">
+  <div class="row  reporting__row">
+    <div class="reporting__header-col">
+      <span class="chip">Щорічні звіти</span>
+      <h2 class="reporting__title">Звіти про діяльність</h2>
+      <div class="reporting__intro">
+        <p>Щорічні звіти KECLab містять повну інформацію про реалізовані дослідження, публікації, заходи, фінансові потоки та стратегічні плани.</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-nostyled  reporting__list">
+    <li class="reporting__item">
+      @@include('../../blocks/annual-report/annual-report.html', {
+        "period": "Квітень 2025 — Грудень 2025",
+        "title": "Звіт про діяльність KECLab 2025",
+        "descr": "<p>Перший звіт про діяльність лабораторії від дня заснування: дослідницька програма, публікації, заходи, фінанси та стратегічні партнерства.</p>"
+      })
+    </li>
+    <!-- <li class="reporting__item">
+      @@include('../../blocks/annual-report/annual-report.html', {
+        "period": "Квітень 2025 — Грудень 2025",
+        "title": "Звіт про діяльність KECLab 2025",
+        "descr": "<p>Перший звіт про діяльність лабораторії від дня заснування: дослідницька програма, публікації, заходи, фінанси та стратегічні партнерства.</p>"
+      })
+    </li> -->
+  </ul>
+
+  <p class="reporting__feature-report">📄 Звіт за 2026 рік — буде опубліковано у першому кварталі 2027</p>
+</section>

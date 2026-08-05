@@ -1,0 +1,158 @@
+<!--DEV
+@@include('blocks/partners-slider/partners-slider.html', {
+  "richHeader": true
+})
+-->
+
+<div class="partners-slider  margin-y">
+
+  @@if(richHeader)
+
+  <div class="container  partners-slider__header  partners-slider__header--rich">
+    <span class="chip">партнери</span>
+    <h2 class="partners-slider__title">Наші партнери</h2>
+    <div class="partners-slider__intro">
+      <p>Ми співпрацюємо з провідними організаціями в Україні та ЄС</p>
+    </div>
+  </div>
+
+  @@else
+
+    <div class="container  partners-slider__header">
+      <h2 class="h3  partners-slider__title">Наші партнери</h2>
+    </div>
+
+  @@endif
+
+  <div class="swiper  partners-slider__container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "erste",
+          "imgFormat": "svg",
+          "name": "ERSTE",
+          "longname": "",
+          "isLink": true
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "eko",
+          "imgFormat": "svg",
+          "name": "EKO",
+          "longname": "txt",
+          "isLink": false
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "ksep",
+          "imgFormat": "svg",
+          "name": "KSEP",
+          "longname": "text",
+          "isLink": true
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "hzb",
+          "imgFormat": "svg",
+          "name": "HZB",
+          "longname": "text",
+          "isLink": true
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "forum-energii",
+          "imgFormat": "svg",
+          "name": "Forum Energii",
+          "longname": "Незалежний аналітичний центр з енергетики (Варшава)",
+          "isLink": false
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "ios",
+          "imgFormat": "svg",
+          "name": "НДІ (IOŚ-PIB)",
+          "longname": "Польський національний науково-дослідний інститут",
+          "isLink": true
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "agh",
+          "imgFormat": "svg",
+          "name": "AGH University of Krakow",
+          "longname": "Провідний польський технічний університет",
+          "isLink": false
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "dixi",
+          "imgFormat": "svg",
+          "name": "DIXI",
+          "longname": "text",
+          "isLink": true
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "naukma",
+          "imgFormat": "png",
+          "name": "НАУКМА",
+          "longname": "txt",
+          "isLink": false
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "green-deal",
+          "imgFormat": "svg",
+          "name": "GreenDeal",
+          "longname": "txt",
+          "isLink": true
+        })
+      </div>
+
+      <div class="swiper-slide  partners-slider__slide">
+        @@include('../../blocks/partner-card/partner-card.html', {
+          "logo": "eui",
+          "imgFormat": "svg",
+          "name": "EUI",
+          "longname": "txt",
+          "isLink": false
+        })
+      </div>
+
+    </div>
+  </div>
+
+  @@if(richHeader)
+
+    <div class="partners-slider__footer">
+      <a href="#" class="btn-secondary">
+        <span class="btn-secondary__text">Детальінше</span>
+        <span class="btn-secondary__icon">
+          <svg width="24" height="24" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+  @@endif
+
+</div>

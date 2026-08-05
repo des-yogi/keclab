@@ -10,6 +10,7 @@ import { buildHtml } from './html.mjs';
 import { copyAssets } from './assets.mjs';
 import { buildSvgSprite } from './sprite-svg.mjs';
 import { generateStyleEntry } from './generateStyle.mjs';
+import { lintHtml } from './lintHtml.mjs';
 import { logInfo, logError } from './logger.mjs';
 
 /**
@@ -83,6 +84,8 @@ export async function devServer() {
     await buildScripts({ mode: 'development' });
     await copyAssets();
     await buildHtml();
+    // lintHtml();
+    // await lintHtml();
   };
 
   // Вотчер для projectConfig.json
@@ -144,6 +147,8 @@ export async function devServer() {
         await buildScripts({ mode: 'development' });
       } else if (rel.endsWith('.html')) {
         await buildHtml();
+        // lintHtml();
+        // await lintHtml();
       } else if (
         rel.startsWith('img/') ||
         rel.startsWith('fonts/') ||

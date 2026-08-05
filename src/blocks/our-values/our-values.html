@@ -1,0 +1,51 @@
+<!--DEV
+@@include('blocks/our-values/our-values.html')
+-->
+
+<section class="container  margin-y  our-values">
+  <div class="row  our-values__row">
+    <div class="our-values__header-col">
+      <div class="our-values__header">
+        <span class="chip">Цінності</span>
+        <h2 class="our-values__title">Наші цінності</h2>
+        <!-- <div class="our-values__intro">
+          <p></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <ol class="list-nostyled  row  our-values__list">
+    <li class="our-values__item">
+      @@include('../../blocks/value-card/value-card.html', {
+        "number": "Н",
+        "title": "Незалежність та неупередженість",
+        "descr": "Неупереджені дослідження та висновки, вільні від політичного чи комерційного впливу."
+      })
+    </li>
+
+    <li class="our-values__item">
+      @@include('../../blocks/value-card/value-card.html', {
+        "number": "Д",
+        "title": "Доброчесність",
+        "descr": "Чесна робота з даними, прозорі припущення та відповідальність за якість результатів."
+      })
+    </li>
+
+    <li class="our-values__item">
+      @@include('../../blocks/value-card/value-card.html', {
+        "number": "В",
+        "title": "Висока якість досліджень",
+        "descr": "Високі академічні стандарти, перевірені методи та доказова основа для кожного дослідження."
+      })
+    </li>
+
+    <li class="our-values__item">
+      @@include('../../blocks/value-card/value-card.html', {
+        "number": "П",
+        "title": "Прозорість та відкритість до діалогу",
+        "descr": "Прозорий діалог із зацікавленими сторонами: державою, громадами, бізнесом, університетами та міжнародними партнерами."
+      })
+    </li>
+  </ol>
+</section>

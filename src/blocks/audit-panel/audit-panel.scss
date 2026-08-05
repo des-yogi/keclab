@@ -1,0 +1,113 @@
+// В этом файле должны быть стили для БЭМ-блока audit-panel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.audit-panel {
+  $block-name: &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px 0;
+  padding: 24px 16px;
+  background: var(--bg-block);
+  border: 1px solid var(--border-color);
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+    border-radius: $border-radius-lg;
+  }
+
+  @media (min-width: $screen-xl) {
+    flex-direction: initial;
+    align-items: center;
+    gap: 24px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 40px;
+  }
+
+  &__main-col {
+
+    @media (min-width: $screen-xl) {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__ctrl-col {
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px 0;
+
+    @media (min-width: $screen-xl) {
+      flex-direction: initial;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--green-50);
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    :root[data-theme="dark"] & {
+      background: var(--green-700);
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px 0;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  // &__title {
+  // }
+
+  &__descr {
+    text-wrap: balance;
+  }
+}

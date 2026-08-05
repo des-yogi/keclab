@@ -1,0 +1,123 @@
+// В этом файле должны быть стили для БЭМ-блока history, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.history {
+  $block-name: &; // #{$block-name}__element
+
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: var(--white);
+  background: var(--blue-800);
+
+  @media (min-width: $screen-md) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &__row {
+    margin-bottom: 24px;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+    @include col(xxl, 6);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px 0;
+
+    & > * {
+      margin: 0;
+      color: inherit;
+    }
+  }
+
+  &__list {}
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 24px;
+    padding: 24px 0;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($white, 0.1);
+
+      #{$block-name}__year-col {
+
+        &::after {
+
+          @media (min-width: $screen-md) {
+            display: block;
+            content: "";
+            width: 1px;
+            height: 40px;
+            margin: 0 auto;
+            background: currentColor;
+          }
+        }
+      }
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__year-col {
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+  }
+
+  // &__text-col {
+  // }
+
+  &__year {
+    margin: 0;
+    color: inherit;
+  }
+
+  &__month {
+    font-size: $font-size-sm;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    color: inherit;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: $font-size;
+    text-wrap: balance;
+    color: var(--blue-100);
+  }
+}

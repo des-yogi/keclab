@@ -46,6 +46,14 @@
 
   &__content {
     flex-grow: 1;
+
+    &--white-bg {
+      background: var(--white);
+
+      :root[data-theme="dark"] & {
+        background: var(--blue-600);
+      }
+    }
   }
 
   &__footer-wrapper {

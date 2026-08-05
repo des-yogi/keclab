@@ -55,6 +55,7 @@ const tagColors = {
   '[assets]':        chalk.hex('#F1FA8C'),
   '[sprite-svg]':    chalk.hex('#50FA7B'),
   '[html]':          chalk.hex('#0000FF'),
+  '[html-validate]': chalk.yellow,
   '[dev-server]':    chalk.hex('#F8F8F2'),
   '[createBlock]':   chalk.hex('#9457EB'),
   '[img-opt]':       chalk.magentaBright,
