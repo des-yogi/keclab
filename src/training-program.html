@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Навчальна програма</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
+
+      <div class="page__hero-wrapper">
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--blue-700)",
+          "chipText": "Навчальні програми",
+          "title": "Навчальна програма з лідерства в енергетиці та кліматі",
+          "intro": "<p>Ця комплексна тритижнева онлайн-програма охоплює ключові аспекти законодавства, політики, управління, ринків, безпеки постачання та сталого розвитку в сфері енергетики й клімату Європейського Союзу. Метою курсу є підтримка нового покоління лідерів у сфері енергетики та клімату в Україні та Молдові, щоб вони могли сприяти енергетичному переходу своїх країн та процесу вступу до ЄС.</p>"
+        })
+
+      </div>
+
+      <main class="main">
+
+        <!-- anchor naviation -->
+        <div class="container  nav-fixed  nav-fixed--overflow-auto  invisible-scrollbar">
+          <nav class="nav-fixed__inner">
+            <ul class="list-nostyled  nav-link">
+              <li class="nav-link__item  active">
+                <a href="#" class="nav-link__link">
+                  <span>Ключова інформація</span>
+                </a>
+              </li>
+              <li class="nav-link__item">
+                <a href="#" class="nav-link__link">
+                  <span>Таймлайн програми</span>
+                </a>
+              </li>
+              <li class="nav-link__item">
+                <a href="#" class="nav-link__link">
+                  <span>Чого очікувати</span>
+                </a>
+              </li>
+              <li class="nav-link__item">
+                <a href="#" class="nav-link__link">
+                  <span>Хто може подавати заявку</span>
+                </a>
+              </li>
+              <li class="nav-link__item">
+                <a href="#publication-main-downloads" class="nav-link__link">
+                  <span>Подати заявку</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        @@include('blocks/training-program/training-program.html')
+
+        @@include('blocks/team/team.html', {
+          "id": "",
+          "chip": "",
+          "titleLevel": "h3",
+          "title": "Доповідачі",
+          "intro": "",
+          "isShortHeader": true
+        })
+
+        @@include('blocks/partners-slider/partners-slider.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+// В этом файле должны быть стили для БЭМ-блока value-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.value-card {
+  $block-name: &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px 0;
+  height: 100%;
+  padding: 24px;
+  background: var(--bg-block);
+  border: 1px solid var(--border-color);
+  border-radius: $border-radius;
+
+  // &__num-wrapper {
+  // }
+
+  &__icon,
+  &__title {
+    font-weight: 500;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    font-size: 16px;
+    color: var(--teal-700);
+    background: var(--teal-50);
+
+    :root[data-theme="dark"] & {
+      color: var(--teal-50);
+      background: var(--teal-700);
+    }
+  }
+
+  // &__text {
+  // }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--title-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: $font-size;
+    text-wrap: balance;
+  }
+}

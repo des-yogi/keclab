@@ -1,0 +1,128 @@
+// В этом файле должны быть стили для БЭМ-блока founder-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.founder-card {
+  $block-name: &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+  height: 100%;
+  padding: 24px;
+  background: var(--gray-20);
+  border: 1px solid var(--blue-50);
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    border-radius: $border-radius-lg;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+
+    @media (min-width: $screen-md) {
+      justify-content: space-between;
+    }
+
+    @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
+      justify-content: initial;
+    }
+  }
+
+  &__logo {
+    flex: 1 1 100%;
+
+    @media (min-width: $screen-md) {
+      flex: 0 0 260px;
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
+      flex: 1 1 100%;
+    }
+
+    img {
+      width: 260px;
+      height: 100px;
+    }
+  }
+
+  &__so-net {
+    flex: 1 1 100%;
+
+    @media (min-width: $screen-md) {
+      flex: 0 1 124px;
+      width: 124px;
+      height: 124px;
+    }
+
+    @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
+      flex: 1 1 100%;
+      width: auto;
+      height: auto;
+    }
+
+    .social-net__link {
+      width: 58px;
+
+      :root[data-theme="dark"] & {
+        color: var(--blue-700);
+        background-color: var(--blue-50);
+        border-color: var(--blue-50);
+      }
+
+      .btn-secondary__icon {
+
+        :root[data-theme="dark"] & {
+          color: var(--blue-700);
+          background-color: var(--white);
+          border-color: var(--white);
+        }
+      }
+
+      &:hover,
+      &:focus {
+
+        :root[data-theme="dark"] & {
+          color: var(--blue-700);
+          background-color: var(--blue-100);
+
+          .btn-secondary__icon {
+            color: var(--blue-700);
+            background-color: var(--white);
+            border-color: var(--blue-100);
+          }
+        }
+      }
+    }
+  }
+
+  // &__bottom {
+  // }
+
+  &__title {
+    color: var(--blue-950);
+  }
+
+  &__descr {
+    text-wrap: balance;
+    color: var(--gray-600);
+  }
+}

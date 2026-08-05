@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Звітність</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
+
+      <div class="page__hero-wrapper">
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--blue-700)",
+          "chipText": "Прозорість та підзвітність",
+          "title": "Звітність",
+          "intro": "<p>KECLab дотримується найвищих стандартів наукової доброчесності та інституційної прозорості. Всі фінансові звіти, документи управління та результати діяльності є у відкритому доступі.</p>"
+        })
+
+      </div>
+
+      <main class="main">
+
+        @@include('blocks/reporting/reporting.html')
+
+        @@include('blocks/reporting-doc/reporting-doc.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

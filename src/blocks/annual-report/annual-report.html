@@ -1,0 +1,52 @@
+<!--DEV
+@@include('blocks/annual-report/annual-report.html', {
+  "period": "Квітень 2025 — Грудень 2025",
+  "title": "Звіт про діяльність KECLab 2025",
+  "descr": "<p>Перший звіт про діяльність лабораторії від дня заснування: дослідницька програма, публікації, заходи, фінанси та стратегічні партнерства.</p>"
+})
+-->
+
+<article class="annual-report">
+
+  <div class="annual-report__inner">
+
+    <div class="annual-report__cover-col">
+      <div class="annual-report__cover">
+        <div class="annual-report__cover-img">
+          <span class="annual-report__cover-icon">
+            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#text"></use></svg>
+          </span>
+          <span class="annual-report__cover-text-sm">KECLab</span>
+          <span class="h6  annual-report__cover-text-lg">2025</span>
+          <span class="annual-report__cover-text-sm">Annual Report</span>
+        </div>
+        <span class="chip">Найновіший звіт</span>
+      </div>
+    </div>
+
+    <div class="annual-report__text-col">
+      <div class="annual-report__text-wrapper">
+
+        <div class="annual-report__text">
+          <p class="annual-report__period">@@period</p>
+          <h3 class="annual-report__title">@@title</h3>
+          <div class="annual-report__descr">
+            @@descr
+          </div>
+        </div>
+
+        <div class="annual-report__footer">
+          <span class="annual-report__file-info">48 стор. - 3.2 МБ</span>
+
+          <a href="#" class="btn" download>
+            <span class="btn__text">Завантажити PDF</span>
+            <span class="btn__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>

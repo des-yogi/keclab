@@ -27,16 +27,46 @@
         margin-bottom: 0;
       }
     }
+
+    &--is-link {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__header-row {
+    gap: 24px 0;
   }
 
   &__header-col {
     @include col(xs, 12);
+    @include col(md, 10);
     @include col(xl, 8);
     @include col(xxl, 6);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px 0;
+
+    &--is-ctrls {
+      @include col(xl, 6);
+    }
+  }
+
+  &__link-col {
+    @include col(xs, 12);
+    @include col(md, 12);
+    @include col(xl, 4);
+    @include col(xxl, 6);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    &--is-ctrls {
+      @include col(xl, 6);
+    }
   }
 
   &__title {

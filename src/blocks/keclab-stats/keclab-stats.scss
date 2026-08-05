@@ -1,0 +1,84 @@
+// В этом файле должны быть стили для БЭМ-блока keclab-stats, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.keclab-stats {
+  $block-name: &; // #{$block-name}__element
+
+  color: var(--white);
+  background: var(--blue-700);
+
+  &__inner {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+    color: inherit;
+  }
+
+  &__list {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px 0;
+    padding: 16px 0;
+
+    @media (min-width: $screen-md) {
+      flex: 1;
+      margin: 16px 0;
+      padding: 0 8px;
+    }
+
+    &:not(:last-child) {
+
+      @media (max-width: $screen-md - 1) {
+        border-bottom: 1px solid var(--blue-400);
+      }
+    }
+
+    &:not(:first-child) {
+
+      @media (min-width: $screen-md) {
+        border-left: 1px solid var(--blue-400);
+      }
+    }
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  &__value {
+    color: inherit;
+  }
+
+  &__name {
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,32 @@
+<!--DEV
+@@include('blocks/audit-panel/audit-panel.html', {
+  "icon": "shield",
+  "title": "Незалежний зовнішній аудит",
+  "descr": "Фінансова звітність KECLab щорічно перевіряється незалежним аудитором. Результати аудиту публікуються у відкритому доступі разом із щорічним звітом."
+})
+-->
+
+<section class="audit-panel">
+
+  <div class="audit-panel__main-col">
+    <div class="audit-panel__main">
+      <div class="audit-panel__icon">
+        <img src="img/shield.svg" alt="" width="32" height="32" loading="lazy">
+      </div>
+      <div class="audit-panel__text">
+        <h3 class="h6  audit-panel__title">@@title</h3>
+        <p class="audit-panel__descr">@@descr</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="audit-panel__ctrl-col">
+    <a href="#" class="btn-secondary" download>
+      <span class="btn-secondary__text">Аудиторський висновок</span>
+      <span class="btn-secondary__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </span>
+    </a>
+  </div>
+
+</section>

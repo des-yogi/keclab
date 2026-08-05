@@ -6,11 +6,13 @@
   "title": "Доповідачі",
   "intro": "",
   "isShortHeader": true,
-  "isFullHeader": false
+  "isFullHeader": false,
+  "isLink": false,
+  "isCtrls": false
 })
 -->
 
-<section id="@@id" class="container  margin-y  team">
+<section id="team-@@id" class="container  margin-y  team">
 
   @@if(isShortHeader)
     <div class="row  team__header  team__header--short">
@@ -23,8 +25,8 @@
   @@endif
 
   @@if(isFullHeader)
-    <div class="row  team__header">
-      <div class="publication-main__row">
+    <div class="team__header  team__header--is-link">
+      <div class="row  team__header-row">
         <div class="team__header-col">
           <span class="chip">@@chip</span>
 
@@ -33,6 +35,60 @@
           </@@titleLevel>
 
           <div class="team__intro">@@intro</div>
+        </div>
+      </div>
+    </div>
+  @@endif
+
+  @@if(isLink)
+    <div class="team__header  team__header--is-link">
+      <div class="row  team__header-row">
+        <div class="team__header-col  team__header-col--is-link">
+          <span class="chip">@@chip</span>
+
+          <@@titleLevel class="team__title">
+            @@title
+          </@@titleLevel>
+
+          <div class="team__intro">@@intro</div>
+        </div>
+
+        <div class="team__link-col">
+          <a href="#" class="btn-secondary">
+            <span class="btn-secondary__text">Наша команда</span>
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  @@endif
+
+  @@if(isCtrls)
+    <div class="team__header  team__header--is-link">
+      <div class="row  team__header-row">
+        <div class="team__header-col  team__header-col--is-ctrls">
+          <span class="chip">@@chip</span>
+
+          <@@titleLevel class="team__title">
+            @@title
+          </@@titleLevel>
+
+          <div class="team__intro">@@intro</div>
+        </div>
+
+        <div class="team__link-col  team__link-col--is-ctrls">
+          <a href="#" class="btn-secondary">
+            <span class="btn-secondary__text">Наша команда</span>
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use>
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -66,6 +122,55 @@
         "isLink": false
       })
     </li>
+
+    @@if(isLink)
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "susanna-nis",
+          "name": "Доктор Сюзанна Ніс",
+          "position": "Керівник проєкту Green Deal Ukraine в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "george-zahman",
+          "name": "Доктор Георг Захманн",
+          "position": "Науковий керівник програми «Зелена угода Україна» в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "frank-meissner",
+          "name": "Доктор Франк Мейсснер",
+          "position": "Керівник відділу даних і моделювання в рамках програми «Зелена угода Україна» в HZB",
+          "isLink": false
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "susanna-nis",
+          "name": "Доктор Сюзанна Ніс",
+          "position": "Керівник проєкту Green Deal Ukraine в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "george-zahman",
+          "name": "Доктор Георг Захманн",
+          "position": "Науковий керівник програми «Зелена угода Україна» в HZB",
+          "isLink": true
+        })
+      </li>
+
+    @@endif
 
   </ul>
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Про нас</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content  page__content--white-bg">
+
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
+
+      <div class="page__hero-wrapper">
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--blue-700)",
+          "chipText": "Про KECLab",
+          "title": "Про нас",
+          "intro": "<p>KECLab — Київська лабораторія з питань енергетики та клімату — науково-освітній центр Національного університету «Києво-Могилянська академія» (НаУКМА), створений у партнерстві з Helmholtz-Zentrum Berlin (HZB).</p>"
+        })
+
+      </div>
+
+      <main class="main  main--index">
+
+        @@include('blocks/about-us/about-us.html')
+
+        @@include('blocks/founders/founders.html')
+
+        @@include('blocks/keclab-stats/keclab-stats.html')
+
+        @@include('blocks/team/team.html', {
+          "id": "",
+          "chip": "",
+          "titleLevel": "h2",
+          "title": "Познайомтеся з командою",
+          "intro": "Наша команда об'єднує досвідчених дослідників, аналітиків та практиків з енергетики, кліматичної науки та публічної політики.",
+          "isLink": true
+        })
+
+        @@include('blocks/key-areas/key-areas.html')
+
+        @@include('blocks/our-values/our-values.html')
+
+        @@include('blocks/history/history.html')
+
+        @@include('blocks/partners-slider/partners-slider.html', {
+          "richHeader": true
+        })
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

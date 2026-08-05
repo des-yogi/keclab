@@ -1,0 +1,59 @@
+<!--DEV
+@@include('blocks/key-areas/key-areas.html')
+-->
+
+<section class="container  margin-y  key-areas">
+  <div class="row  key-areas__row">
+    <div class="key-areas__header-col">
+      <div class="key-areas__header">
+        <span class="chip">напрями роботи</span>
+        <h2 class="key-areas__title">Ключові напрями досліджень</h2>
+        <!-- <div class="key-areas__intro">
+          <p></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <ol class="list-nostyled  row  key-areas__list">
+    <li class="key-areas__item">
+      @@include('../../blocks/key-area-card/key-area-card.html', {
+        "number": "01",
+        "title": "Енергетична безпека",
+        "descr": "Стійкість енергосистеми, безпека постачання, критична інфраструктура та відновлення енергетики в умовах війни й ризиків."
+      })
+    </li>
+
+    <li class="key-areas__item">
+      @@include('../../blocks/key-area-card/key-area-card.html', {
+        "number": "02",
+        "title": "Клімат і сталий розвиток",
+        "descr": "Декарбонізація, кліматична політика, зелене відновлення та зв’язок між розвитком, стійкістю й кліматичною відповідальністю."
+      })
+    </li>
+
+    <li class="key-areas__item">
+      @@include('../../blocks/key-area-card/key-area-card.html', {
+        "number": "03",
+        "title": "Енергетичні ринки",
+        "descr": "Ринки електроенергії, газу й тепла, тарифи, інвестиції, конкуренція та правила для ефективного енергетичного сектору."
+      })
+    </li>
+
+    <li class="key-areas__item">
+      @@include('../../blocks/key-area-card/key-area-card.html', {
+        "number": "04",
+        "title": "Європейська інтеграція у сфері енергетики та клімату",
+        "descr": "Acquis ЄС, регулювання, інституційні зміни та інтеграція України з європейським енергетичним і кліматичним простором."
+      })
+    </li>
+
+    <li class="key-areas__item">
+      @@include('../../blocks/key-area-card/key-area-card.html', {
+        "number": "05",
+        "title": "Технології чистої енергії",
+        "descr": "ВДЕ, накопичувачі, енергоефективність, електрифікація та інші рішення для чистої енергетичної трансформації."
+      })
+    </li>
+  </ol>
+</section>

@@ -37,12 +37,13 @@
     "@eslint/js": "^10.0.1",
     "autoprefixer": "^10.4.21",
     "browser-sync": "^3.0.4",
-    "chalk": "^5.6.2",
+    "chalk": "^6.0.0",
     "chokidar": "^5.0.0",
     "cross-env": "^10.1.0",
     "esbuild": "^0.28.1",
     "eslint": "^10.1.0",
     "globals": "^17.4.0",
+    "html-validate": "^11.6.2",
     "postcss": "^8.5.6",
     "postcss-calc": "^10.1.1",
     "postcss-extract-media-query": "^3.2.0",
@@ -70,6 +71,5 @@
     "chalk@5.6.2": true,
     "sharp@0.35.3": true,
     "@parcel/watcher@2.6.0": true
-
   }
 }
