@@ -1,0 +1,63 @@
+<!--DEV
+@@include('blocks/partner-big-card/partner-big-card.html', {
+  "logo": "ksep",
+  "imgFormat": "svg",
+  "title": "Київська Школа Енергетичної Політики (КШЕП)",
+  "descr": "<p>КШЕП, незалежна освітня платформа у сфері енергетики, підвищує кваліфікацію енергетичних фахівців, будучи мостом між енергетичним сектором України та ЄС. Пропонуючи передові програми та курси, КШЕП забезпечує високоякісну підготовку фахівців, які задіяні або готуються до участі у реформуванні та розвитку енергетичного сектору України.</p>"
+})
+-->
+
+<article class="partner-big-card">
+  <div class="partner-big-card__inner">
+
+    <div class="partner-big-card__logo-wrapper">
+      <div class="partner-big-card__logo">
+        <img src="img/@@logo.@@imgFormat" alt="@@title" width="260" height="100" loading="lazy">
+      </div>
+    </div>
+
+    <div class="partner-big-card__text-wrapper">
+      <h2 class="h4  partner-big-card__title">@@title</h2>
+      <div class="partner-big-card__descr">
+        @@descr
+      </div>
+    </div>
+
+    <div class="partner-big-card__links-wrapper">
+      <ul class="list-nostyled  social-net">
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Підписуйтесь на нас у LinkedIn" title="LinkedIn">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#linkedin-logo"></use></svg>
+            </span>
+          </a>
+        </li>
+
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Підписуйтесь на нас у Facebook" title="Facebook">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-logo"></use></svg>
+            </span>
+          </a>
+        </li>
+
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Підписуйтесь на нас у X (ex Twitter)" title="X">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#x-logo"></use></svg>
+            </span>
+          </a>
+        </li>
+
+        <li class="social-net__item">
+          <a href="#" class="btn-secondary  social-net__link" target="_blank" rel="nofollow noopener" aria-label="Перейти до сайту партнера" title="Сайт партнера">
+            <span class="btn-secondary__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#link"></use></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</article>

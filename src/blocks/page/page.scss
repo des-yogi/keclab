@@ -627,6 +627,22 @@ a {
   }
 }
 
+.text-article {
+
+  & > * {
+    max-width: 992px;
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1064px;
+    }
+  }
+
+  div + div,
+  section + section {
+    margin-top: 48px;
+  }
+}
+
 figure {
   margin: 0;
 }

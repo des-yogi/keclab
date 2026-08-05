@@ -109,6 +109,8 @@
 @use '../blocks/our-values/our-values';
 @use '../blocks/value-card/value-card';
 @use '../blocks/history/history';
+@use '../blocks/partner-big-card/partner-big-card';
+@use '../blocks/error-404/error-404';
 
 // Подключения из addCssAfter:
 @use './print' as *;

@@ -81,14 +81,11 @@
         </div>
 
         <div class="team__link-col  team__link-col--is-ctrls">
-          <a href="#" class="btn-secondary">
-            <span class="btn-secondary__text">Наша команда</span>
-            <span class="btn-secondary__icon">
-              <svg width="24" height="24" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use>
-              </svg>
-            </span>
-          </a>
+
+          @@include('../../blocks/nav-link/nav-link.html', {
+            "isTeam": true
+          })
+
         </div>
       </div>
     </div>
@@ -124,6 +121,100 @@
     </li>
 
     @@if(isLink)
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "susanna-nis",
+          "name": "Доктор Сюзанна Ніс",
+          "position": "Керівник проєкту Green Deal Ukraine в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "george-zahman",
+          "name": "Доктор Георг Захманн",
+          "position": "Науковий керівник програми «Зелена угода Україна» в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "frank-meissner",
+          "name": "Доктор Франк Мейсснер",
+          "position": "Керівник відділу даних і моделювання в рамках програми «Зелена угода Україна» в HZB",
+          "isLink": false
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "susanna-nis",
+          "name": "Доктор Сюзанна Ніс",
+          "position": "Керівник проєкту Green Deal Ukraine в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "george-zahman",
+          "name": "Доктор Георг Захманн",
+          "position": "Науковий керівник програми «Зелена угода Україна» в HZB",
+          "isLink": true
+        })
+      </li>
+
+    @@endif
+
+    @@if(isCtrls)
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "susanna-nis",
+          "name": "Доктор Сюзанна Ніс",
+          "position": "Керівник проєкту Green Deal Ukraine в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "george-zahman",
+          "name": "Доктор Георг Захманн",
+          "position": "Науковий керівник програми «Зелена угода Україна» в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "frank-meissner",
+          "name": "Доктор Франк Мейсснер",
+          "position": "Керівник відділу даних і моделювання в рамках програми «Зелена угода Україна» в HZB",
+          "isLink": false
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "susanna-nis",
+          "name": "Доктор Сюзанна Ніс",
+          "position": "Керівник проєкту Green Deal Ukraine в HZB",
+          "isLink": true
+        })
+      </li>
+
+      <li class="team__col">
+        @@include('../../blocks/person-card/person-card.html', {
+          "photo": "george-zahman",
+          "name": "Доктор Георг Захманн",
+          "position": "Науковий керівник програми «Зелена угода Україна» в HZB",
+          "isLink": true
+        })
+      </li>
 
       <li class="team__col">
         @@include('../../blocks/person-card/person-card.html', {
