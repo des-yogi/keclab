@@ -105,7 +105,9 @@
     "key-area-card": [],
     "our-values": [],
     "value-card": [],
-    "history": []
+    "history": [],
+    "partner-big-card": [],
+    "error-404": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",

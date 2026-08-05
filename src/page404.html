@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Сторінка не знайдена</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
+
+      <div class="page__hero-wrapper">
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--blue-700)",
+          "chipText": "",
+          "title": "Політика конфіденційності",
+          "intro": ""
+        })
+
+      </div>
+
+      <main class="main">
+
+        <div class="container margin-y  error-404">
+
+          <div class="row  error-404__row">
+            <div class="error-404__col">
+
+              <div class="error-404__img">
+                <img src="img/error-404.svg" alt="" width="800" height="402" loading="eager" decoding="sync">
+              </div>
+
+              <div class="error-404__text-wrapper">
+                <span class="h1">Упс…</span>
+
+                <div class="error-404__text">
+                  <h1 class="error-404__title">Сторінка, яку ви запитували, не існує або була видалена</h1>
+
+                  <a href="index" class="btn">
+                    <span class="btn__text">На головну</span>
+                    <span class="btn__icon">
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

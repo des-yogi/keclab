@@ -1,0 +1,105 @@
+// В этом файле должны быть стили для БЭМ-блока partner-big-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очерёдность:
+// 1. Стилевые правила для этого селектора. 2. @media этого контекста.
+// 3. Псевдоселекторы и псевдоэлементы. 4. Вложенные сторонние селекторы.
+// 5. БЭМ-элементы. 6. БЭМ-модификаторы.
+
+// Раскомментируйте нужные подключения:
+// @use 'sass:math' as *;    // math.div(), math.round(), math.ceil(), math.floor(), math.percentage(), math.max(), math.min(), math.random()
+// @use 'sass:list' as *;    // list.append(), list.join(), list.nth(), list.length(), list.index(), list.separator()
+// @use 'sass:map' as *;     // map.get(), map.set(), map.merge(), map.keys(), map.values(), map.has-key(), map.remove()
+// @use 'sass:color' as *;   // color.adjust(), color.scale(), color.mix(), color.change(), color.complement(), color.invert()
+// @use 'sass:string' as *;  // string.index(), string.slice(), string.to-upper-case(), string.to-lower-case(), string.length(), string.insert()
+
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.partner-big-card {
+  $block-name: &; // #{$block-name}__element
+
+  padding: 16px;
+  background: var(--bg-block);
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+    border-radius: $border-radius-lg;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px 40px;
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: initial;
+      align-items: stretch;
+    }
+  }
+
+  &__logo-wrapper {
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__logo {
+    padding: 24px;
+    background: var(--white);
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+  &__text-wrapper {
+
+    @media (min-width: $screen-xl) {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__links-wrapper {
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+    }
+
+    .social-net {
+
+      @media (min-width: $screen-xl) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  &__descr {
+    font-size: $font-size;
+    text-wrap: balance;
+  }
+}

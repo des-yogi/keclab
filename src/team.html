@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Команда</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
+
+      <div class="page__hero-wrapper">
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--teal-700)",
+          "chipText": "Команда",
+          "title": "Наша команда",
+          "intro": "<p>Досвідчені дослідники, аналітики та практики — разом ми формуємо аналітичну основу для енергетичного майбутнього України.</p>"
+        })
+
+      </div>
+
+      <main class="main">
+
+        @@include('blocks/team/team.html', {
+          "id": "",
+          "chip": "",
+          "titleLevel": "h2",
+          "title": "Познайомтеся з командою",
+          "intro": "Наша команда об'єднує досвідчених дослідників, аналітиків та практиків з енергетики, кліматичної науки та публічної політики.",
+          "isCtrls": true
+        })
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
