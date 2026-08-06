@@ -144,4 +144,21 @@
     pointer-events: none;
     transition: all $transition-time ease;
   }
+
+  &--alt {
+    background-color: var(--gray-20);
+    border: 1px solid var(--gray-20);
+
+    :root[data-theme="dark"] & {
+      background-color: var(--blue-700);
+      border: 1px solid var(--blue-700);
+    }
+
+    #{$block-name}__file-type {
+
+      :root[data-theme="light"] & {
+        background-color: var(--white);
+      }
+    }
+  }
 }

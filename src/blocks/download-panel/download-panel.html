@@ -4,8 +4,8 @@
   "title": "Презентація лабораторії",
   "descr": "PDF • 2.1 MB",
   "isDownload": false,
-  "isShareLink": false,
-  "isCopyClipBoard": false
+  "isAltStyle": false,
+  "isShareLink": false
 })
 -->
 
@@ -31,9 +31,31 @@
 
 @@endif
 
+@@if(isAltStyle)
+
+  <a href="#" class="download-panel  download-panel--alt" download>
+    <div class="download-panel__info">
+      <div class="download-panel__file-type">
+        <svg width="28" height="28" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@fileTypeIcon"></use></svg>
+      </div>
+      <div class="download-panel__text">
+        <span class="h6  download-panel__title">@@title</span>
+        <span class="download-panel__descr">@@descr</span>
+      </div>
+    </div>
+
+    <span class="btn-secondary  download-panel__icon">
+      <span class="btn-secondary__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+      </span>
+    </span>
+  </a>
+
+@@endif
+
 @@if(isShareLink)
 
-  <a href="#" class="download-panel" target="_blank" rel="nofollow noopener">
+  <a href="#" class="download-panel  download-panel--alt" target="_blank" rel="nofollow noopener">
     <div class="download-panel__info">
       <div class="download-panel__file-type">
         <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@fileTypeIcon"></use></svg>
@@ -53,5 +75,3 @@
 
 @@endif
 
-@@if(isCopyClipBoard)
-@@endif
