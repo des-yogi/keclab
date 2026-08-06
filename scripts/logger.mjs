@@ -58,6 +58,8 @@ const tagColors = {
   '[html-validate]': chalk.yellow,
   '[dev-server]':    chalk.hex('#F8F8F2'),
   '[createBlock]':   chalk.hex('#9457EB'),
+  '[removeBlock]':   chalk.redBright,
+  '[purgeUnused]':   chalk.redBright,
   '[img-opt]':       chalk.magentaBright,
 };
 

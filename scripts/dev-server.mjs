@@ -65,6 +65,7 @@ export async function devServer() {
       ],
     },
     files: [`${buildDir}/**/*`],
+    ignore: ['**/*.map'],
     open: true,
     notify: false,
   });
@@ -98,6 +99,19 @@ export async function devServer() {
     logError('[dev-server] Ошибка configWatcher: ' + err.message);
   });
 
+  /*configWatcher.on('change', async () => {
+    if (isRebuilding) return;
+    isRebuilding = true;
+    logInfo('[dev-server] projectConfig.json изменён — пересборка (без clean)');
+    try {
+      await rebuildAllDev();
+    } catch (err) {
+      logError('[dev-server] Ошибка пересборки: ' + err.message);
+    } finally {
+      isRebuilding = false;
+    }
+  });*/
+
   configWatcher.on('change', async () => {
     if (isRebuilding) return;
     isRebuilding = true;
@@ -108,6 +122,16 @@ export async function devServer() {
       logError('[dev-server] Ошибка пересборки: ' + err.message);
     } finally {
       isRebuilding = false;
+
+      if (pendingRebuild) {
+        pendingRebuild = false;
+        logInfo('[dev-server] Во время пересборки конфига были пропущены изменения — пересобираем всё');
+        try {
+          await rebuildAllDev();
+        } catch (err) {
+          logError('[dev-server] Ошибка отложенной пересборки: ' + err.message);
+        }
+      }
     }
   });
 
@@ -139,9 +163,12 @@ export async function devServer() {
       if (/^blocks\/sprite-svg\/svg\/[^/]+\.svg$/i.test(rel)) {
         await buildSvgSprite();
       } else if (rel.endsWith('.scss')) {
-        if (rel !== 'scss/style.scss') {
-          await generateStyleEntry();
-        }
+        // if (rel !== 'scss/style.scss') {
+        //   await generateStyleEntry();
+        // }
+        // The include list in style.scss depends only on projectConfig.json (see config.mjs),
+        // which has its own watcher (configWatcher) that regenerates style.scss when needed.
+        // No need to regenerate it here on every block-scss edit.
         await buildStyles({ mode: 'development' });
       } else if (rel.endsWith('.js')) {
         await buildScripts({ mode: 'development' });
