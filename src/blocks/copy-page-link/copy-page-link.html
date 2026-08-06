@@ -1,0 +1,28 @@
+<!--DEV
+@@include('blocks/copy-page-link/copy-page-link.html')
+-->
+
+<button id="currentPageLink"
+        class="download-panel  copy-page-link"
+        type="button"
+        title="Скопіювати посилання на сторінку"
+        aria-label="Скопіювати посилання на сторінку"
+        data-success="Скопійовано в буфер"
+        data-error="Скопіювати не вдалося"
+>
+  <span class="download-panel__info">
+    <span class="download-panel__file-type">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#copy"></use></svg>
+    </span>
+    <span class="download-panel__text">
+      <span class="h6  download-panel__title">Буфер обміну</span>
+      <span class="download-panel__descr  download-panel__descr--warning"></span>
+    </span>
+  </span>
+
+  <span class="btn-secondary  download-panel__icon">
+    <span class="btn-secondary__icon">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
+    </span>
+  </span>
+</button>

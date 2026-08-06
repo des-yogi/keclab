@@ -1,0 +1,21 @@
+<!--DEV
+@@include('blocks/search-result/search-result.html', {
+  "title": "Заголовок",
+  "descr": "…текст вибірки…",
+  "tagText": "Аналітичний семінар"
+})
+-->
+
+<li class="row  search-result__item">
+  <div class="search-result__content-col">
+    <a href="#" class="h5  search-result__title">@@title</a>
+    <p class="search-result__sample">@@descr</p>
+    <p class="search-result__tag">@@tagText</p>
+  </div>
+
+  <div class="search-result__icon-col">
+    @@include('../../blocks/faux-link/faux-link.html')
+  </div>
+</li>
+
+

@@ -107,7 +107,10 @@
     "value-card": [],
     "history": [],
     "partner-big-card": [],
-    "error-404": []
+    "error-404": [],
+    "modals": [],
+    "copy-page-link": [],
+    "search-result": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",

@@ -1,4 +1,14 @@
 @@include('../blocks/search-panel/search-panel.html')
 
+@@include('../blocks/modals/modals.html', {
+  "isContact": false,
+  "isShare": true
+})
+
+@@include('../blocks/modals/modals.html', {
+  "isContact": true,
+  "isShare": false
+})
+
 <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
 <script src="js/script.min.js"></script>

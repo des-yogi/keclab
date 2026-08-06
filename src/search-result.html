@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js  page  no-transition"
+      lang="uk"
+      data-overlayscrollbars-initialize
+      data-theme
+      prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Результати пошуку</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body data-overlayscrollbars-initialize>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює користування цим сайтом.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+      <span id="menuOverlay" class="menu-overlay"></span>
+
+      <div class="page__hero-wrapper">
+
+        @@include('blocks/hero-secondary/hero-secondary.html', {
+          "bgColor": "var(--blue-700)",
+          "chipText": "",
+          "title": "Результати пошуку",
+          "intro": "За запитом «Аналітика» знайдено 4 результати"
+        })
+
+      </div>
+
+      <main class="main">
+
+        <div class="container  margin-y  search-result">
+          <ol class="list-nostyled  search-result__list">
+
+            @@include('blocks/search-result/search-result.html', {
+              "title": "Заголовок 1",
+              "descr": "…текст вибірки…",
+              "tagText": "Аналітичний семінар"
+            })
+
+            @@include('blocks/search-result/search-result.html', {
+              "title": "Заголовок 2",
+              "descr": "…текст вибірки…",
+              "tagText": "Аналітичний семінар"
+            })
+
+            @@include('blocks/search-result/search-result.html', {
+              "title": "Заголовок 3",
+              "descr": "…текст вибірки…",
+              "tagText": "Аналітичний семінар"
+            })
+
+            @@include('blocks/search-result/search-result.html', {
+              "title": "Заголовок 4",
+              "descr": "…текст вибірки…",
+              "tagText": "Аналітичний семінар"
+            })
+
+            @@include('blocks/search-result/search-result.html', {
+              "title": "Заголовок 5",
+              "descr": "…текст вибірки…",
+              "tagText": "Аналітичний семінар"
+            })
+
+          </ol>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

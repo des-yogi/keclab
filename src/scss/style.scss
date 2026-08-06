@@ -111,6 +111,9 @@
 @use '../blocks/history/history';
 @use '../blocks/partner-big-card/partner-big-card';
 @use '../blocks/error-404/error-404';
+@use '../blocks/modals/modals';
+@use '../blocks/copy-page-link/copy-page-link';
+@use '../blocks/search-result/search-result';
 
 // Подключения из addCssAfter:
 @use './print' as *;

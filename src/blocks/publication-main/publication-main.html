@@ -63,12 +63,16 @@
               </li>
             </ul>
 
-            <a href="#" class="btn-secondary" download>
+            <button class="btn-secondary"
+                    type="button"
+                    data-coreui-toggle="modal"
+                    data-coreui-target="#shareModal">
               <span class="btn-secondary__text">Поділитися</span>
               <span class="btn-secondary__icon">
                 <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
               </span>
-            </a>
+            </button>
+
           </div>
         </div>
 
@@ -135,6 +139,7 @@
               @@include('../../blocks/download-panel/download-panel.html', {
                 "fileTypeIcon": "file-pdf",
                 "title": "Повний звіт",
+                "isDownload": true,
                 "descr": "PDF • 2.1 MB"
               })
             </li>
@@ -143,6 +148,7 @@
               @@include('../../blocks/download-panel/download-panel.html', {
                 "fileTypeIcon": "file-pdf",
                 "title": "Резюме для керівників",
+                "isDownload": true,
                 "descr": "PDF • 2.1 MB"
               })
             </li>
@@ -151,6 +157,7 @@
               @@include('../../blocks/download-panel/download-panel.html', {
                 "fileTypeIcon": "file-xls",
                 "title": "Додаток з даними",
+                "isDownload": true,
                 "descr": "XLSX • 840 кB"
               })
             </li>
