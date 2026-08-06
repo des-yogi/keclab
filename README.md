@@ -18,4 +18,5 @@
 * https://des-yogi.github.io/keclab/partners
 * https://des-yogi.github.io/keclab/contacts
 * https://des-yogi.github.io/keclab/text
+* https://des-yogi.github.io/keclab/search-result
 * https://des-yogi.github.io/keclab/page404
