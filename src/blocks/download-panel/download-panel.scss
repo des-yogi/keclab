@@ -25,9 +25,12 @@
   height: 100%;
   padding: 16px;
   text-decoration: none;
+  color: var(--link-color);
   background-color: var(--bg-block);
   border: 1px solid var(--border-color);
   border-radius: $border-radius;
+  cursor: pointer;
+  user-select: none;
 
   @media (min-width: $screen-md) {
     padding: 24px;
@@ -35,6 +38,7 @@
 
   &:hover,
   &:focus {
+    color: var(--link-color-hover);
 
     #{$block-name}__title {
       color: inherit;
@@ -92,6 +96,7 @@
     justify-content: center;
     width: 56px;
     height: 56px;
+    color: inherit;
     background-color: var(--bg-input);
     border-radius: 16px;
     overflow: hidden;
@@ -115,6 +120,23 @@
     font-size: $font-size-sm;
     word-break: break-word;
     overflow-wrap: anywhere;
+
+    &--warning {
+      color: var(--red-700);
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: $transition-base;
+
+      :root[data-theme="dark"] & {
+        color: var(--white);
+      }
+    }
+
+    &--visible {
+      max-height: 40px; // enough to fit the message text
+      opacity: 1;
+    }
   }
 
   &__icon {

@@ -2,24 +2,56 @@
 @@include('blocks/download-panel/download-panel.html', {
   "fileTypeIcon": "file-pdf",
   "title": "Презентація лабораторії",
-  "descr": "PDF • 2.1 MB"
+  "descr": "PDF • 2.1 MB",
+  "isDownload": false,
+  "isShareLink": false,
+  "isCopyClipBoard": false
 })
 -->
 
-<a href="#" class="download-panel" download>
-  <div class="download-panel__info">
-    <div class="download-panel__file-type">
-      <svg width="28" height="28" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@fileTypeIcon"></use></svg>
-    </div>
-    <div class="download-panel__text">
-      <span class="h6  download-panel__title">@@title</span>
-      <span class="download-panel__descr">@@descr</span>
-    </div>
-  </div>
+@@if(isDownload)
 
-  <span class="btn-secondary  download-panel__icon">
-    <span class="btn-secondary__icon">
-      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+  <a href="#" class="download-panel" download>
+    <div class="download-panel__info">
+      <div class="download-panel__file-type">
+        <svg width="28" height="28" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@fileTypeIcon"></use></svg>
+      </div>
+      <div class="download-panel__text">
+        <span class="h6  download-panel__title">@@title</span>
+        <span class="download-panel__descr">@@descr</span>
+      </div>
+    </div>
+
+    <span class="btn-secondary  download-panel__icon">
+      <span class="btn-secondary__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+      </span>
     </span>
-  </span>
-</a>
+  </a>
+
+@@endif
+
+@@if(isShareLink)
+
+  <a href="#" class="download-panel" target="_blank" rel="nofollow noopener">
+    <div class="download-panel__info">
+      <div class="download-panel__file-type">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@fileTypeIcon"></use></svg>
+      </div>
+      <div class="download-panel__text">
+        <span class="h6  download-panel__title">@@title</span>
+        <span class="download-panel__descr">@@descr</span>
+      </div>
+    </div>
+
+    <span class="btn-secondary  download-panel__icon">
+      <span class="btn-secondary__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
+      </span>
+    </span>
+  </a>
+
+@@endif
+
+@@if(isCopyClipBoard)
+@@endif
