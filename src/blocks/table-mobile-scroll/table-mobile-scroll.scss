@@ -9,12 +9,11 @@ $border-color: hsl(0deg 0% 60%) !default;
   display: block;
   width: 100%;
   overflow-x: auto;
-  margin-top: $line-height;
-  margin-bottom: $line-height;
-  border: 1px solid $border-color;
+  margin: 16px 0;
+  //border: 1px solid $border-color;
 
   table {
-    table-layout: fixed;
+    //table-layout: fixed;
     margin: 0;
     border: 0 !important; // stylelint-disable-line  declaration-no-important
     width: 100%;
@@ -36,10 +35,10 @@ $border-color: hsl(0deg 0% 60%) !default;
     }
   }
 
-  caption {
-    text-align: left;
-    padding: 0.4em;
-    border-bottom: 1px solid $border-color;
-    caption-side: top;
-  }
+  // caption {
+    // text-align: left;
+    // padding: 1em;
+    // //border-bottom: 1px solid $border-color;
+    // caption-side: top;
+  // }
 }

@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   const countdownArr = document.getElementsByClassName('countdown');
+  //console.log(regBtns.length);
   if (!countdownArr) { return; }
+
+  const regBtns = document.querySelectorAll('.btn-registration');
+  function regBtnsHider(btns) {
+    if(btns.length <= 0) { return };
+    btns.forEach(btn => {
+      //btn.style.display = 'none';
+      btn.hidden = true;
+    });
+  }
 
   function getTimeRemaining(endtime) {
     let t = Date.parse(endtime) - Date.parse(new Date());
@@ -39,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (t.total <= 0) {
         countdownContainer.classList.add('hidden');
         deadlineMessage.classList.add('visible');
+        regBtnsHider(regBtns);
         clearInterval(timeinterval);
         return true;
       }

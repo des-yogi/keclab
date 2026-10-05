@@ -35,6 +35,10 @@
     color: inherit;
     background-color: rgba(#ffffff, 0.1);
     border-radius: 20px;
+
+    &:empty {
+      display: none;
+    }
   }
 
   // &__desc {

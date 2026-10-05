@@ -110,7 +110,9 @@
     "error-404": [],
     "modals": [],
     "copy-page-link": [],
-    "search-result": []
+    "search-result": [],
+    "not-found": [],
+    "site-unavailable": []
   },
   "addCssBefore": [
     "src/scss/_coreui-custom.scss",
