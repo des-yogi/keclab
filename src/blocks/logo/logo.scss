@@ -10,6 +10,11 @@
     width: 112px;
     height: 56px;
 
+    @media (max-width: 335px) {
+      width: 100px;
+      height: 50px;
+    }
+
     @media (min-width: $screen-md) {
       width: 144px;
       height: 72px;

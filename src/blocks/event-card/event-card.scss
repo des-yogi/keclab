@@ -98,7 +98,11 @@
   &__text-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 12px 0;
+
+    @media (min-width: $screen-xl) {
+      gap: 16px 0;
+    }
   }
 
   &__top {
@@ -121,22 +125,23 @@
     }
   }
 
-  &__descr {
+  &__descr,
+  &__speakers {
     font-size: $font-size-sm;
 
     @media (min-width: $screen-md) {
       font-size: $font-size;
     }
 
-    @media (min-width: $screen-xxl) {
-      font-size: $font-size-lg;
-    }
+    // @media (min-width: $screen-xxl) {
+    //   font-size: $font-size-lg;
+    // }
   }
 
   &__footer {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 16px 4px;
   }
 
   &__speakers {

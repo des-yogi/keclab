@@ -35,6 +35,14 @@
 
   &__item {
     margin: 0;
+
+    &.active {
+
+      #{$block-name}__link {
+        text-decoration: underline;
+        pointer-events: none;
+      }
+    }
   }
 
   &__link {

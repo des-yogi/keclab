@@ -38,6 +38,10 @@
   &__btn-wrapper {
     padding: 0 0 40px;
 
+    &:empty {
+      display: none;
+    }
+
     .btn {
 
       @media (max-width: $screen-md - 1) {

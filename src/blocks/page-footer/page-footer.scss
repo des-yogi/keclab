@@ -62,8 +62,16 @@
     gap: 16px 0;
   }
 
-  //&__item {
-  //}
+  &__item {
+
+    &.active {
+
+      #{$block-name}__link {
+        text-decoration: underline;
+        pointer-events: none;
+      }
+    }
+  }
 
   &__link {
     text-decoration: none;
@@ -78,6 +86,7 @@
       &:hover,
       &:focus {
         text-decoration: underline;
+        color: var(--link-color-hover);
       }
     }
   }

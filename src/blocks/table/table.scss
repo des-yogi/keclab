@@ -13,15 +13,15 @@ table,
   width: 100%;
   //border: 1px solid var(--border-color);
   border: none;
-  margin: #{$line-height}px 0;
+  margin: 1em 0;
 
   caption {
-    padding-top: 0.4em;
-    text-align: right;
+    padding-top: 1em;
+    text-align: left;
     caption-side: bottom;
     font-size: $font-size-sm;
     line-height: 1em;
-    color: $text-muted;
+    color: var(--text-color);
   }
 
   th {

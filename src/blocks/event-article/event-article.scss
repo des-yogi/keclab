@@ -18,6 +18,12 @@
 .event-article {
   $block-name: &; // #{$block-name}__element
 
+  .btn-registration {
+
+    &[hidden] {
+      display: none;
+    }
+  }
 
   &__main {
 
@@ -51,6 +57,11 @@
 
   &__btn-wrapper {
     padding: 40px 0 40px;
+
+    &:empty,
+    &:has(.btn-registration[hidden]) {
+      padding-bottom: 0;
+    }
 
     .btn {
 

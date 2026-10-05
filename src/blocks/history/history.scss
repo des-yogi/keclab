@@ -51,7 +51,7 @@
     }
   }
 
-  &__list {}
+  //&__list {}
 
   &__item {
     display: flex;
@@ -94,7 +94,10 @@
   &__year-col {
     display: flex;
     flex-direction: column;
-    //align-items: center;
+
+    @media (min-width: $screen-md) {
+      align-items: center;
+    }
   }
 
   // &__text-col {

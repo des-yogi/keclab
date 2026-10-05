@@ -66,6 +66,10 @@
 
     &--is-ctrls {
       @include col(xl, 6);
+
+      .nav-link {
+        flex-wrap: wrap;
+      }
     }
   }
 

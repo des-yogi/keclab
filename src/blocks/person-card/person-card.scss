@@ -60,8 +60,13 @@
   }
 
   &__img {
-    background-color: var(--gray-100);
+    background-color: var(--bg-input);
     border-radius: $border-radius;
+    border: 1px solid var(--blue-100);
+
+    :root[data-theme="dark"] & {
+      border-color: var(--blue-950);
+    }
 
     img {
       object-fit: cover;

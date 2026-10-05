@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока other-news-card, его элементов,
+// В этом файле должны быть стили для БЭМ-блока not-found, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очерёдность:
 // 1. Стилевые правила для этого селектора. 2. @media этого контекста.
@@ -15,56 +15,34 @@
 @use '../../scss/variables' as *;
 @use '../../scss/mixins' as *;
 
-.other-news-card {
+.not-found {
   $block-name: &; // #{$block-name}__element
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px 0;
-  padding: 16px;
-  text-decoration: none;
-  background-color: var(--bg-block);
-  border: 1px solid var(--border-color);
-  border-radius: $border-radius;
-
-  @include hover-trigger-inner;
-
-  &:hover,
-  &:focus {
-
-    #{$block-name}__caption {
-      color: var(--link-color-hover);
-    }
+  &__col {
+    @include col(xs, 12);
+    @include col-offset(md, 3);
+    @include col(md, 6);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    @include col-offset(xxl, 3);
+    @include col(xxl, 6);
   }
 
-  @media (min-width: $screen-md) {
-    padding: 24px;
-  }
-
-  &__main {
+  &__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 16px 0;
-  }
-
-  &__caption {
-    margin: 0;
-    color: var(--title-color);
-    transition: color $transition-time ease;
-  }
-
-  &__footer {
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    //justify-content: space-between;
-    gap: 8px;
-    width: 100%;
 
-    .date-time {
-      margin-right: auto;
+    img {
+      width: 100%;
     }
+  }
+
+  &__info {
+    margin-top: 24px;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    text-align: center;
+    text-wrap: balance;
   }
 }

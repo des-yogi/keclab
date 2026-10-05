@@ -114,6 +114,8 @@
 @use '../blocks/modals/modals';
 @use '../blocks/copy-page-link/copy-page-link';
 @use '../blocks/search-result/search-result';
+@use '../blocks/not-found/not-found';
+@use '../blocks/site-unavailable/site-unavailable';
 
 // Подключения из addCssAfter:
 @use './print' as *;

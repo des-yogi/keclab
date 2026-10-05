@@ -47,6 +47,14 @@
       justify-content: space-between;
       gap: 0 24px;
     }
+
+    // @media (min-width: 1440px) and (max-width: $screen-xxl - 1) {
+    //   max-width: 450px;
+    // }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 54px;
+    }
   }
 
   &__cover-col,
@@ -81,6 +89,7 @@
     overflow: hidden;
 
     @media (min-width: $screen-md) {
+      max-width: none;
       height: auto;
     }
 
@@ -140,7 +149,7 @@
     }
 
     @media (min-width: $screen-xxl) {
-      padding-left: 88px;
+      padding-left: 34px;
     }
   }
 
